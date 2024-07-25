@@ -11522,6 +11522,24 @@
       }
     }
   }
+  /**
+   * Icons (bootstrap, material)
+   * lists using icons
+   * ...
+  */
+  @layer logo-icon {
+    .icon-list {
+      list-style: none;
+      margin: 55px 0;
+      padding: 0;
+    }
+    .icon-list li {
+      margin: 0 13px;
+    }
+    .icon-list li:last-child {
+      margin-right: 0;
+    }
+  }
   :root {
     --website-speech-bubble-padding: 20px;
   }
@@ -11874,22 +11892,16 @@
       }
     }
   }
-  /**
-   * Icons (bootstrap, material)
-   * lists using icons
-   * ...
-  */
-  @layer logo-icon {
-    .icon-list {
+  @layer slick-slider {
+    .slider {
+      margin-top: 110px;
       list-style: none;
-      margin: 55px 0;
       padding: 0;
     }
-    .icon-list li {
-      margin: 0 13px;
-    }
-    .icon-list li:last-child {
-      margin-right: 0;
+    .slider .badge {
+      color: #302E1D;
+      font-weight: 400;
+      margin-bottom: 20px;
     }
   }
   :root {
