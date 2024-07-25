@@ -1,0 +1,24 @@
+/**
+ * Icons (bootstrap, material)
+ * lists using icons
+ * ...
+*/
+
+@layer logo-icon {
+    .icon-list{
+        list-style: none;
+        margin: 55px 0;
+        padding: 0;
+
+        li{
+            margin: 0 13px;
+
+            &:last-child
+            {
+                margin-right: 0;
+            }
+        }
+
+    }
+}
+

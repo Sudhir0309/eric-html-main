@@ -1,0 +1,61 @@
+
+/**
+ * NOTE ON BACKGROUND IMAGES
+ * ------
+ They have to be referrenced relative to this file (_index.scss), so url(./_img/...)
+*/
+
+// Using layers to override bootstrap features without using "!important"
+@layer vendors {
+    @import './vendors/_bootstrap@5.3.3.min';
+}
+
+// @layer framework {
+//     @import './framework/_bootstrap-override.scss';
+// }
+
+@layer base {
+    @import './base/initialization';
+    @import './base/variables';
+    @import './base/utilities';
+}
+
+
+// @layer layouts {
+//     @import './layouts/index';
+// }
+
+
+
+.custom-icon {
+    width: 68px;
+    height: inherit;
+}
+
+
+@layer components {
+//     // The "icons-and-more" file has to remain on top because of the 
+//     // "icon-foundation" layer that needs to be overriten by the other layers
+    @import './components/icons-and-more';
+    @import './components/form-elts';
+    @import './components/jumbotron';
+    @import './components/hero';
+    @import './components/speech-bubble';
+    @import './components/navbar';
+//     @import './components/banners';
+    @import './components/mixed-components';
+//     @import './components/alert';
+    @import './components/section-video-banner';
+    @import './components/icon-list';
+    @import './components/footer';
+//     @import './components/info1-blurb';
+//     @import './components/accordion';
+//     @import './components/case-study-thumb';
+//     @import './components/navigation-articles';
+}
+
+@layer theming {
+//     @import './theming/theme-toggle';
+    @import './theming/light-mode';
+//     @import './theming/dark-mode';
+}

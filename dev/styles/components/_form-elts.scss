@@ -1,0 +1,110 @@
+
+:root {
+    --website-btn-padding: 10px 20px;
+    --website-btn-fontsize: 1.2rem;
+    // btn icon ...
+    --website-btnicon-padding: 10px 45px 10px 20px;
+    --website-btnicon-icon-top: 6px;
+    --website-btnicon-icon-right: 20px;
+}
+
+@layer form-elts {
+    @layer buttons {
+        .btn {
+            border-radius: 0;
+            padding: var(--website-btn-padding);
+            font-weight: 500;
+            font-size: var(--website-btn-fontsize);
+
+
+            // Extra Large screens ...
+            @media (min-width: 1400px) {
+                // border: 10px solid purple;
+                --website-btn-padding: 15px 30px;
+                --website-btn-fontsize: 1.35rem;
+                // btn icon ...
+                --website-btnicon-icon-top: 8px;
+            }
+            
+            // Large screens ...
+            @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+                // border: 10px solid violet;
+                --website-btn-padding: 15px 30px;
+                --website-btn-fontsize: 1.35rem;
+                // btn icon ...
+                --website-btnicon-icon-top: 8px;
+            }
+            
+            // Large Medium screens ...
+            @media (min-width: 992px) and (max-width: (1200px - 1)) {
+                // border: 10px solid lime;
+                --website-btn-padding: 15px 30px;
+                --website-btn-fontsize: 1.35rem;
+                // btn icon ...
+                --website-btnicon-icon-top: 8px;
+            }
+
+            // // Medium Medium screens ...
+            // @media (min-width: 768px) and (max-width: (992px - 1)) {
+            //     border: 10px solid blue;
+            // }
+
+            // // Small Medium screens ...
+            // @media (min-width: 576px) and (max-width: (768px - 1)) {
+            //     border: 10px solid turquoise;
+            // }
+
+            // // Smaller screens ...
+            // @media (max-width: (576px - 1px)) {
+            //     border: 10px solid chocolate;
+            // }
+        }
+        .btn.item-icon-bootstrap,
+        .btn.item-icon-material {
+            position: relative;
+            padding: var(--website-btnicon-padding);
+
+            &::before, &::after {
+                position: absolute;
+                left: unset;
+            }
+        }
+        .btn.item-icon-bootstrap.item-icon-bootstrap-after,
+        .btn.item-icon-material.item-icon-material-after {
+            &::after {
+                top: var(--website-btnicon-icon-top);
+                right: var(--website-btnicon-icon-right);
+            }
+        }
+ 
+        // .btn-large {
+        //     font-size: 1.3rem;
+        // }
+        // .btn-min-block {
+        //     min-width: 230px;  
+        // }
+        // .slick-arrow, //Settting carousel button as a seondary button
+        // .btn-secondary {
+        //     border-width: 2px;
+        //     border-style: solid;
+        // }
+        // .slick-arrow {
+        //     display: block;
+        //     padding: 3px 13px;
+        //     font-size: 1rem;
+        // }
+        // .btn-transparent {
+        //     background-color: transparent;
+        // }
+    }
+
+    // @layer inputs {
+    //     .form-control {
+    //         border-radius: 0;
+    //         padding: 13px 12px;
+    //     }
+    //     .form-label {
+    //         margin-bottom: 4px;
+    //     }
+    // }
+}
