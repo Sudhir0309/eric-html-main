@@ -1,3 +1,7 @@
+:root {
+    --website-logo-icon-height: 30px;
+    --website-logo-icon-gap: 26px;
+}
 /**
  * Icons (bootstrap, material)
  * lists using icons
@@ -8,38 +12,53 @@
     .icon-list {
         display: flex;
         list-style: none;
-        // margin: 55px 0;
+        gap: var(--website-logo-icon-gap);
         padding: 0; 
+        overflow: hidden;
 
         li {
-            margin: 0 13px;
-
-            &:last-child
-            {
-                margin-right: 0;
+            img {
+                height: var(--website-logo-icon-height);
             }
         }
+
+        // li {
+        //     margin: 0 13px;
+
+        //     &:last-child
+        //     {
+        //         margin-right: 0;
+        //     }
+        // }
 
 
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
             border: 10px solid purple;
+            --website-logo-icon-height: 53px;
+            --website-logo-icon-gap: 70px;
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
             border: 10px solid violet;
+            --website-logo-icon-height: 53px;
+            --website-logo-icon-gap: 70px;
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
             border: 10px solid lime;
+            --website-logo-icon-height: 53px;
+            --website-logo-icon-gap: 70px;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
             border: 10px solid blue;
+            --website-logo-icon-height: 53px;
+            --website-logo-icon-gap: 70px;
         }
 
         // Small Medium screens ...

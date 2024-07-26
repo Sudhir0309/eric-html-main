@@ -11517,6 +11517,10 @@
       }
     }
   }
+  :root {
+    --website-logo-icon-height: 30px;
+    --website-logo-icon-gap: 26px;
+  }
   /**
    * Icons (bootstrap, material)
    * lists using icons
@@ -11526,32 +11530,39 @@
     .icon-list {
       display: flex;
       list-style: none;
+      gap: var(--website-logo-icon-gap);
       padding: 0;
+      overflow: hidden;
     }
-    .icon-list li {
-      margin: 0 13px;
-    }
-    .icon-list li:last-child {
-      margin-right: 0;
+    .icon-list li img {
+      height: var(--website-logo-icon-height);
     }
     @media (min-width: 1400px) {
       .icon-list {
         border: 10px solid purple;
+        --website-logo-icon-height: 53px;
+        --website-logo-icon-gap: 70px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .icon-list {
         border: 10px solid violet;
+        --website-logo-icon-height: 53px;
+        --website-logo-icon-gap: 70px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .icon-list {
         border: 10px solid lime;
+        --website-logo-icon-height: 53px;
+        --website-logo-icon-gap: 70px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .icon-list {
         border: 10px solid blue;
+        --website-logo-icon-height: 53px;
+        --website-logo-icon-gap: 70px;
       }
     }
     @media (min-width: 576px) and (max-width: 767px) {
