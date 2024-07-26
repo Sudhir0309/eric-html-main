@@ -10,7 +10,7 @@
     --website-anchors-scrollto-top: -80px;
     --website-btnscrolltop-padding: 5px 10px;
     --website-btnscrolltop-font-size: 0.8rem;
-    --website-btnscrolltop-right: 10px;
+    --website-btnscrolltop-x-pos: 10px;
     --website-btnscrolltop-arrowdisplay: none;
 }
 
@@ -76,7 +76,7 @@
         bottom: 30px;
         padding: var(--website-btnscrolltop-padding);
         font-size: var(--website-btnscrolltop-font-size);
-        right: var(--website-btnscrolltop-right);
+        left: var(--website-btnscrolltop-x-pos);
         &::after {
             display: var(--website-btnscrolltop-arrowdisplay);
         }
@@ -87,7 +87,7 @@
             --website-btnscrolltop-padding: 10px 45px 10px 20px;
             --website-btnscrolltop-font-size: 1.2rem;
             --website-btnscrolltop-arrowdisplay: block;
-            --website-btnscrolltop-right: 50px;
+            --website-btnscrolltop-x-pos: 50px;
         }
         
         // Large screens ...
@@ -96,7 +96,7 @@
             --website-btnscrolltop-padding: 10px 45px 10px 20px;
             --website-btnscrolltop-font-size: 1.2rem;
             --website-btnscrolltop-arrowdisplay: block;
-            --website-btnscrolltop-right: 90px;
+            --website-btnscrolltop-x-pos: 90px;
         }
         
         // Large Medium screens ...
@@ -105,7 +105,7 @@
             --website-btnscrolltop-padding: 10px 45px 10px 20px;
             --website-btnscrolltop-font-size: 1.2rem;
             --website-btnscrolltop-arrowdisplay: block;
-            --website-btnscrolltop-right: 90px;
+            --website-btnscrolltop-x-pos: 90px;
         }
 
         // Medium Medium screens ...

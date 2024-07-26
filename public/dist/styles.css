@@ -11754,7 +11754,7 @@
     --website-anchors-scrollto-top: -80px;
     --website-btnscrolltop-padding: 5px 10px;
     --website-btnscrolltop-font-size: 0.8rem;
-    --website-btnscrolltop-right: 10px;
+    --website-btnscrolltop-x-pos: 10px;
     --website-btnscrolltop-arrowdisplay: none;
   }
   @layer anchors-scrollto {
@@ -11796,7 +11796,7 @@
       bottom: 30px;
       padding: var(--website-btnscrolltop-padding);
       font-size: var(--website-btnscrolltop-font-size);
-      right: var(--website-btnscrolltop-right);
+      left: var(--website-btnscrolltop-x-pos);
     }
     .btn-scroll-top::after {
       display: var(--website-btnscrolltop-arrowdisplay);
@@ -11806,7 +11806,7 @@
         --website-btnscrolltop-padding: 10px 45px 10px 20px;
         --website-btnscrolltop-font-size: 1.2rem;
         --website-btnscrolltop-arrowdisplay: block;
-        --website-btnscrolltop-right: 50px;
+        --website-btnscrolltop-x-pos: 50px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
@@ -11814,7 +11814,7 @@
         --website-btnscrolltop-padding: 10px 45px 10px 20px;
         --website-btnscrolltop-font-size: 1.2rem;
         --website-btnscrolltop-arrowdisplay: block;
-        --website-btnscrolltop-right: 90px;
+        --website-btnscrolltop-x-pos: 90px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
@@ -11822,7 +11822,7 @@
         --website-btnscrolltop-padding: 10px 45px 10px 20px;
         --website-btnscrolltop-font-size: 1.2rem;
         --website-btnscrolltop-arrowdisplay: block;
-        --website-btnscrolltop-right: 90px;
+        --website-btnscrolltop-x-pos: 90px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
