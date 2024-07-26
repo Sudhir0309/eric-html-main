@@ -11702,6 +11702,48 @@
     }
   }
   /**
+   * Basic decorator of the carousel component.
+   * This class takes care of every styling uncovered by the Slick slider plugin
+   * https://kenwheeler.github.io/slick/
+  */
+  @layer site-carousel {
+    .site-carousel {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    @media (min-width: 1400px) {
+      .site-carousel {
+        border: 10px solid purple;
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      .site-carousel {
+        border: 10px solid violet;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .site-carousel {
+        border: 10px solid lime;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .site-carousel {
+        border: 10px solid blue;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      .site-carousel {
+        border: 10px solid turquoise;
+      }
+    }
+    @media (max-width: 575px) {
+      .site-carousel {
+        border: 10px solid chocolate;
+      }
+    }
+  }
+  /**
    * - block-presentation-1
    * - list-of-social-icons
    * - list-items-inline
@@ -11917,18 +11959,6 @@
       }
     }
   }
-  @layer slick-slider {
-    .slider {
-      margin-top: 110px;
-      list-style: none;
-      padding: 0;
-    }
-    .slider .badge {
-      color: #302E1D;
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
-  }
   :root {
     --website-footer-padding: 60px 0;
     --website-footer-text-wrapper-gap: 20px;
@@ -12028,6 +12058,8 @@
     --website-theme-light-col-gray-3: #aaa;
     --website-theme-light-headings-col: var(--website-theme-light-col-3b);
     --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-2d);
+    --website-clr-gray-1: #e6e6e6;
+    --website-clr-gray-5: #302E1D;
   }
   body {
     background-color: var(--website-theme-light-col-1a);
@@ -12035,6 +12067,12 @@
   }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     color: var(--website-theme-light-col-3b);
+  }
+  @layer site-carousel {
+    .site-carousel .badge {
+      color: var(--website-clr-gray-5);
+      background-color: var(--website-clr-gray-1);
+    }
   }
   @layer hero {
     .hero {

@@ -4,6 +4,7 @@ import { handleViewportChange as handleViewportChange } from './videoBannerAcces
 import { setElementSticky as setElementSticky } from './sticky-nav.js';
 import { setupScrolltopBtn as setupScrolltopBtn } from './scroll-top-btn.js';
 import { setupChatbotBtn as setupChatbotBtn } from './chatbot.js'
+import { setupCarousselFct as setupCarousselFct } from './caroussel.js'
 
 
 
@@ -27,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Setting chatbot trigger ...
   setupChatbotBtn();
+
+  // Setting caroussel functionality ...
+  setupCarousselFct();
 });
 
 

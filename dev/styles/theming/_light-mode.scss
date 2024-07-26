@@ -20,6 +20,10 @@
     --website-theme-light-headings-col: var(--website-theme-light-col-3b);
 
     --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-2d);
+
+
+    --website-clr-gray-1: #e6e6e6;
+    --website-clr-gray-5: #302E1D;
 }
 
 // html[data-theme="light"] {
@@ -29,6 +33,15 @@
 
         h1, h2, h3, h4, h5, h6 {
             color: var(--website-theme-light-col-3b);
+        }
+    }
+
+    @layer site-carousel {
+        .site-carousel {  
+            .badge {
+                color: var(--website-clr-gray-5);
+                background-color: var(--website-clr-gray-1);
+            }
         }
     }
 

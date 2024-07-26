@@ -20,6 +20,12 @@
 
 
 
+  <!-- jQuery (must be call asap) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Slick Carousel (only on home page) -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
   <!-- General styling -->
   <link rel="stylesheet" href="dist/styles.css" />
 </head>
@@ -161,30 +167,57 @@
       <header class="text-center">
         <h2>Best Work</h2>
         <p>I have a multi-disciplinary body of work. From UI Development to UX Design.</p>
-      </header>
-      <div class="slider-col">
-        <ul id="enjanga-caroussel-1" class="regular slider row ">
-          <li class="col-6">
-            <h3>Designing and Developing a Creative/Technical studio website</h3>
+      </header> 
+      <ul id="enjanga-caroussel-1" class="site-carousel d-none">
+        <li class="site-carousel-item">
+          <a href="#">
+            <h3>dicta earum minus non nihil assumenda eum aut facilis necessitatibus odit</h3>
             <div class="badge-col">
-              <span class="badge text-bg-light">UX Design</span>
-              <span class="badge text-bg-light">WordPress</span>
-              <span class="badge text-bg-light">UI Development</span>
+              <span class="badge">Here is a tag</span>
+              <span class="badge">Another tag</span>
+              <span class="badge">And another one</span>
             </div>
-            <P><a class="text-dark" href="www.tenverto.com"><b>- www.tenverto.com -</b></a> sit amet consectetur. Sit eget malesuada sociis amet. Vel amet viverra facilisi senectus. Sapien turpis porttitor volutpat nibh. In adipiscing nulla in tincidunt aliquet convallis sem.</P>
-          </li>
-          <li class="col-6">
-            <h3>Karma Financial (a private insurance <br>broker) undergoes a website revamp</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, laboriosam sunt doloremque quia labore, dicta earum minus non nihil assumenda eum aut facilis necessitatibus odit mollitia quaerat dolorem odio sit.</p>
+            <img class="w-100" alt="image" src="https://placehold.co/486x394">
+          </a>
+        </li>
+        <li class="site-carousel-item">
+          <a href="#">
+            <h3>dicta earum minus non nihil assumenda eum aut facilis necessitatibus odit</h3>
             <div class="badge-col">
-              <span class="badge text-bg-light">UX Design</span>
-              <span class="badge text-bg-light">WordPress</span>
-              <span class="badge text-bg-light">UI Development</span>
+              <span class="badge">Here is a tag</span>
+              <span class="badge">Another tag</span>
+              <span class="badge">And another one</span>
             </div>
-            <P><a class="text-dark" href="www.tenverto.com"><b>- www.tenverto.com -</b></a> sit amet consectetur. Sit eget malesuada sociis amet. Vel amet viverra facilisi senectus. Sapien turpis porttitor volutpat nibh. In adipiscing nulla in tincidunt aliquet convallis sem.</P>
-            <span class="thumb d-block"><img class="w-100" alt="image" src="images/slider-thumb.png"></span>
-          </li>
-        </ul>
-      </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, laboriosam sunt doloremque quia labore, dicta earum minus non nihil assumenda eum aut facilis necessitatibus odit mollitia quaerat dolorem odio sit.</p>
+            <img class="w-100" alt="image" src="https://placehold.co/486x394">
+          </a>
+        </li>
+        <li class="site-carousel-item">
+          <a href="#">
+            <h3>dicta earum minus non nihil assumenda eum aut facilis necessitatibus odit</h3>
+            <div class="badge-col">
+              <span class="badge">Here is a tag</span>
+              <span class="badge">Another tag</span>
+              <span class="badge">And another one</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, laboriosam sunt doloremque quia labore, dicta earum minus non nihil assumenda eum aut facilis necessitatibus odit mollitia quaerat dolorem odio sit.</p>
+            <img class="w-100" alt="image" src="https://placehold.co/486x394">
+          </a>
+        </li>
+        <li class="site-carousel-item">
+          <a href="#">
+            <h3>dicta earum minus non nihil assumenda eum aut facilis necessitatibus odit</h3>
+            <div class="badge-col">
+              <span class="badge">Here is a tag</span>
+              <span class="badge">Another tag</span>
+              <span class="badge">And another one</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, laboriosam sunt doloremque quia labore, dicta earum minus non nihil assumenda eum aut facilis necessitatibus odit mollitia quaerat dolorem odio sit.</p>
+            <img class="w-100" alt="image" src="https://placehold.co/486x394">
+          </a>
+        </li>
+      </ul> 
     </div>
   </section>
 
@@ -227,14 +260,11 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
+  <!-- Slick Carousel (only on home page) -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   <!-- Video background plugin (https://vodkabears.github.io/vide/) -->
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/background-video@1.0.7/jquery.background-video.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vide/0.5.1/jquery.vide.min.js"></script>
-
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vide/0.5.1/jquery.vide.min.js"></script>
 
 
   <!-- script bundle-->
