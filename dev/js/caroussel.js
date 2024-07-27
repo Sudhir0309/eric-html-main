@@ -16,16 +16,16 @@ export function setupCarousselFct() {
         // dots: true,
         speed: 300,
         infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         responsive: [
-          {
-            breakpoint: 1199,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-            },
-          },
+          // {
+          //   breakpoint: 1199,
+          //   settings: {
+          //     slidesToShow: 2,
+          //     slidesToScroll: 2,
+          //   },
+          // },
           {
             breakpoint: 767,
             settings: {
