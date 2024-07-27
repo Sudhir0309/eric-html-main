@@ -11767,6 +11767,9 @@
     }
   }
   @layer carousel-modale {
+    .caroussel-modal h4 {
+      margin-top: 47px;
+    }
     .caroussel-modal .project-list {
       list-style: none;
     }
