@@ -20,14 +20,14 @@ export function setupCarousselFct() {
         slidesToScroll: 3,
         responsive: [
           {
-            breakpoint: 991, //767,
+            breakpoint: 1199,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
             },
           },
           {
-            breakpoint: 575,
+            breakpoint: 767,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
