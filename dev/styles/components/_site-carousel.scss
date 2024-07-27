@@ -1,5 +1,7 @@
 :root {
-
+    --website-a-color: inherit;
+    --website-text-decoration:none;
+    --website-hover-state:35%;
 }
 
 /**
@@ -16,9 +18,27 @@
 
         .site-carousel-item {
             a {
+                color: var(--website-a-color);
+                text-decoration: var(--website-text-decoration);
                 // [***] remove text decoration
+
+                &:hover{
+                    h3, p, .badge{
+                        opacity:var(--website-hover-state);
+                    }
+                }
             }
         }
+
+        // .slick-arrow
+        // {
+        //     position: absolute;  
+        //     top: -70px;          
+        // }
+        // .slick-prev
+        // {
+        //     right:75px
+        // }
 
 
 

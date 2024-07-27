@@ -11712,6 +11712,11 @@
       text-decoration: underline;
     }
   }
+  :root {
+    --website-a-color: inherit;
+    --website-text-decoration:none;
+    --website-hover-state:35%;
+  }
   /**
    * Basic decorator of the carousel component.
    * This class takes care of every styling uncovered by the Slick slider plugin
@@ -11722,6 +11727,13 @@
       list-style: none;
       margin: 0;
       padding: 0;
+    }
+    .site-carousel .site-carousel-item a {
+      color: var(--website-a-color);
+      text-decoration: var(--website-text-decoration);
+    }
+    .site-carousel .site-carousel-item a:hover h3, .site-carousel .site-carousel-item a:hover p, .site-carousel .site-carousel-item a:hover .badge {
+      opacity: var(--website-hover-state);
     }
     @media (min-width: 1400px) {
       .site-carousel {
@@ -11750,6 +11762,56 @@
     }
     @media (max-width: 575px) {
       .site-carousel {
+        border: 10px solid chocolate;
+      }
+    }
+  }
+  @layer carousel-modale {
+    .caroussel-modal .project-list {
+      list-style: none;
+    }
+    .caroussel-modal .project-list li:before {
+      padding-right: 11px;
+      font-size: 17px;
+    }
+    .caroussel-modal .project-list .light-color-icon:before {
+      color: #BCBCBC;
+    }
+    .caroussel-modal .btn {
+      margin-top: 36px;
+    }
+    .caroussel-modal .btn.bi-box-arrow-up-right::before {
+      position: absolute;
+      right: 17px;
+      top: 11px;
+    }
+    @media (min-width: 1400px) {
+      .caroussel-modal {
+        border: 10px solid purple;
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      .caroussel-modal {
+        border: 10px solid violet;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .caroussel-modal {
+        border: 10px solid lime;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .caroussel-modal {
+        border: 10px solid blue;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      .caroussel-modal {
+        border: 10px solid turquoise;
+      }
+    }
+    @media (max-width: 575px) {
+      .caroussel-modal {
         border: 10px solid chocolate;
       }
     }

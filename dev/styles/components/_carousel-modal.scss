@@ -1,0 +1,68 @@
+:root {
+    
+}
+
+
+
+@layer carousel-modale {
+    .caroussel-modal { 
+        
+        .project-list
+        {
+            list-style: none;
+
+            li{
+                &:before{
+                    padding-right: 11px;
+                    font-size: 17px;
+                }
+            }
+            .light-color-icon{
+
+                &:before{
+                    color: #BCBCBC;
+                }
+            }
+        }
+        .btn{
+            margin-top: 36px;
+        }
+        .btn.bi-box-arrow-up-right
+        {
+            &::before{
+            position: absolute;
+            right: 17px;
+            top: 11px;
+            }
+        }
+        // Extra Large screens ...
+        @media (min-width: 1400px) {
+            border: 10px solid purple;
+        }
+        
+        // Large screens ...
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            border: 10px solid violet;
+        }
+        
+        // Large Medium screens ...
+        @media (min-width: 992px) and (max-width: (1200px - 1)) {
+            border: 10px solid lime;
+        }
+
+        // Medium Medium screens ...
+        @media (min-width: 768px) and (max-width: (992px - 1)) {
+            border: 10px solid blue;
+        }
+
+        // Small Medium screens ...
+        @media (min-width: 576px) and (max-width: (768px - 1)) {
+            border: 10px solid turquoise;
+        }
+
+        // Smaller screens ...
+        @media (max-width: (576px - 1px)) {
+            border: 10px solid chocolate;
+        }
+    }
+}
