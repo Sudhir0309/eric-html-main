@@ -27,6 +27,12 @@
 
 
 
+@layer vendors {
+    @import './vendors/modal.scss';
+}
+
+
+
 @layer components {
 //     // The "icons-and-more" file has to remain on top because of the 
 //     // "icon-foundation" layer that needs to be overriten by the other layers
@@ -38,7 +44,6 @@
     @import './components/speech-bubble';
     @import './components/navbar';
     @import './components/site-carousel.scss';
-    @import './components/carousel-modal.scss';
     @import './components/mixed-components';
 //     @import './components/alert';
     @import './components/section-video-banner';   

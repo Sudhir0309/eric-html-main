@@ -1,7 +1,8 @@
 :root {
     --website-a-color: inherit;
-    --website-text-decoration:none;
-    --website-hover-state:35%;
+    --website-site-carousel-hover-state: 35%;
+    --website-site-carousel-control-top: 3px;
+    --website-site-carousel-item-gap: 0;
 }
 
 /**
@@ -16,55 +17,80 @@
         margin: 0;
         padding: 0;
 
-        .site-carousel-item {
-            a {
-                color: var(--website-a-color);
-                text-decoration: var(--website-text-decoration); // [***] remove text decoration
-                
-
-                &:hover{
-                    h3, p, .badge{
-                        opacity:var(--website-hover-state);
-                    }
-                }
+        // [Carousel controls]
+        // Move all button controls to the carousel top right, and align them horizontally
+        // "Prev button" on the left, and "next button" on the right
+        .slick-arrow  {
+            position: absolute;
+            top: var(--website-site-carousel-control-top);
+            right: 0;
+            z-index: 2;
+    
+            &.slick-prev {
+                right: 75px;
+            }
+            &.slick-disabled {
+                opacity: 0.4;
+                cursor: default;
             }
         }
 
-        // .slick-arrow
-        // {
-        //     position: absolute;  
-        //     top: -70px;          
-        // }
-        // .slick-prev
-        // {
-        //     right:75px
-        // }
+        .site-carousel-item {
+            a {
+                display: block;
+                color: var(--website-a-color);
+                text-decoration: none;
+                
+                &:hover{
+                    h3, p, .badge{
+                        opacity:var(--website-site-carousel-hover-state);
+                    }
+                }
+            }
+
+            &:nth-child(odd) {
+                padding-right: var(--website-site-carousel-item-gap);
+            }
+            
+            &:nth-child(even) {
+                padding-left: var(--website-site-carousel-item-gap);
+            }
+        }
 
 
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
             border: 10px solid purple;
+            --website-site-carousel-control-top: -70px;
+            --website-site-carousel-item-gap: 60px;
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
             border: 10px solid violet;
+            --website-site-carousel-control-top: -80px;
+            --website-site-carousel-item-gap: 60px;
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
             border: 10px solid lime;
+            --website-site-carousel-control-top: -70px;
+            --website-site-carousel-item-gap: 40px;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
             border: 10px solid blue;
+            --website-site-carousel-control-top: 0px;
+            --website-site-carousel-item-gap: 20px;
         }
 
         // Small Medium screens ...
         @media (min-width: 576px) and (max-width: (768px - 1)) {
             border: 10px solid turquoise;
+            --website-site-carousel-control-top: 0px;
         }
 
         // Smaller screens ...

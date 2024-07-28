@@ -11147,6 +11147,64 @@
     }
   }
 }
+@layer vendors {
+  /**
+   * Modal is from the Bootstrap vendor, so we are mostly overriding styles
+  */
+  @layer modal {
+    .modal h4 {
+      margin-top: 47px;
+    }
+    .modal .modal-list {
+      list-style: none;
+    }
+    .modal .modal-list li:before {
+      padding-right: 11px;
+      font-size: 17px;
+    }
+    .modal .modal-list .light-color-icon:before {
+      color: #BCBCBC;
+    }
+    .modal .btn {
+      margin-top: 36px;
+    }
+    .modal .btn.bi-box-arrow-up-right::before {
+      position: absolute;
+      right: 17px;
+      top: 11px;
+    }
+    @media (min-width: 1400px) {
+      .modal {
+        border: 10px solid purple;
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      .modal {
+        border: 10px solid violet;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .modal {
+        border: 10px solid lime;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .modal {
+        border: 10px solid blue;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      .modal {
+        border: 10px solid turquoise;
+      }
+    }
+    @media (max-width: 575px) {
+      .modal {
+        border: 10px solid chocolate;
+      }
+    }
+  }
+}
 @layer components {
   /**
    * Icons (bootstrap, material)
@@ -11714,8 +11772,9 @@
   }
   :root {
     --website-a-color: inherit;
-    --website-text-decoration:none;
-    --website-hover-state:35%;
+    --website-site-carousel-hover-state: 35%;
+    --website-site-carousel-control-top: 3px;
+    --website-site-carousel-item-gap: 0;
   }
   /**
    * Basic decorator of the carousel component.
@@ -11728,93 +11787,69 @@
       margin: 0;
       padding: 0;
     }
+    .site-carousel .slick-arrow {
+      position: absolute;
+      top: var(--website-site-carousel-control-top);
+      right: 0;
+      z-index: 2;
+    }
+    .site-carousel .slick-arrow.slick-prev {
+      right: 75px;
+    }
+    .site-carousel .slick-arrow.slick-disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
     .site-carousel .site-carousel-item a {
+      display: block;
       color: var(--website-a-color);
-      text-decoration: var(--website-text-decoration);
+      text-decoration: none;
     }
     .site-carousel .site-carousel-item a:hover h3, .site-carousel .site-carousel-item a:hover p, .site-carousel .site-carousel-item a:hover .badge {
-      opacity: var(--website-hover-state);
+      opacity: var(--website-site-carousel-hover-state);
+    }
+    .site-carousel .site-carousel-item:nth-child(odd) {
+      padding-right: var(--website-site-carousel-item-gap);
+    }
+    .site-carousel .site-carousel-item:nth-child(even) {
+      padding-left: var(--website-site-carousel-item-gap);
     }
     @media (min-width: 1400px) {
       .site-carousel {
         border: 10px solid purple;
+        --website-site-carousel-control-top: -70px;
+        --website-site-carousel-item-gap: 60px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .site-carousel {
         border: 10px solid violet;
+        --website-site-carousel-control-top: -80px;
+        --website-site-carousel-item-gap: 60px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .site-carousel {
         border: 10px solid lime;
+        --website-site-carousel-control-top: -70px;
+        --website-site-carousel-item-gap: 40px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .site-carousel {
         border: 10px solid blue;
+        --website-site-carousel-control-top: 0px;
+        --website-site-carousel-item-gap: 20px;
       }
     }
     @media (min-width: 576px) and (max-width: 767px) {
       .site-carousel {
         border: 10px solid turquoise;
+        --website-site-carousel-control-top: 0px;
       }
     }
     @media (max-width: 575px) {
       .site-carousel {
-        border: 10px solid chocolate;
-      }
-    }
-  }
-  @layer carousel-modale {
-    .caroussel-modal h4 {
-      margin-top: 47px;
-    }
-    .caroussel-modal .project-list {
-      list-style: none;
-    }
-    .caroussel-modal .project-list li:before {
-      padding-right: 11px;
-      font-size: 17px;
-    }
-    .caroussel-modal .project-list .light-color-icon:before {
-      color: #BCBCBC;
-    }
-    .caroussel-modal .btn {
-      margin-top: 36px;
-    }
-    .caroussel-modal .btn.bi-box-arrow-up-right::before {
-      position: absolute;
-      right: 17px;
-      top: 11px;
-    }
-    @media (min-width: 1400px) {
-      .caroussel-modal {
-        border: 10px solid purple;
-      }
-    }
-    @media (min-width: 1200px) and (max-width: 1399px) {
-      .caroussel-modal {
-        border: 10px solid violet;
-      }
-    }
-    @media (min-width: 992px) and (max-width: 1199px) {
-      .caroussel-modal {
-        border: 10px solid lime;
-      }
-    }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .caroussel-modal {
-        border: 10px solid blue;
-      }
-    }
-    @media (min-width: 576px) and (max-width: 767px) {
-      .caroussel-modal {
-        border: 10px solid turquoise;
-      }
-    }
-    @media (max-width: 575px) {
-      .caroussel-modal {
         border: 10px solid chocolate;
       }
     }

@@ -1,11 +1,16 @@
+/**
+ * Modal is from the Bootstrap vendor, so we are mostly overriding styles
+*/
+
+
 :root {
     
 }
 
 
 
-@layer carousel-modale {
-    .caroussel-modal { 
+@layer modal {
+    .modal { 
         
         h4
         {
@@ -13,7 +18,7 @@
         }
 
         //List styles
-        .project-list
+        .modal-list
         {
             list-style: none;
 
@@ -30,6 +35,8 @@
                 }
             }
         }
+        
+        // [NOTE]: Ww'll be back to this style soon ---------
         .btn{
             margin-top: 36px;
         }
@@ -41,6 +48,11 @@
             top: 11px;
             }
         }
+        // [NOTE]: Ww'll be back to this style soon ---------
+
+
+
+
         // Extra Large screens ...
         @media (min-width: 1400px) {
             border: 10px solid purple;
