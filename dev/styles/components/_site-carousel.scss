@@ -35,22 +35,31 @@
 
             // Next arrow icon
 
-            // &.slick-next
-            // {
-            //     &:after{
-            //         content: '\F285';    
-            //     }
-            // }
+            &.slick-next
+            {
+                
+                &:after{
+                    content: '\F285';
+                    font-family: bootstrap-icons!important;
+                    color: #B31E7F;  
+                    position: relative;
+                    top: 3px;
+                }
+            }
 
 
             &.slick-prev {
-                right: 75px;
+                right: 95px;
                 padding: 11px 15px 11px 11px;
                
-            //     &:before
-            //    {
-            //         content: '\F286';    
-            //     }
+                &:before
+               {
+                    content: '\F284';  
+                    font-family: bootstrap-icons!important;
+                    color: #B31E7F;
+                    position: relative;
+                    top: 3px;
+                }
             }
             &.slick-disabled {
                 opacity: 0.4;

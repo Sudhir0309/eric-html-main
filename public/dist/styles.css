@@ -11818,9 +11818,23 @@
       background: none;
       padding: 11px 11px 11px 15px;
     }
+    .site-carousel .slick-arrow.slick-next:after {
+      content: "\f285";
+      font-family: bootstrap-icons !important;
+      color: #B31E7F;
+      position: relative;
+      top: 3px;
+    }
     .site-carousel .slick-arrow.slick-prev {
-      right: 75px;
+      right: 95px;
       padding: 11px 15px 11px 11px;
+    }
+    .site-carousel .slick-arrow.slick-prev:before {
+      content: "\f284";
+      font-family: bootstrap-icons !important;
+      color: #B31E7F;
+      position: relative;
+      top: 3px;
     }
     .site-carousel .slick-arrow.slick-disabled {
       opacity: 0.4;
