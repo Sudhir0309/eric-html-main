@@ -11792,7 +11792,7 @@
   :root {
     --website-a-color: inherit;
     --website-site-carousel-hover-state: 35%;
-    --website-site-carousel-control-top: 3px;
+    --website-site-carousel-control-top: -80px;
     --website-site-carousel-item-gap: 0;
   }
   /**
@@ -11805,15 +11805,22 @@
       list-style: none;
       margin: 0;
       padding: 0;
+      margin-top: 120px;
     }
     .site-carousel .slick-arrow {
       position: absolute;
       top: var(--website-site-carousel-control-top);
       right: 0;
       z-index: 2;
+      border: 2px solid #B31E7F;
+      font-size: 18px;
+      line-height: 25px;
+      background: none;
+      padding: 11px 11px 11px 15px;
     }
     .site-carousel .slick-arrow.slick-prev {
       right: 75px;
+      padding: 11px 15px 11px 11px;
     }
     .site-carousel .slick-arrow.slick-disabled {
       opacity: 0.4;
@@ -11824,8 +11831,19 @@
       color: var(--website-a-color);
       text-decoration: none;
     }
+    .site-carousel .site-carousel-item a .hover-btn {
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 0 4px 90px rgba(0, 0, 0, 0.65);
+      top: 141px;
+      left: 30%;
+    }
     .site-carousel .site-carousel-item a:hover h3, .site-carousel .site-carousel-item a:hover p, .site-carousel .site-carousel-item a:hover .badge {
       opacity: var(--website-site-carousel-hover-state);
+    }
+    .site-carousel .site-carousel-item a:hover .hover-btn {
+      visibility: visible;
+      opacity: 1;
     }
     .site-carousel .site-carousel-item:nth-child(odd) {
       padding-right: var(--website-site-carousel-item-gap);
@@ -11857,14 +11875,12 @@
     @media (min-width: 768px) and (max-width: 991px) {
       .site-carousel {
         border: 10px solid blue;
-        --website-site-carousel-control-top: 0px;
         --website-site-carousel-item-gap: 20px;
       }
     }
     @media (min-width: 576px) and (max-width: 767px) {
       .site-carousel {
         border: 10px solid turquoise;
-        --website-site-carousel-control-top: 0px;
       }
     }
     @media (max-width: 575px) {

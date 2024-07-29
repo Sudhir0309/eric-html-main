@@ -1,7 +1,8 @@
 :root {
     --website-a-color: inherit;
     --website-site-carousel-hover-state: 35%;
-    --website-site-carousel-control-top: 3px;
+    // --website-site-carousel-control-top: 3px;
+    --website-site-carousel-control-top: -80px;
     --website-site-carousel-item-gap: 0;
 }
 
@@ -16,6 +17,7 @@
         list-style: none;    
         margin: 0;
         padding: 0;
+        margin-top: 120px;
 
         // [Carousel controls]
         // Move all button controls to the carousel top right, and align them horizontally
@@ -25,9 +27,30 @@
             top: var(--website-site-carousel-control-top);
             right: 0;
             z-index: 2;
-    
+            border: 2px solid #B31E7F;
+            font-size: 18px;
+            line-height: 25px;
+            background: none;
+            padding: 11px 11px 11px 15px;
+
+            // Next arrow icon
+
+            // &.slick-next
+            // {
+            //     &:after{
+            //         content: '\F285';    
+            //     }
+            // }
+
+
             &.slick-prev {
                 right: 75px;
+                padding: 11px 15px 11px 11px;
+               
+            //     &:before
+            //    {
+            //         content: '\F286';    
+            //     }
             }
             &.slick-disabled {
                 opacity: 0.4;
@@ -35,17 +58,35 @@
             }
         }
 
+
         .site-carousel-item {
             a {
                 display: block;
                 color: var(--website-a-color);
                 text-decoration: none;
+
+                .hover-btn
+                {
+                    opacity: 0;
+                    visibility: hidden;
+                    box-shadow: 0 4px 90px rgba(0, 0, 0, 0.65);
+                    top: 141px;
+                    left: 30%;
+                }
                 
                 &:hover{
                     h3, p, .badge{
                         opacity:var(--website-site-carousel-hover-state);
                     }
+
+                    .hover-btn
+                    {
+                        visibility: visible;
+                        opacity: 1;
+                    }
                 }
+
+
             }
 
             &:nth-child(odd) {
@@ -55,6 +96,7 @@
             &:nth-child(even) {
                 padding-left: var(--website-site-carousel-item-gap);
             }
+            
         }
 
         // Extra Large screens ...
@@ -81,14 +123,14 @@
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
             border: 10px solid blue;
-            --website-site-carousel-control-top: 0px;
+            // --website-site-carousel-control-top: 0px;
             --website-site-carousel-item-gap: 20px;
         }
 
         // Small Medium screens ...
         @media (min-width: 576px) and (max-width: (768px - 1)) {
             border: 10px solid turquoise;
-            --website-site-carousel-control-top: 0px;
+            // --website-site-carousel-control-top: 0px;
         }
 
         // Smaller screens ...

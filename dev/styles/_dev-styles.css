@@ -52,11 +52,11 @@ p{ margin-bottom: 35px;}
 .skill-col .icon { margin-bottom:20px; display: block;}
 .skill-col .icon img{ width:86px;}
 .skill-col .section-heading{ margin-bottom:35px;}
-.tenverto-col{ background-image:url(../images/bg-shadow-img.png) !important; background-size: cover !important;}
+.tenverto-col{ background-image:url(../images/bg-shadow-img.png) !important; background-size: cover !important;} 
 .tenverto-col .person{ width: 414px;}
 .about-col .icon img{ width: 86px;}
 .career-col .list-col{ position: relative; padding-left:70px; }
-.career-col .list-col::before{ background: url(../images/border.png) top left repeat-y ; content: ''; position: absolute; left:20px; top: 0; height: 100%; width: 1px;}
+.career-col .list-col::before{ background: url(../images/border.png) top left repeat-y ; content: ''; position: absolute;   left:20px; top: 0; height: 100%; width: 1px;}
 .career-col .list-col li{ margin-bottom: 56px;}
 .career-col .list-col li:last-child{ margin-bottom: 20px;}
 .career-col .list-col li span{ right: 492px; position: absolute; top:0; display:block; background: #F0EBBE; width: 60px; font-family: "Roboto Condensed", sans-serif; font-weight: 700; line-height: 40px; text-align: center; }
