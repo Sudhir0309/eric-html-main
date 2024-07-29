@@ -4,7 +4,7 @@
 
 
 :root {
-    
+    --website-modal-LeftRight-space:40px;
 }
 
 
@@ -15,6 +15,12 @@
         h4
         {
             margin-top: 47px;
+        }
+
+        .modal-header, .modal-body
+        {
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         //List styles
@@ -35,6 +41,12 @@
                 }
             }
         }
+
+        .grid-col
+        {
+            grid-template-columns: auto auto auto;
+            grid-gap: 12px;
+        }
         
         // [NOTE]: Ww'll be back to this style soon ---------
         .btn{
@@ -45,7 +57,7 @@
             &::before{
             position: absolute;
             right: 17px;
-            top: 11px;
+            top: 11px !important;
             }
         }
         // [NOTE]: Ww'll be back to this style soon ---------
@@ -56,11 +68,15 @@
         // Extra Large screens ...
         @media (min-width: 1400px) {
             border: 10px solid purple;
+            .modal-header, .modal-body{padding-left: var(--website-modal-LeftRight-space); 
+                padding-right: var(--website-modal-LeftRight-space);}
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
             border: 10px solid violet;
+            .modal-header, .modal-body{padding-left: var(--website-modal-LeftRight-space); 
+                padding-right: var(--website-modal-LeftRight-space);}
         }
         
         // Large Medium screens ...

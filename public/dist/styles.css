@@ -11151,9 +11151,16 @@
   /**
    * Modal is from the Bootstrap vendor, so we are mostly overriding styles
   */
+  :root {
+    --website-modal-LeftRight-space:40px;
+  }
   @layer modal {
     .modal h4 {
       margin-top: 47px;
+    }
+    .modal .modal-header, .modal .modal-body {
+      padding-left: 20px;
+      padding-right: 20px;
     }
     .modal .modal-list {
       list-style: none;
@@ -11165,22 +11172,34 @@
     .modal .modal-list .light-color-icon:before {
       color: #BCBCBC;
     }
+    .modal .grid-col {
+      grid-template-columns: auto auto auto;
+      grid-gap: 12px;
+    }
     .modal .btn {
       margin-top: 36px;
     }
     .modal .btn.bi-box-arrow-up-right::before {
       position: absolute;
       right: 17px;
-      top: 11px;
+      top: 11px !important;
     }
     @media (min-width: 1400px) {
       .modal {
         border: 10px solid purple;
       }
+      .modal .modal-header, .modal .modal-body {
+        padding-left: var(--website-modal-LeftRight-space);
+        padding-right: var(--website-modal-LeftRight-space);
+      }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .modal {
         border: 10px solid violet;
+      }
+      .modal .modal-header, .modal .modal-body {
+        padding-left: var(--website-modal-LeftRight-space);
+        padding-right: var(--website-modal-LeftRight-space);
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
