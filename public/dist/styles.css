@@ -11152,7 +11152,7 @@
    * Modal is from the Bootstrap vendor, so we are mostly overriding styles
   */
   :root {
-    --website-modal-LeftRight-space:40px;
+    --website-modal-LeftRight-space: 20px;
   }
   @layer modal {
     .modal h4 {
@@ -11176,6 +11176,10 @@
       grid-template-columns: auto auto auto;
       grid-gap: 12px;
     }
+    .modal .modal-header, .modal .modal-body {
+      padding-left: var(--website-modal-LeftRight-space);
+      padding-right: var(--website-modal-LeftRight-space);
+    }
     .modal .btn {
       margin-top: 36px;
     }
@@ -11187,19 +11191,13 @@
     @media (min-width: 1400px) {
       .modal {
         border: 10px solid purple;
-      }
-      .modal .modal-header, .modal .modal-body {
-        padding-left: var(--website-modal-LeftRight-space);
-        padding-right: var(--website-modal-LeftRight-space);
+        --website-modal-LeftRight-space: 40px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .modal {
         border: 10px solid violet;
-      }
-      .modal .modal-header, .modal .modal-body {
-        padding-left: var(--website-modal-LeftRight-space);
-        padding-right: var(--website-modal-LeftRight-space);
+        --website-modal-LeftRight-space: 40px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
