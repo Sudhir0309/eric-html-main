@@ -35,40 +35,40 @@
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            border: 10px solid purple;
+            // border: 10px solid purple;
             --website-logo-icon-height: 53px;
             --website-logo-icon-gap: 70px;
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            border: 10px solid violet;
+            // border: 10px solid violet;
             --website-logo-icon-height: 53px;
             --website-logo-icon-gap: 70px;
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            border: 10px solid lime;
+            // border: 10px solid lime;
             --website-logo-icon-height: 53px;
             --website-logo-icon-gap: 70px;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            border: 10px solid blue;
+            // border: 10px solid blue;
             --website-logo-icon-height: 53px;
             --website-logo-icon-gap: 70px;
         }
 
         // Small Medium screens ...
         @media (min-width: 576px) and (max-width: (768px - 1)) {
-            border: 10px solid turquoise;
+            // border: 10px solid turquoise;
         }
 
         // Smaller screens ...
         @media (max-width: (576px - 1px)) {
-            border: 10px solid chocolate;
+            // border: 10px solid chocolate;
         }
 
     }

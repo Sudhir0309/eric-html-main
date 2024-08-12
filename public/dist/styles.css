@@ -10960,10 +10960,10 @@
   :root {
     --website-fs-h1: 32px;
     --website-ln-h1: 34px;
-    --website-fs-h2: 24px;
+    --website-fs-h2: 28px;
     --website-ln-h2: 28px;
-    --website-fs-h3: 20px;
-    --website-ln-h3: 27px;
+    --website-fs-h3: 23px;
+    --website-ln-h3: 26px;
     --website-fs-h4: 18px;
     --website-ln-h4: 24px;
     --website-mb-h1: 10px;
@@ -10978,7 +10978,7 @@
     -webkit-font-smoothing: antialiased; /* For Chrome, Safari, and newer versions of Edge */
     -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
     font-smooth: auto; /* For older versions of Edge and other browsers */
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-family: var(--website-font-body);
     font-weight: 400;
     font-style: normal;
@@ -11019,7 +11019,7 @@
       --website-fs-h2: 42px;
       --website-ln-h2: 46px;
       --website-fs-h3: 26.5px;
-      --website-ln-h3: 38.5px;
+      --website-ln-h3: 34.5px;
       --website-fs-h4: 22px;
       --website-ln-h4: 26px;
       --website-mb-h2: 25px;
@@ -11038,7 +11038,7 @@
       --website-fs-h2: 34.5px;
       --website-ln-h2: 38.5px;
       --website-fs-h3: 25px;
-      --website-ln-h3: 35.5px;
+      --website-ln-h3: 33.5px;
       --website-fs-h4: 21px;
       --website-ln-h4: 26px;
       --website-mb-h2: 22px;
@@ -11057,7 +11057,7 @@
       --website-fs-h2: 30.5px;
       --website-ln-h2: 33.5px;
       --website-fs-h3: 24.5px;
-      --website-ln-h3: 32.5px;
+      --website-ln-h3: 30.5px;
       --website-fs-h4: 20.5px;
       --website-ln-h4: 26px;
       --website-mb-h2: 20px;
@@ -11076,7 +11076,7 @@
       --website-fs-h2: 30.5px;
       --website-ln-h2: 33.5px;
       --website-fs-h3: 24.5px;
-      --website-ln-h3: 31.5px;
+      --website-ln-h3: 28.5px;
       --website-fs-h4: 20.5px;
       --website-ln-h4: 24px;
       --website-mb-h2: 20px;
@@ -11614,40 +11614,26 @@
     }
     @media (min-width: 1400px) {
       .icon-list {
-        border: 10px solid purple;
         --website-logo-icon-height: 53px;
         --website-logo-icon-gap: 70px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .icon-list {
-        border: 10px solid violet;
         --website-logo-icon-height: 53px;
         --website-logo-icon-gap: 70px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .icon-list {
-        border: 10px solid lime;
         --website-logo-icon-height: 53px;
         --website-logo-icon-gap: 70px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .icon-list {
-        border: 10px solid blue;
         --website-logo-icon-height: 53px;
         --website-logo-icon-gap: 70px;
-      }
-    }
-    @media (min-width: 576px) and (max-width: 767px) {
-      .icon-list {
-        border: 10px solid turquoise;
-      }
-    }
-    @media (max-width: 575px) {
-      .icon-list {
-        border: 10px solid chocolate;
       }
     }
   }
@@ -11790,8 +11776,14 @@
   :root {
     --website-a-color: inherit;
     --website-site-carousel-hover-state: 35%;
-    --website-site-carousel-control-top: -80px;
+    --website-site-carousel-btnprev-y: -66px;
+    --website-site-carousel-btnnext-y: -110px;
     --website-site-carousel-item-gap: 0;
+    --website-site-carousel-btnprev-x: 0px;
+    --website-site-carousel-btn-x: 0;
+    --website-site-carousel-btn-padd: 6px 8px 6px 13px;
+    --website-site-carousel-btn-fontsize: 0.8rem;
+    --website-site-carousel-btn-line-height: 25px;
   }
   /**
    * Basic decorator of the carousel component.
@@ -11803,18 +11795,16 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      margin-top: 120px;
     }
     .site-carousel .slick-arrow {
       position: absolute;
-      top: var(--website-site-carousel-control-top);
-      right: 0;
+      top: var(--website-site-carousel-btnnext-y);
+      right: var(--website-site-carousel-btn-x);
       z-index: 2;
-      border: 2px solid #B31E7F;
-      font-size: 18px;
-      line-height: 25px;
-      background: none;
-      padding: 11px 11px 11px 15px;
+      font-weight: bold;
+      font-size: var(--website-site-carousel-btn-fontsize);
+      line-height: var(--website-site-carousel-btn-line-height);
+      padding: var(--website-site-carousel-btn-padd);
     }
     .site-carousel .slick-arrow.slick-next:after {
       content: "\f285";
@@ -11824,8 +11814,8 @@
       top: 3px;
     }
     .site-carousel .slick-arrow.slick-prev {
-      right: 95px;
-      padding: 11px 15px 11px 11px;
+      top: var(--website-site-carousel-btnprev-y);
+      right: var(--website-site-carousel-btnprev-x);
     }
     .site-carousel .slick-arrow.slick-prev:before {
       content: "\f284";
@@ -11881,21 +11871,21 @@
     @media (min-width: 1400px) {
       .site-carousel {
         border: 10px solid purple;
-        --website-site-carousel-control-top: -70px;
+        --website-site-carousel-btnnext-y: -70px;
         --website-site-carousel-item-gap: 60px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .site-carousel {
         border: 10px solid violet;
-        --website-site-carousel-control-top: -80px;
+        --website-site-carousel-btnnext-y: -80px;
         --website-site-carousel-item-gap: 60px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .site-carousel {
         border: 10px solid lime;
-        --website-site-carousel-control-top: -70px;
+        --website-site-carousel-btnnext-y: -70px;
         --website-site-carousel-item-gap: 40px;
       }
     }
@@ -11929,6 +11919,7 @@
     --website-btnscrolltop-font-size: 0.8rem;
     --website-btnscrolltop-x-pos: 10px;
     --website-btnscrolltop-arrowdisplay: none;
+    --website-hero-elts-spacer: 20px 0 0 0;
   }
   @layer anchors-scrollto {
     section {
@@ -12007,27 +11998,37 @@
     }
   }
   @layer section-footer-cta {
-    .section-footer-cta {
-      margin: var(--website-section-footer-cta-marg);
+    .icon-list,
+    .section-footer-cta,
+    .site-carousel {
+      margin: var(--website-hero-elts-spacer);
     }
     @media (min-width: 1400px) {
-      .section-footer-cta {
-        --website-section-footer-cta-marg: 35px 0 0 0;
+      .icon-list,
+      .section-footer-cta,
+      .site-carousel {
+        --website-hero-elts-spacer: 35px 0 0 0;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
-      .section-footer-cta {
-        --website-section-footer-cta-marg: 35px 0 0 0;
+      .icon-list,
+      .section-footer-cta,
+      .site-carousel {
+        --website-hero-elts-spacer: 35px 0 0 0;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
-      .section-footer-cta {
-        --website-section-footer-cta-marg: 30px 0 0 0;
+      .icon-list,
+      .section-footer-cta,
+      .site-carousel {
+        --website-hero-elts-spacer: 30px 0 0 0;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
-      .section-footer-cta {
-        --website-section-footer-cta-marg: 25px 0 0 0;
+      .icon-list,
+      .section-footer-cta,
+      .site-carousel {
+        --website-hero-elts-spacer: 25px 0 0 0;
       }
     }
   }
@@ -12245,6 +12246,11 @@
     .site-carousel .badge {
       color: var(--website-clr-gray-5);
       background-color: var(--website-clr-gray-1);
+    }
+    .site-carousel .slick-arrow {
+      background-color: var(--website-theme-light-col-2a);
+      border: 0;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
   }
   @layer hero {

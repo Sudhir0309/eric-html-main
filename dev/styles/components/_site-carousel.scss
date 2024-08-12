@@ -1,9 +1,15 @@
 :root {
     --website-a-color: inherit;
-    --website-site-carousel-hover-state: 35%;
-    // --website-site-carousel-control-top: 3px;
-    --website-site-carousel-control-top: -80px; 
+    --website-site-carousel-hover-state: 35%; 
+    --website-site-carousel-btnprev-y: -66px; 
+    --website-site-carousel-btnnext-y: -110px; 
     --website-site-carousel-item-gap: 0;
+
+    --website-site-carousel-btnprev-x: 0px; // 60px;
+    --website-site-carousel-btn-x: 0; //-10px;
+    --website-site-carousel-btn-padd: 6px 8px 6px 13px;
+    --website-site-carousel-btn-fontsize: 0.8rem;
+    --website-site-carousel-btn-line-height: 25px;
 }
 
 /**
@@ -17,28 +23,26 @@
         list-style: none;    
         margin: 0;
         padding: 0;
-        margin-top: 120px;
+        // margin-top: 120px;
 
         // [Carousel controls]
         // Move all button controls to the carousel top right, and align them horizontally
         // "Prev button" on the left, and "next button" on the right
         .slick-arrow  {
             position: absolute;
-            top: var(--website-site-carousel-control-top);
-            right: 0;
+            top: var(--website-site-carousel-btnnext-y);
+            right: var(--website-site-carousel-btn-x);
             z-index: 2;
-            border: 2px solid #B31E7F;
-            font-size: 18px;
-            line-height: 25px;
-            background: none;
-            padding: 11px 11px 11px 15px;
+            font-weight: bold;
+            font-size: var(--website-site-carousel-btn-fontsize);
+            line-height: var(--website-site-carousel-btn-line-height);
+            padding: var(--website-site-carousel-btn-padd);
 
             // Next arrow icon
 
-            &.slick-next
-            {
+            &.slick-next {
                 
-                &:after{
+                &:after {
                     content: '\F285';
                     font-family: bootstrap-icons!important;
                     color: #B31E7F;  
@@ -49,8 +53,8 @@
 
 
             &.slick-prev {
-                right: 95px;
-                padding: 11px 15px 11px 11px;
+                top: var(--website-site-carousel-btnprev-y);
+                right: var(--website-site-carousel-btnprev-x);
                
                 &:before
                {
@@ -123,35 +127,35 @@
         // Extra Large screens ...
         @media (min-width: 1400px) {
             border: 10px solid purple;
-            --website-site-carousel-control-top: -70px;
+            --website-site-carousel-btnnext-y: -70px;
             --website-site-carousel-item-gap: 60px;
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
             border: 10px solid violet;
-            --website-site-carousel-control-top: -80px;
+            --website-site-carousel-btnnext-y: -80px;
             --website-site-carousel-item-gap: 60px;
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
             border: 10px solid lime;
-            --website-site-carousel-control-top: -70px;
+            --website-site-carousel-btnnext-y: -70px;
             --website-site-carousel-item-gap: 40px;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
             border: 10px solid blue;
-            // --website-site-carousel-control-top: 0px;
+            // --website-site-carousel-btnnext-y: 0px;
             --website-site-carousel-item-gap: 20px;
         }
 
         // Small Medium screens ...
         @media (min-width: 576px) and (max-width: (768px - 1)) {
             border: 10px solid turquoise;
-            // --website-site-carousel-control-top: 0px;
+            // --website-site-carousel-btnnext-y: 0px;
         }
 
         // Smaller screens ...

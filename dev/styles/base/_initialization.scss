@@ -6,10 +6,13 @@
     // Font sizes and line heights ... 
   --website-fs-h1: 32px;
   --website-ln-h1: 34px; 
-  --website-fs-h2: 24px;
+
+  --website-fs-h2: 28px;
   --website-ln-h2: 28px; 
-  --website-fs-h3: 20px;
-  --website-ln-h3: 27px; 
+
+  --website-fs-h3: 23px;
+  --website-ln-h3: 26px; 
+
   --website-fs-h4: 18px;
   --website-ln-h4: 24px;
 
@@ -31,7 +34,7 @@ body {
   font-smooth: auto; /* For older versions of Edge and other browsers */
 
   // ...
-  font-size: 1.15rem;
+  font-size: 1.05rem;
 
   // Typography
   font-family: var(--website-font-body);
@@ -120,7 +123,7 @@ h5 {
     --website-fs-h2: 42px;
     --website-ln-h2: 46px; 
     --website-fs-h3: 26.5px;
-    --website-ln-h3: 38.5px; 
+    --website-ln-h3: 34.5px; 
     --website-fs-h4: 22px;
     --website-ln-h4: 26px;
 
@@ -140,7 +143,7 @@ h5 {
     --website-fs-h2: 34.5px;
     --website-ln-h2: 38.5px; 
     --website-fs-h3: 25px;
-    --website-ln-h3: 35.5px; 
+    --website-ln-h3: 33.5px; 
     --website-fs-h4: 21px;
     --website-ln-h4: 26px;
 
@@ -160,7 +163,7 @@ h5 {
     --website-fs-h2: 30.5px;
     --website-ln-h2: 33.5px; 
     --website-fs-h3: 24.5px;
-    --website-ln-h3: 32.5px; 
+    --website-ln-h3: 30.5px; 
     --website-fs-h4: 20.5px;
     --website-ln-h4: 26px;
 
@@ -180,7 +183,7 @@ h5 {
     --website-fs-h2: 30.5px;
     --website-ln-h2: 33.5px; 
     --website-fs-h3: 24.5px;
-    --website-ln-h3: 31.5px; 
+    --website-ln-h3: 28.5px; 
     --website-fs-h4: 20.5px;
     --website-ln-h4: 24px;
 
