@@ -1,93 +1,72 @@
 
 
-:root {
-    --website-hero-margin: 0 0 30px 0;
-    --website-hero-height: 270px;
-    --website-hero-deo-width: 300px;
-    --website-hero-deo-persona-width: 80%;
-    --website-hero-deo-glow-width: 200%;
+:root { 
+    --website-hero-height: auto; // 270px; 
+    --website-hero-top-spacing: 30px;
+    --website-hero-jumbotron-margin: 0 0 20px 0;
+    --website-hero-deo-persona-width: 70%;
 }
 
 
 @layer hero {
     .hero {
         position: relative;
-        margin: var(--website-hero-margin);
+        height: var(--website-hero-height); 
 
-        .hero-content-wrapper {
-            display: flex;
-            align-items: end;
-            height: var(--website-hero-height);
-            overflow: hidden;
+        &-content-wrapper {
+            margin-top: var(--website-hero-top-spacing);
+            // display: flex;
+            // align-items: end;
+            // overflow: hidden;
         }
 
-       
-
-        .hero-decoration {
+        &-persona {
+            transform: scaleX(-1); // Mirroring an Image Horizontally
             position: relative;
-            width: var(--website-hero-deo-width);
+            z-index: 1;
+            width: var(--website-hero-deo-persona-width);
+            display: block;
             margin-left: auto;
             margin-right: auto;
+        }
 
-            .hero-persona {
-                transform: scaleX(-1); // Mirroring an Image Horizontally
-                position: relative;
-                z-index: 1;
-                width: var(--website-hero-deo-persona-width);
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            // .hero-glow {
-            //     position: absolute; 
-            //     left: calc((var(--website-hero-deo-widt) / 2) - (var(--website-hero-deo-glow-width) / 2));
-            //     left: calc(150px - 100%);
-            //     width: var(--website-hero-deo-glow-width);
-            //     bottom: 0;
-            // }
+        &-jumbotron {
+            margin: var(--website-hero-jumbotron-margin);
         }
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            // border: 10px solid purple;
-            --website-hero-margin: 0 0 120px 0;
-            --website-hero-height: 560px;
-            --website-hero-deo-width: 530px; 
+            border: 10px solid purple; 
+            --website-hero-height: 560px; 
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            // border: 10px solid violet;
-            --website-hero-margin: 0 0 120px 0;
-            --website-hero-height: 560px;
-            --website-hero-deo-width: 530px; 
+            border: 10px solid violet; 
+            --website-hero-height: 560px; 
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            // border: 10px solid lime;
-            --website-hero-margin: 0 0 70px 0;
-            --website-hero-height: 430px;
-            --website-hero-deo-width: 400px; 
+            border: 10px solid lime; 
+            --website-hero-height: 430px; 
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            // border: 10px solid blue;
-            --website-hero-margin: 0 0 50px 0;
-            --website-hero-height: 430px;
-            --website-hero-deo-width: 400px; 
+            border: 10px solid blue; 
+            --website-hero-height: 430px; 
         }
 
-        // // Small Medium screens ...
-        // @media (min-width: 576px) and (max-width: (768px - 1)) {
-        //     // border: 10px solid turquoise;
-        // }
+        // Small Medium screens ...
+        @media (min-width: 576px) and (max-width: (768px - 1)) {
+            border: 10px solid turquoise;
+        }
 
-        // // Smaller screens ...
-        // @media (max-width: (576px - 1px)) {
-        //     // border: 10px solid chocolate;
-        // }
+        // Smaller screens ...
+        @media (max-width: (576px - 1px)) {
+            border: 10px solid chocolate;
+        }
     }
 }
 

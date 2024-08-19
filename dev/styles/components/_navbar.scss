@@ -69,16 +69,6 @@
             
         .container {
             position: relative;
-
-            // bottom border
-            &::after {
-                position: absolute;
-                left: 11px;
-                bottom: 0px;
-                content: '';
-                height: 1px;
-                width: calc(100% - 24px);
-            }
         }
  
         .navbar-collapse {

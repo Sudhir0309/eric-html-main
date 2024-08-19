@@ -11469,30 +11469,20 @@
     }
   }
   :root {
-    --website-hero-margin: 0 0 30px 0;
-    --website-hero-height: 270px;
-    --website-hero-deo-width: 300px;
-    --website-hero-deo-persona-width: 80%;
-    --website-hero-deo-glow-width: 200%;
+    --website-hero-height: auto;
+    --website-hero-top-spacing: 30px;
+    --website-hero-jumbotron-margin: 0 0 20px 0;
+    --website-hero-deo-persona-width: 70%;
   }
   @layer hero {
     .hero {
       position: relative;
-      margin: var(--website-hero-margin);
-    }
-    .hero .hero-content-wrapper {
-      display: flex;
-      align-items: end;
       height: var(--website-hero-height);
-      overflow: hidden;
     }
-    .hero .hero-decoration {
-      position: relative;
-      width: var(--website-hero-deo-width);
-      margin-left: auto;
-      margin-right: auto;
+    .hero-content-wrapper {
+      margin-top: var(--website-hero-top-spacing);
     }
-    .hero .hero-decoration .hero-persona {
+    .hero-persona {
       transform: scaleX(-1);
       position: relative;
       z-index: 1;
@@ -11501,32 +11491,41 @@
       margin-left: auto;
       margin-right: auto;
     }
+    .hero-jumbotron {
+      margin: var(--website-hero-jumbotron-margin);
+    }
     @media (min-width: 1400px) {
       .hero {
-        --website-hero-margin: 0 0 120px 0;
+        border: 10px solid purple;
         --website-hero-height: 560px;
-        --website-hero-deo-width: 530px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .hero {
-        --website-hero-margin: 0 0 120px 0;
+        border: 10px solid violet;
         --website-hero-height: 560px;
-        --website-hero-deo-width: 530px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .hero {
-        --website-hero-margin: 0 0 70px 0;
+        border: 10px solid lime;
         --website-hero-height: 430px;
-        --website-hero-deo-width: 400px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .hero {
-        --website-hero-margin: 0 0 50px 0;
+        border: 10px solid blue;
         --website-hero-height: 430px;
-        --website-hero-deo-width: 400px;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      .hero {
+        border: 10px solid turquoise;
+      }
+    }
+    @media (max-width: 575px) {
+      .hero {
+        border: 10px solid chocolate;
       }
     }
   }
@@ -11735,14 +11734,6 @@
     }
     .navbar .container {
       position: relative;
-    }
-    .navbar .container::after {
-      position: absolute;
-      left: 11px;
-      bottom: 0px;
-      content: "";
-      height: 1px;
-      width: calc(100% - 24px);
     }
     .navbar .navbar-collapse {
       text-align: center;
@@ -12249,7 +12240,7 @@
     --website-theme-light-col-2d: #959572;
     --website-theme-light-col-2c: #fff7b0;
     --website-theme-light-col-2d: #EAEACE;
-    --website-theme-light-col-3a: #080806;
+    --website-theme-light-col-3a: #010023;
     --website-theme-light-col-3b: #262200;
     --website-theme-light-col-3c: #4A4834;
     --website-theme-light-col-4a: #004ee5;
@@ -12283,6 +12274,7 @@
   }
   @layer hero {
     .hero {
+      color: var(--website-theme-light-col-1a);
       background-color: var(--website-theme-light-col-3a);
     }
     .hero .speech-bubble {
@@ -12296,15 +12288,6 @@
     }
   }
   @layer navbar {
-    .navbar {
-      background-color: var(--website-theme-light-col-1a);
-    }
-    .navbar .container::after {
-      background-color: var(--website-theme-light-col-2b1);
-    }
-    .navbar .navbar-collapse {
-      background-color: var(--website-theme-light-navbar-collapse-bgcol);
-    }
     .navbar .navbar-brand, .navbar .nav-link {
       color: var(--website-theme-light-col-3c);
     }

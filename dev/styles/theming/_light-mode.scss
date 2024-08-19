@@ -7,7 +7,7 @@
     --website-theme-light-col-2d: #959572;
     --website-theme-light-col-2c: #fff7b0;
     --website-theme-light-col-2d: #EAEACE;
-    --website-theme-light-col-3a: #080806;
+    --website-theme-light-col-3a: #010023;
     --website-theme-light-col-3b: #262200;
     --website-theme-light-col-3c: #4A4834;
     --website-theme-light-col-4a: #004ee5;
@@ -57,6 +57,7 @@
 
     @layer hero {
         .hero {
+            color: var(--website-theme-light-col-1a);
             background-color: var(--website-theme-light-col-3a);
 
             .speech-bubble {
@@ -76,18 +77,11 @@
 
     @layer navbar {
         .navbar {
-            background-color: var(--website-theme-light-col-1a);
-            
-            .container {
-                // bottom border
-                &::after {
-                    background-color: var(--website-theme-light-col-2b1);
-                }
-            }
+            // background-color: var(--website-theme-light-col-1a);
 
-            .navbar-collapse {
-                background-color: var(--website-theme-light-navbar-collapse-bgcol);
-            }
+            // .navbar-collapse {
+            //     background-color: var(--website-theme-light-navbar-collapse-bgcol);
+            // }
 
             .navbar-brand, .nav-link {
                 color: var(--website-theme-light-col-3c);
