@@ -11474,14 +11474,6 @@
     --website-hero-deo-width: 300px;
     --website-hero-deo-persona-width: 80%;
     --website-hero-deo-glow-width: 200%;
-    --website-hero-spbubble-left: 16%;
-    --website-hero-spbubble-bottom: 18px;
-    --website-hero-spbubble-width: 210px;
-    --website-hero-spbubble-arrow-top: -50px;
-    --website-hero-spbubble-arrow-left: 160px;
-    --website-hero-spbubble-arrow-rotate: -50deg;
-    --website-hero-spbubble-p-fsize: 1rem;
-    --website-hero-spbubble-cta-marg: 3px;
   }
   @layer hero {
     .hero {
@@ -11494,33 +11486,6 @@
       height: var(--website-hero-height);
       overflow: hidden;
     }
-    .hero .speech-bubble {
-      position: absolute;
-      z-index: 2;
-      left: var(--website-hero-spbubble-left);
-      bottom: var(--website-hero-spbubble-bottom);
-      width: var(--website-hero-spbubble-width);
-    }
-    .hero .speech-bubble p {
-      font-size: var(--website-hero-spbubble-p-fsize);
-    }
-    .hero .speech-bubble::before {
-      top: var(--website-hero-spbubble-arrow-top);
-      left: var(--website-hero-spbubble-arrow-left);
-      rotate: var(--website-hero-spbubble-arrow-rotate);
-    }
-    .hero .speech-bubble a {
-      display: inline-block;
-      margin-top: var(--website-hero-spbubble-cta-marg);
-      font-weight: bold;
-      font-size: var(--website-hero-spbubble-p-fsize);
-    }
-    .hero .speech-bubble a:hover {
-      text-decoration: none;
-    }
-    .hero .speech-bubble p:last-of-type {
-      margin: 0;
-    }
     .hero .hero-decoration {
       position: relative;
       width: var(--website-hero-deo-width);
@@ -11528,6 +11493,7 @@
       margin-right: auto;
     }
     .hero .hero-decoration .hero-persona {
+      transform: scaleX(-1);
       position: relative;
       z-index: 1;
       width: var(--website-hero-deo-persona-width);
@@ -11535,26 +11501,11 @@
       margin-left: auto;
       margin-right: auto;
     }
-    .hero .hero-decoration .hero-glow {
-      position: absolute;
-      left: calc(var(--website-hero-deo-widt) / 2 - var(--website-hero-deo-glow-width) / 2);
-      left: calc(150px - 100%);
-      width: var(--website-hero-deo-glow-width);
-      bottom: 0;
-    }
     @media (min-width: 1400px) {
       .hero {
         --website-hero-margin: 0 0 120px 0;
         --website-hero-height: 560px;
         --website-hero-deo-width: 530px;
-        --website-hero-spbubble-p-fsize: 1.3rem;
-        --website-hero-spbubble-width: 290px;
-        --website-hero-spbubble-left: 74%;
-        --website-hero-spbubble-bottom: 180px;
-        --website-hero-spbubble-cta-marg: 10px;
-        --website-hero-spbubble-arrow-top: 0px;
-        --website-hero-spbubble-arrow-left: -37px;
-        --website-hero-spbubble-arrow-rotate: -70deg;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
@@ -11562,14 +11513,6 @@
         --website-hero-margin: 0 0 120px 0;
         --website-hero-height: 560px;
         --website-hero-deo-width: 530px;
-        --website-hero-spbubble-p-fsize: 1.3rem;
-        --website-hero-spbubble-width: 290px;
-        --website-hero-spbubble-left: 74%;
-        --website-hero-spbubble-bottom: 180px;
-        --website-hero-spbubble-cta-marg: 10px;
-        --website-hero-spbubble-arrow-top: 0px;
-        --website-hero-spbubble-arrow-left: -37px;
-        --website-hero-spbubble-arrow-rotate: -70deg;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
@@ -11577,9 +11520,6 @@
         --website-hero-margin: 0 0 70px 0;
         --website-hero-height: 430px;
         --website-hero-deo-width: 400px;
-        --website-hero-spbubble-left: 30%;
-        --website-hero-spbubble-bottom: 60px;
-        --website-hero-spbubble-cta-marg: 5px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
@@ -11587,11 +11527,99 @@
         --website-hero-margin: 0 0 50px 0;
         --website-hero-height: 430px;
         --website-hero-deo-width: 400px;
-        --website-hero-spbubble-left: 30%;
-        --website-hero-spbubble-bottom: 60px;
       }
     }
   }
+  /*
+      SPEECH BUBBLE FEATURE IS DEACTIVATED FOR NOW
+      ------------------------------
+
+      :root { 
+          // speech bubble ..
+          --website-hero-spbubble-left: 16%;
+          --website-hero-spbubble-bottom: 18px;
+          --website-hero-spbubble-width: 210px;
+          --website-hero-spbubble-arrow-top: -50px;
+          --website-hero-spbubble-arrow-left: 160px;
+          --website-hero-spbubble-arrow-rotate: -50deg;
+          --website-hero-spbubble-p-fsize: 1rem;
+          --website-hero-spbubble-cta-marg: 3px;
+      }
+
+      .speech-bubble {
+          position: absolute;
+          z-index: 2;
+
+          left: var(--website-hero-spbubble-left);
+          bottom: var(--website-hero-spbubble-bottom);
+          width: var(--website-hero-spbubble-width);
+
+          p {
+              font-size: var(--website-hero-spbubble-p-fsize);
+          }
+
+          // arrow
+          &::before {
+              top: var(--website-hero-spbubble-arrow-top);
+              left: var(--website-hero-spbubble-arrow-left);
+              rotate: var(--website-hero-spbubble-arrow-rotate);
+          }
+
+          a {
+              display: inline-block;
+              margin-top: var(--website-hero-spbubble-cta-marg);
+              font-weight: bold;
+              font-size: var(--website-hero-spbubble-p-fsize);
+
+              &:hover {
+                  text-decoration: none;
+              }
+          }
+
+          p:last-of-type {
+              margin: 0;
+          }
+
+
+          @media (min-width: 1400px) { 
+              --website-hero-spbubble-p-fsize: 1.3rem;
+              --website-hero-spbubble-width: 290px;
+              --website-hero-spbubble-left: 74%;
+              --website-hero-spbubble-bottom: 180px;
+              --website-hero-spbubble-cta-marg: 10px;
+              // speech bubble arrow .. 
+              --website-hero-spbubble-arrow-top: 0px;
+              --website-hero-spbubble-arrow-left: -37px;
+              --website-hero-spbubble-arrow-rotate: -70deg;
+          }
+
+          // Large screens ...
+          @media (min-width: 1200px) and (max-width: (1400px - 1)) { 
+              --website-hero-spbubble-p-fsize: 1.3rem;
+              --website-hero-spbubble-width: 290px;
+              --website-hero-spbubble-left: 74%;
+              --website-hero-spbubble-bottom: 180px;
+              --website-hero-spbubble-cta-marg: 10px;
+              // speech bubble arrow .. 
+              --website-hero-spbubble-arrow-top: 0px;
+              --website-hero-spbubble-arrow-left: -37px;
+              --website-hero-spbubble-arrow-rotate: -70deg;
+          }
+
+          // Large Medium screens ...
+          @media (min-width: 992px) and (max-width: (1200px - 1)) { 
+              --website-hero-spbubble-left: 30%;
+              --website-hero-spbubble-bottom: 60px;
+              --website-hero-spbubble-cta-marg: 5px;
+          }
+
+          // Medium Medium screens ...
+          @media (min-width: 768px) and (max-width: (992px - 1)) { 
+              --website-hero-spbubble-left: 30%;
+              --website-hero-spbubble-bottom: 60px;
+          }
+      }
+  */
   :root {
     --website-logo-icon-height: 30px;
     --website-logo-icon-gap: 26px;
