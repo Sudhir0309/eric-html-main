@@ -1,6 +1,6 @@
 :root {
-    // --website-theme-light-bodybg-col: #F8F7F4;
     --website-theme-light-col-1a: #fff;
+    --website-theme-light-xxxx-1: #EDEBF7;
     --website-theme-light-col-2a: #FFE500;
     --website-theme-light-col-2b: #8b7d00;
     --website-theme-light-col-2b1: #756900;
@@ -28,7 +28,7 @@
 
 // html[data-theme="light"] {
     body {
-        background-color: var(--website-theme-light-col-1a);
+        background-color: var(--website-theme-light-xxxx-1);
         color: var(--website-theme-light-col-3c);
 
         // h1, h2, h3, h4, h5, h6 {

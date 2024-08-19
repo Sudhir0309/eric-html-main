@@ -2,9 +2,15 @@
 
 :root { 
     --website-hero-height: auto; // 270px; 
-    --website-hero-top-spacing: 30px;
+    --website-hero-margin: 90px auto 0 auto;
     --website-hero-jumbotron-margin: 0 0 20px 0;
-    --website-hero-deo-persona-width: 70%;
+    --website-hero-persona-position: relative;
+    --website-hero-persona-pos-bottom: 0;
+    --website-hero-persona-pos-right: 0;
+    --website-hero-persona-position: relative;
+    --website-hero-persona-width: 50%;
+    --website-hero-persona-margin: 0 auto;
+    --website-jumbotron-textwrapper-width: unset;
 }
 
 
@@ -14,58 +20,85 @@
         height: var(--website-hero-height); 
 
         &-content-wrapper {
-            margin-top: var(--website-hero-top-spacing);
+            margin: var(--website-hero-margin);
             // display: flex;
             // align-items: end;
             // overflow: hidden;
         }
 
         &-persona {
-            transform: scaleX(-1); // Mirroring an Image Horizontally
-            position: relative;
-            z-index: 1;
-            width: var(--website-hero-deo-persona-width);
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            position: var(--website-hero-persona-position);
+            bottom: var(--website-hero-persona-pos-bottom);
+            right: var(--website-hero-persona-pos-right);
+            width: var(--website-hero-persona-width);
+            margin: var(--website-hero-persona-margin);
+            transform: scaleX(-1); // Mirroring an Image Horizontally
+            z-index: 1;
         }
 
         &-jumbotron {
+            width: var(--website-jumbotron-textwrapper-width);
             margin: var(--website-hero-jumbotron-margin);
         }
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            border: 10px solid purple; 
+            border: 3px solid purple; 
             --website-hero-height: 560px; 
+            --website-hero-margin: 190px auto 0 auto;
+            --website-hero-persona-width: 400px;
+            --website-jumbotron-textwrapper-width: 760px;
+            --website-hero-persona-margin: 0;
+            --website-hero-persona-position: absolute;
+            --website-hero-persona-pos-right: 40px;
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            border: 10px solid violet; 
+            border: 3px solid violet; 
             --website-hero-height: 560px; 
+            --website-hero-margin: 190px auto 0 auto;
+            --website-hero-persona-width: 400px;
+            --website-jumbotron-textwrapper-width: 760px;
+            --website-hero-persona-margin: 0;
+            --website-hero-persona-position: absolute;
+            --website-hero-persona-pos-right: 40px;
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            border: 10px solid lime; 
+            border: 3px solid lime; 
             --website-hero-height: 430px; 
+            --website-hero-margin: 160px auto 0 auto;
+            --website-hero-persona-width: 300px;
+            --website-jumbotron-textwrapper-width: 500px;
+            --website-hero-persona-margin: 0;
+            --website-hero-persona-position: absolute;
+            --website-hero-persona-pos-right: 40px;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            border: 10px solid blue; 
+            border: 3px solid blue; 
             --website-hero-height: 430px; 
+            --website-hero-margin: 150px auto 0 auto;
+            --website-hero-persona-width: 300px;
+            --website-jumbotron-textwrapper-width: 400px;
+            --website-hero-persona-margin: 0;
+            --website-hero-persona-position: absolute;
+            --website-hero-persona-pos-right: 60px;
         }
 
         // Small Medium screens ...
         @media (min-width: 576px) and (max-width: (768px - 1)) {
-            border: 10px solid turquoise;
+            border: 3px solid turquoise;
+            --website-hero-persona-width: 45%;
         }
 
         // Smaller screens ...
         @media (max-width: (576px - 1px)) {
-            border: 10px solid chocolate;
+            border: 3px solid chocolate;
         }
     }
 }

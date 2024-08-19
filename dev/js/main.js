@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // Setting up sticky nav ...
-  setElementSticky('main-nav');
+  // setElementSticky('main-nav');
 
   // Setting up scrolltop button ...
   setupScrolltopBtn('scroll-top-button', 300);

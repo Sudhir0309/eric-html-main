@@ -12,6 +12,7 @@
     .icon-list {
         display: flex;
         list-style: none;
+        justify-content: center;
         gap: var(--website-logo-icon-gap);
         padding: 0; 
         overflow: hidden;

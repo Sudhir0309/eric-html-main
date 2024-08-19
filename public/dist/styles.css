@@ -11440,46 +11440,44 @@
     }
   }
   :root {
-    --website-jumbotron-textwrapper-width: unset;
     --website-section-footer-cta-marg: 20px 0 0 0;
   }
   @layer jumbotron {
-    .jumbotron__textwrapper {
-      width: var(--website-jumbotron-textwrapper-width);
-    }
     .jumbotron__textwrapper p:last-of-type {
       margin: 0;
     }
     @media (min-width: 1400px) {
       .jumbotron {
-        --website-jumbotron-textwrapper-width: 760px;
         --website-section-footer-cta-marg: 35px 0 0 0;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .jumbotron {
-        --website-jumbotron-textwrapper-width: 760px;
         --website-section-footer-cta-marg: 35px 0 0 0;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .jumbotron {
-        --website-jumbotron-textwrapper-width: 760px;
         --website-section-footer-cta-marg: 30px 0 0 0;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .jumbotron {
-        --website-jumbotron-textwrapper-width: 560px;
         --website-section-footer-cta-marg: 25px 0 0 0;
       }
     }
   }
   :root {
     --website-hero-height: auto;
-    --website-hero-top-spacing: 30px;
+    --website-hero-margin: 90px auto 0 auto;
     --website-hero-jumbotron-margin: 0 0 20px 0;
-    --website-hero-deo-persona-width: 70%;
+    --website-hero-persona-position: relative;
+    --website-hero-persona-pos-bottom: 0;
+    --website-hero-persona-pos-right: 0;
+    --website-hero-persona-position: relative;
+    --website-hero-persona-width: 50%;
+    --website-hero-persona-margin: 0 auto;
+    --website-jumbotron-textwrapper-width: unset;
   }
   @layer hero {
     .hero {
@@ -11487,52 +11485,79 @@
       height: var(--website-hero-height);
     }
     .hero-content-wrapper {
-      margin-top: var(--website-hero-top-spacing);
+      margin: var(--website-hero-margin);
     }
     .hero-persona {
-      transform: scaleX(-1);
-      position: relative;
-      z-index: 1;
-      width: var(--website-hero-deo-persona-width);
       display: block;
-      margin-left: auto;
-      margin-right: auto;
+      position: var(--website-hero-persona-position);
+      bottom: var(--website-hero-persona-pos-bottom);
+      right: var(--website-hero-persona-pos-right);
+      width: var(--website-hero-persona-width);
+      margin: var(--website-hero-persona-margin);
+      transform: scaleX(-1);
+      z-index: 1;
     }
     .hero-jumbotron {
+      width: var(--website-jumbotron-textwrapper-width);
       margin: var(--website-hero-jumbotron-margin);
     }
     @media (min-width: 1400px) {
       .hero {
-        border: 10px solid purple;
+        border: 3px solid purple;
         --website-hero-height: 560px;
+        --website-hero-margin: 190px auto 0 auto;
+        --website-hero-persona-width: 400px;
+        --website-jumbotron-textwrapper-width: 760px;
+        --website-hero-persona-margin: 0;
+        --website-hero-persona-position: absolute;
+        --website-hero-persona-pos-right: 40px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .hero {
-        border: 10px solid violet;
+        border: 3px solid violet;
         --website-hero-height: 560px;
+        --website-hero-margin: 190px auto 0 auto;
+        --website-hero-persona-width: 400px;
+        --website-jumbotron-textwrapper-width: 760px;
+        --website-hero-persona-margin: 0;
+        --website-hero-persona-position: absolute;
+        --website-hero-persona-pos-right: 40px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .hero {
-        border: 10px solid lime;
+        border: 3px solid lime;
         --website-hero-height: 430px;
+        --website-hero-margin: 160px auto 0 auto;
+        --website-hero-persona-width: 300px;
+        --website-jumbotron-textwrapper-width: 500px;
+        --website-hero-persona-margin: 0;
+        --website-hero-persona-position: absolute;
+        --website-hero-persona-pos-right: 40px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .hero {
-        border: 10px solid blue;
+        border: 3px solid blue;
         --website-hero-height: 430px;
+        --website-hero-margin: 150px auto 0 auto;
+        --website-hero-persona-width: 300px;
+        --website-jumbotron-textwrapper-width: 400px;
+        --website-hero-persona-margin: 0;
+        --website-hero-persona-position: absolute;
+        --website-hero-persona-pos-right: 60px;
       }
     }
     @media (min-width: 576px) and (max-width: 767px) {
       .hero {
-        border: 10px solid turquoise;
+        border: 3px solid turquoise;
+        --website-hero-persona-width: 45%;
       }
     }
     @media (max-width: 575px) {
       .hero {
-        border: 10px solid chocolate;
+        border: 3px solid chocolate;
       }
     }
   }
@@ -11639,6 +11664,7 @@
     .icon-list {
       display: flex;
       list-style: none;
+      justify-content: center;
       gap: var(--website-logo-icon-gap);
       padding: 0;
       overflow: hidden;
@@ -11693,7 +11719,7 @@
     --website-navbar-logo-width: 140px;
     --website-navbar-margin: 0;
     --website-navbar-gap: 0;
-    --website-navbar-padding: 0;
+    --website-navbar-padding: 8px 0;
     --website-navbar-navitem-sep-display: none;
     --website-navbar-navitem-sep-right: -12px;
     --webite-navbar-collapse-padding: 15px 0;
@@ -12241,6 +12267,7 @@
 @layer theming {
   :root {
     --website-theme-light-col-1a: #fff;
+    --website-theme-light-xxxx-1: #EDEBF7;
     --website-theme-light-col-2a: #FFE500;
     --website-theme-light-col-2b: #8b7d00;
     --website-theme-light-col-2b1: #756900;
@@ -12262,7 +12289,7 @@
     --website-clr-gray-5: #302E1D;
   }
   body {
-    background-color: var(--website-theme-light-col-1a);
+    background-color: var(--website-theme-light-xxxx-1);
     color: var(--website-theme-light-col-3c);
   }
   @layer site-carousel {
