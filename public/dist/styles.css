@@ -11157,7 +11157,9 @@
 @layer layouts {
   :root {
     --website-section-intro-card-marg: 0 0 4px 0;
+    --website-section-intro-card-display: block;
     --website-section-intro-card-padd: 30px 20px 20px 20px;
+    --website-skills-card-padd: 30px 20px 20px 20px;
   }
   @layer best-work {
     .best-work-header {
@@ -11165,11 +11167,50 @@
     }
   }
   @layer section-introduction {
+    .section-introduction .card-group {
+      display: var(--website-section-intro-card-display);
+    }
     .section-introduction .card-group .card {
       margin: var(--website-section-intro-card-marg);
     }
     .section-introduction .card-group .card .card-body {
       padding: var(--website-section-intro-card-padd);
+    }
+    @media (min-width: 1400px) {
+      .section-introduction .card-group {
+        border: 4px solid purple;
+        --website-section-intro-card-display: flex;
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      .section-introduction .card-group {
+        border: 4px solid violet;
+        --website-section-intro-card-display: flex;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .section-introduction .card-group {
+        border: 4px solid lime;
+        --website-section-intro-card-display: flex;
+        --website-section-intro-card-padd: 45px 30px 30px 30px;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .section-introduction .card-group {
+        border: 4px solid blue;
+        --website-section-intro-card-padd: 45px 30px 30px 30px;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      .section-introduction .card-group {
+        border: 4px solid turquoise;
+        --website-section-intro-card-padd: 45px 30px 30px 30px;
+      }
+    }
+    @media (max-width: 575px) {
+      .section-introduction .card-group {
+        border: 4px solid chocolate;
+      }
     }
   }
   @layer section-skills {
@@ -11177,6 +11218,41 @@
       display: grid;
       grid-template: 1fr/1fr;
       gap: 4px;
+    }
+    .section-skills .section-skills__wrapper .special-card .card-body {
+      padding: var(--website-skills-card-padd);
+    }
+    @media (min-width: 1400px) {
+      .section-skills .section-skills__wrapper {
+        border: 4px solid purple;
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      .section-skills .section-skills__wrapper {
+        border: 4px solid violet;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .section-skills .section-skills__wrapper {
+        border: 4px solid lime;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .section-skills .section-skills__wrapper {
+        border: 4px solid blue;
+        --website-skills-card-padd: 45px 30px 30px 30px;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      .section-skills .section-skills__wrapper {
+        border: 4px solid turquoise;
+        --website-skills-card-padd: 45px 30px 30px 30px;
+      }
+    }
+    @media (max-width: 575px) {
+      .section-skills .section-skills__wrapper {
+        border: 4px solid chocolate;
+      }
     }
   }
 }
@@ -11981,6 +12057,7 @@
     @media (min-width: 576px) and (max-width: 767px) {
       .site-carousel {
         border: 3px solid turquoise;
+        --website-carousel-card-padd: 30px;
       }
     }
     @media (max-width: 575px) {
@@ -12117,9 +12194,6 @@
     }
   }
   @layer special-card {
-    .special-card .card-body {
-      padding: var(--website-special-card-padd);
-    }
     .special-card__list {
       padding-left: 13px;
     }
@@ -12283,6 +12357,7 @@
     }
     @media (min-width: 1400px) {
       .global-footer {
+        border: 3px solid purple;
         --website-footer-text-wrapper-gap: 30px;
         --website-footer-logo-width: 263.48px;
         --website-footer-padding: 100px 0;
@@ -12290,6 +12365,7 @@
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .global-footer {
+        border: 3px solid violet;
         --website-footer-text-wrapper-gap: 30px;
         --website-footer-logo-width: 263.48px;
         --website-footer-padding: 100px 0;
@@ -12297,13 +12373,25 @@
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .global-footer {
+        border: 3px solid lime;
         --website-footer-text-wrapper-gap: 30px;
         --website-footer-padding: 100px 0;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .global-footer {
+        border: 3px solid blue;
         --website-footer-padding: 100px 0;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      .global-footer {
+        border: 3px solid turquoise;
+      }
+    }
+    @media (max-width: 575px) {
+      .global-footer {
+        border: 3px solid chocolate;
       }
     }
   }
@@ -12454,19 +12542,7 @@
   }
   @layer footer {
     .global-footer {
-      background-color: var(--website-theme-light-col-3a);
-    }
-    .global-footer .logo, .global-footer p, .global-footer a {
-      color: var(--website-theme-light-col-gray-1);
-    }
-    .global-footer .logo, .global-footer a {
-      color: var(--website-theme-light-col-2c);
-    }
-    .global-footer .logo:hover, .global-footer a:hover {
-      color: var(--website-theme-light-col-2a);
-    }
-    .global-footer a::before {
-      color: var(--website-theme-light-col-2a);
+      background-color: var(--website-theme-light-col-1a);
     }
     .global-footer .copyright {
       color: var(--website-theme-light-col-gray-2);

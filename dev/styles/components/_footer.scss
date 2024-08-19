@@ -72,7 +72,7 @@
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            // border: 10px solid purple;
+            border: 3px solid purple;
             --website-footer-text-wrapper-gap: 30px;
             --website-footer-logo-width: 263.48px;
             // --website-footer-logo-icon-fontsize: 1.5rem;
@@ -84,7 +84,7 @@
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            // border: 10px solid violet;
+            border: 3px solid violet;
             --website-footer-text-wrapper-gap: 30px;
             --website-footer-logo-width: 263.48px;
             // --website-footer-logo-icon-fontsize: 1.5rem;
@@ -96,7 +96,7 @@
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            // border: 10px solid lime;
+            border: 3px solid lime;
             --website-footer-text-wrapper-gap: 30px;
             // --website-footer-logo-width: 2rem;
             // --website-footer-logo-icon-fontsize: 1.5rem;
@@ -108,18 +108,18 @@
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            // border: 10px solid blue;
+            border: 3px solid blue;
             --website-footer-padding: 100px 0;
         }
 
-        // // Small Medium screens ...
-        // @media (min-width: 576px) and (max-width: (768px - 1)) {
-        //     // border: 10px solid turquoise;
-        // }
+        // Small Medium screens ...
+        @media (min-width: 576px) and (max-width: (768px - 1)) {
+            border: 3px solid turquoise;
+        }
 
-        // // Smaller screens ...
-        // @media (max-width: (576px - 1px)) {
-        //     // border: 10px solid chocolate;
-        // }
+        // Smaller screens ...
+        @media (max-width: (576px - 1px)) {
+            border: 3px solid chocolate;
+        }
     }
 }

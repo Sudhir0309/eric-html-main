@@ -1,8 +1,12 @@
 :root {
     --website-section-intro-card-marg: 0 0 4px 0;
+    --website-section-intro-card-display: block;
 
-    // Special card
+    // Intro card
     --website-section-intro-card-padd: 30px 20px 20px 20px;
+
+    // Skills card
+    --website-skills-card-padd: 30px 20px 20px 20px;
 }
 
 @layer best-work {
@@ -14,12 +18,50 @@
 @layer section-introduction {
     .section-introduction {
         .card-group {
+            display: var(--website-section-intro-card-display);
+
             .card {
                 margin: var(--website-section-intro-card-marg);
 
                 .card-body {
                     padding: var(--website-section-intro-card-padd);
                 }
+            }
+
+            // Extra Large screens ...
+            @media (min-width: 1400px) {
+                border: 4px solid purple;
+                --website-section-intro-card-display: flex;
+            }
+            
+            // Large screens ...
+            @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+                border: 4px solid violet;
+                --website-section-intro-card-display: flex;
+            }
+            
+            // Large Medium screens ...
+            @media (min-width: 992px) and (max-width: (1200px - 1)) {
+                border: 4px solid lime;
+                --website-section-intro-card-display: flex;
+                --website-section-intro-card-padd: 45px 30px 30px 30px;
+            }
+
+            // Medium Medium screens ...
+            @media (min-width: 768px) and (max-width: (992px - 1)) {
+                border: 4px solid blue;
+                --website-section-intro-card-padd: 45px 30px 30px 30px;
+            }
+
+            // Small Medium screens ...
+            @media (min-width: 576px) and (max-width: (768px - 1)) {
+                border: 4px solid turquoise;
+                --website-section-intro-card-padd: 45px 30px 30px 30px;
+            }
+
+            // Smaller screens ...
+            @media (max-width: (576px - 1px)) {
+                border: 4px solid chocolate;
             }
         }
     }
@@ -31,6 +73,45 @@
             display: grid;
             grid-template: 1fr / 1fr;
             gap: 4px;
+
+            .special-card {
+
+                .card-body {
+                    padding: var(--website-skills-card-padd);
+                }
+            }
+
+            // Extra Large screens ...
+            @media (min-width: 1400px) {
+                border: 4px solid purple;
+            }
+            
+            // Large screens ...
+            @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+                border: 4px solid violet;
+            }
+            
+            // Large Medium screens ...
+            @media (min-width: 992px) and (max-width: (1200px - 1)) {
+                border: 4px solid lime;
+            }
+    
+            // Medium Medium screens ...
+            @media (min-width: 768px) and (max-width: (992px - 1)) {
+                border: 4px solid blue;
+                --website-skills-card-padd: 45px 30px 30px 30px;
+            }
+    
+            // Small Medium screens ...
+            @media (min-width: 576px) and (max-width: (768px - 1)) {
+                border: 4px solid turquoise;
+                --website-skills-card-padd: 45px 30px 30px 30px;
+            }
+    
+            // Smaller screens ...
+            @media (max-width: (576px - 1px)) {
+                border: 4px solid chocolate;
+            }
         }
     }
 }

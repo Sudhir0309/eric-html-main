@@ -391,23 +391,23 @@
 
     @layer footer {
         .global-footer {
-            background-color: var(--website-theme-light-col-3a);
+            background-color: var(--website-theme-light-col-1a);
 
-            .logo, p, a {
-                color: var(--website-theme-light-col-gray-1);
-            }
-            .logo, a {
-                color: var(--website-theme-light-col-2c);
+            // .logo, p, a {
+            //     color: var(--website-theme-light-col-gray-1);
+            // }
+            // .logo, a {
+            //     color: var(--website-theme-light-col-2c);
 
-                &:hover {
-                    color: var(--website-theme-light-col-2a);
-                }
-            }
-            a {
-                &::before {
-                    color: var(--website-theme-light-col-2a);
-                }
-            }
+            //     &:hover {
+            //         color: var(--website-theme-light-col-2a);
+            //     }
+            // }
+            // a {
+            //     &::before {
+            //         color: var(--website-theme-light-col-2a);
+            //     }
+            // }
             .copyright {
                 color: var(--website-theme-light-col-gray-2);
             }
