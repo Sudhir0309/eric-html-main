@@ -10,6 +10,9 @@
     --website-site-carousel-btn-padd: 6px 8px 6px 13px;
     --website-site-carousel-btn-fontsize: 0.8rem;
     --website-site-carousel-btn-line-height: 25px;
+
+    // Special card
+    --website-carousel-card-padd: 20px 20px 20px 20px;
 }
 
 /**
@@ -73,11 +76,16 @@
 
 
         .site-carousel-item {
-            a {
+            .card {
                 position: relative;
                 display: block;
                 color: var(--website-a-color);
                 text-decoration: none;
+                padding: var(--website-carousel-card-padd);
+
+                p:last-of-type {
+                    margin-bottom: 0;
+                }
 
                 // Overlay screen designed to blur the content on hover ...
                 &::before {
@@ -126,41 +134,41 @@
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            border: 10px solid purple;
+            border: 3px solid purple;
             --website-site-carousel-btnnext-y: -70px;
             --website-site-carousel-item-gap: 60px;
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            border: 10px solid violet;
+            border: 3px solid violet;
             --website-site-carousel-btnnext-y: -80px;
             --website-site-carousel-item-gap: 60px;
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            border: 10px solid lime;
+            border: 3px solid lime;
             --website-site-carousel-btnnext-y: -70px;
             --website-site-carousel-item-gap: 40px;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            border: 10px solid blue;
+            border: 3px solid blue;
             // --website-site-carousel-btnnext-y: 0px;
             --website-site-carousel-item-gap: 20px;
         }
 
         // Small Medium screens ...
         @media (min-width: 576px) and (max-width: (768px - 1)) {
-            border: 10px solid turquoise;
+            border: 3px solid turquoise;
             // --website-site-carousel-btnnext-y: 0px;
         }
 
         // Smaller screens ...
         @media (max-width: (576px - 1px)) {
-            border: 10px solid chocolate;
+            border: 3px solid chocolate;
         }
     }
 

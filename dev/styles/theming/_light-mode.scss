@@ -1,6 +1,10 @@
 :root {
     --website-theme-light-col-1a: #fff;
     --website-theme-light-xxxx-1: #EDEBF7;
+    --website-theme-light-yyyy-1: #5946D9;
+    --website-theme-light-yyyy-2: #644FF3;
+    --website-theme-light-yyyy-3: #d9caf2;
+    --website-theme-light-yyyy-4: #F0EFFB;
     --website-theme-light-col-2a: #FFE500;
     --website-theme-light-col-2b: #8b7d00;
     --website-theme-light-col-2b1: #756900;
@@ -60,9 +64,6 @@
             color: var(--website-theme-light-col-1a);
             background-color: var(--website-theme-light-col-3a);
 
-            h1 {
-                color: var(--website-theme-light-col-1a);
-            }
 
             .speech-bubble {
                 background-color: var(--website-theme-light-col-2a);
@@ -75,6 +76,14 @@
                 &::before {
                     border-bottom-color: var(--website-theme-light-col-2a);
                 } 
+            }
+        }
+    }
+
+    @layer color-mix {
+        .section-theme1, .hero {
+            h1, h2, h3 {
+                color: var(--website-theme-light-col-1a);
             }
         }
     }
@@ -148,6 +157,14 @@
         }
     }
 
+    @layer section-introduction {
+        .section-introduction {
+            .card {
+                border: 1px solid var(--website-theme-light-yyyy-3);
+            }
+        }
+    }
+
     @layer section-video-banner {
         .section-video-banner {
             a:not(.btn) {
@@ -159,6 +176,25 @@
                     background-color: var(--website-theme-light-col-2b1);
                 }
             }
+        }
+    }
+
+    @layer section-theme {
+        .section-theme1 {
+            background-color: var(--website-theme-light-yyyy-1);
+            p, ul {
+                color: var(--website-theme-light-yyyy-4);
+            }
+
+            .card {
+                background-color: var(--website-theme-light-yyyy-2);
+            }
+
+
+    // --website-theme-light-yyyy-1: #5946D9;
+    // --website-theme-light-yyyy-2: #644FF3;
+
+
         }
     }
 

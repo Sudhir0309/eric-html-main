@@ -11154,6 +11154,32 @@
     }
   }
 }
+@layer layouts {
+  :root {
+    --website-section-intro-card-marg: 0 0 4px 0;
+    --website-section-intro-card-padd: 30px 20px 20px 20px;
+  }
+  @layer best-work {
+    .best-work-header {
+      padding: 0 30% 0 0;
+    }
+  }
+  @layer section-introduction {
+    .section-introduction .card-group .card {
+      margin: var(--website-section-intro-card-marg);
+    }
+    .section-introduction .card-group .card .card-body {
+      padding: var(--website-section-intro-card-padd);
+    }
+  }
+  @layer section-skills {
+    .section-skills .section-skills__wrapper {
+      display: grid;
+      grid-template: 1fr/1fr;
+      gap: 4px;
+    }
+  }
+}
 @layer vendors {
   /**
    * Modal is from the Bootstrap vendor, so we are mostly overriding styles
@@ -11836,6 +11862,7 @@
     --website-site-carousel-btn-padd: 6px 8px 6px 13px;
     --website-site-carousel-btn-fontsize: 0.8rem;
     --website-site-carousel-btn-line-height: 25px;
+    --website-carousel-card-padd: 20px 20px 20px 20px;
   }
   /**
    * Basic decorator of the carousel component.
@@ -11880,13 +11907,17 @@
       opacity: 0.4;
       cursor: default;
     }
-    .site-carousel .site-carousel-item a {
+    .site-carousel .site-carousel-item .card {
       position: relative;
       display: block;
       color: var(--website-a-color);
       text-decoration: none;
+      padding: var(--website-carousel-card-padd);
     }
-    .site-carousel .site-carousel-item a::before {
+    .site-carousel .site-carousel-item .card p:last-of-type {
+      margin-bottom: 0;
+    }
+    .site-carousel .site-carousel-item .card::before {
       content: "";
       position: absolute;
       z-index: 1;
@@ -11898,7 +11929,7 @@
       background-color: #fff;
       transition: all 0.3s ease;
     }
-    .site-carousel .site-carousel-item a .hover-btn {
+    .site-carousel .site-carousel-item .card .hover-btn {
       position: absolute;
       z-index: 2;
       opacity: 0;
@@ -11907,11 +11938,11 @@
       top: 20%;
       left: 30%;
     }
-    .site-carousel .site-carousel-item a:hover .hover-btn {
+    .site-carousel .site-carousel-item .card:hover .hover-btn {
       visibility: visible;
       opacity: 1;
     }
-    .site-carousel .site-carousel-item a:hover::before {
+    .site-carousel .site-carousel-item .card:hover::before {
       opacity: 0.7;
     }
     .site-carousel .site-carousel-item:nth-child(odd) {
@@ -11922,39 +11953,39 @@
     }
     @media (min-width: 1400px) {
       .site-carousel {
-        border: 10px solid purple;
+        border: 3px solid purple;
         --website-site-carousel-btnnext-y: -70px;
         --website-site-carousel-item-gap: 60px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .site-carousel {
-        border: 10px solid violet;
+        border: 3px solid violet;
         --website-site-carousel-btnnext-y: -80px;
         --website-site-carousel-item-gap: 60px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .site-carousel {
-        border: 10px solid lime;
+        border: 3px solid lime;
         --website-site-carousel-btnnext-y: -70px;
         --website-site-carousel-item-gap: 40px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .site-carousel {
-        border: 10px solid blue;
+        border: 3px solid blue;
         --website-site-carousel-item-gap: 20px;
       }
     }
     @media (min-width: 576px) and (max-width: 767px) {
       .site-carousel {
-        border: 10px solid turquoise;
+        border: 3px solid turquoise;
       }
     }
     @media (max-width: 575px) {
       .site-carousel {
-        border: 10px solid chocolate;
+        border: 3px solid chocolate;
       }
     }
   }
@@ -11972,6 +12003,7 @@
     --website-btnscrolltop-x-pos: 10px;
     --website-btnscrolltop-arrowdisplay: none;
     --website-hero-elts-spacer: 20px 0 0 0;
+    --website-special-card-padd: 30px 20px 20px 20px;
   }
   @layer anchors-scrollto {
     section {
@@ -12082,6 +12114,18 @@
       .site-carousel {
         --website-hero-elts-spacer: 25px 0 0 0;
       }
+    }
+  }
+  @layer special-card {
+    .special-card .card-body {
+      padding: var(--website-special-card-padd);
+    }
+    .special-card__list {
+      padding-left: 13px;
+    }
+    .special-card__list,
+    .special-card p:last-of-type {
+      margin-bottom: 0;
     }
   }
   :root {
@@ -12268,6 +12312,10 @@
   :root {
     --website-theme-light-col-1a: #fff;
     --website-theme-light-xxxx-1: #EDEBF7;
+    --website-theme-light-yyyy-1: #5946D9;
+    --website-theme-light-yyyy-2: #644FF3;
+    --website-theme-light-yyyy-3: #d9caf2;
+    --website-theme-light-yyyy-4: #F0EFFB;
     --website-theme-light-col-2a: #FFE500;
     --website-theme-light-col-2b: #8b7d00;
     --website-theme-light-col-2b1: #756900;
@@ -12308,9 +12356,6 @@
       color: var(--website-theme-light-col-1a);
       background-color: var(--website-theme-light-col-3a);
     }
-    .hero h1 {
-      color: var(--website-theme-light-col-1a);
-    }
     .hero .speech-bubble {
       background-color: var(--website-theme-light-col-2a);
     }
@@ -12319,6 +12364,11 @@
     }
     .hero .speech-bubble::before {
       border-bottom-color: var(--website-theme-light-col-2a);
+    }
+  }
+  @layer color-mix {
+    .section-theme1 h1, .section-theme1 h2, .section-theme1 h3, .hero h1, .hero h2, .hero h3 {
+      color: var(--website-theme-light-col-1a);
     }
   }
   @layer navbar {
@@ -12353,6 +12403,11 @@
       }
     }
   }
+  @layer section-introduction {
+    .section-introduction .card {
+      border: 1px solid var(--website-theme-light-yyyy-3);
+    }
+  }
   @layer section-video-banner {
     .section-video-banner a:not(.btn) {
       color: var(--website-theme-light-col-3b);
@@ -12361,6 +12416,17 @@
     .section-video-banner a:not(.btn):hover {
       color: var(--website-theme-light-col-1a);
       background-color: var(--website-theme-light-col-2b1);
+    }
+  }
+  @layer section-theme {
+    .section-theme1 {
+      background-color: var(--website-theme-light-yyyy-1);
+    }
+    .section-theme1 p, .section-theme1 ul {
+      color: var(--website-theme-light-yyyy-4);
+    }
+    .section-theme1 .card {
+      background-color: var(--website-theme-light-yyyy-2);
     }
   }
   @layer buttons {
