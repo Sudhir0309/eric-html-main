@@ -40,6 +40,7 @@ body {
   font-family: var(--website-font-body);
   font-weight: 400;
   font-style: normal;
+  font-optical-sizing: auto;
   // font-size handled by bootstrap
 } 
 
@@ -91,7 +92,6 @@ h3,
 h4,
 h5, .btn, .navbar-brand, .logo, .speech-bubble a {
   font-family: var(--website-font-headings); 
-  font-optical-sizing: auto;
   font-style: normal;
 }
 

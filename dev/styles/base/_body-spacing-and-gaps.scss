@@ -1,5 +1,6 @@
 :root {
-  --website-spacing-gap: 120px;
+  --website-spacing-top-gap: 20px;
+  --website-spacing-1: 30px;
 }
 
 * {
@@ -7,25 +8,30 @@
 }
 
 body {
+  // // Creating a top gap for a the fixed navbar
+  // padding-top: calc(var(--website-navbar-height) + var(--website-spacing-top-gap));
 
     // Extra Large screens ...
     @media (min-width: 1400px) {
-      --website-spacing-gap: 350px;
+      --website-spacing-section-h-small: 120px;
+      --website-spacing-1: 60px;
   }
   
   // Large screens ...
   @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-      --website-spacing-gap: 350px;
+      --website-spacing-section-h-small: 90px;
+      --website-spacing-1: 60px;
   }
   
   // Large Medium screens ...
   @media (min-width: 992px) and (max-width: (1200px - 1)) {
-    --website-spacing-gap: 150px;
+      --website-spacing-section-h-small: 70px;
+      --website-spacing-1: 40px;
   }
 
   // Medium Medium screens ...
   @media (min-width: 768px) and (max-width: (992px - 1)) {
-    --website-spacing-gap: 150px;
+    --website-spacing-section-h-small: 60px;
   }
 
   // Small Medium screens ...
@@ -41,21 +47,24 @@ body {
 
 @layer blocks {
   .sc-block {
-    padding-top: var(--website-spacing-gap);
-    padding-bottom: var(--website-spacing-gap);
+    padding-top: var(--website-spacing-section-h-small);
+    padding-bottom: var(--website-spacing-section-h-small);
   }
 
   .sc-block-mg-top {
-    margin-top: var(--website-spacing-gap);
+    margin-top: var(--website-spacing-section-h-small);
   }
   .sc-block-mg-bot {
-    margin-bottom: var(--website-spacing-gap);
+    margin-bottom: var(--website-spacing-section-h-small);
+  }
+  .sc-block-mg-bot-1 {
+    margin-bottom: var(--website-spacing-1);
   }
   .sc-block-pd-top {
-    padding-top: var(--website-spacing-gap);
+    padding-top: var(--website-spacing-section-h-small);
   }
   .sc-block-pd-bot {
-    padding-bottom: var(--website-spacing-gap);
+    padding-bottom: var(--website-spacing-section-h-small);
   }
 }
 
