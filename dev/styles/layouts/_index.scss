@@ -3,6 +3,7 @@
     --website-section-intro-card-display: block;
 
     // Intro card
+    --website-section-intro-h-textalign: left;
     --website-section-intro-card-padd: 30px 20px 20px 20px;
 
     // Skills card
@@ -12,7 +13,7 @@
 }
 
 @layer best-work {
-    .best-work-header {
+    .best-work__header {
         padding: 0 30% 0 0;
     }
 }
@@ -67,6 +68,58 @@
             @media (max-width: (576px - 1px)) {
                 border: 4px solid chocolate;
             }
+        }
+
+        &__header {
+            text-align: var(--website-section-intro-h-textalign);
+        }
+
+        // Extra Large screens ...
+        @media (min-width: 1400px) {
+            border: 3px solid purple;
+            --website-section-intro-h-textalign: center;
+        }
+        
+        // Large screens ...
+        @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            border: 3px solid violet;
+            --website-section-intro-h-textalign: center;
+        }
+        
+        // Large Medium screens ...
+        @media (min-width: 992px) and (max-width: (1200px - 1)) {
+            border: 3px solid lime;
+            --website-section-intro-h-textalign: center;
+        }
+    
+        // Medium Medium screens ...
+        @media (min-width: 768px) and (max-width: (992px - 1)) {
+            border: 3px solid blue;
+            --website-section-intro-h-textalign: center;
+        }
+    
+        // // Small Medium screens ...
+        // @media (min-width: 576px) and (max-width: (768px - 1)) {
+        //     border: 3px solid turquoise;
+        // }
+    
+        // // Smaller screens ...
+        // @media (max-width: (576px - 1px)) {
+        //     border: 3px solid chocolate;
+        // }
+    }
+}
+
+.best-work-header,
+.site-carousel-item .card,
+.section-skills header,
+.jumbotron__textwrapper,
+.banner-shine, .banner-feature,
+.alert,
+.special-card {
+    ul, ol, p {
+        &:last-of-type {
+            margin-bottom: 0;
         }
     }
 }

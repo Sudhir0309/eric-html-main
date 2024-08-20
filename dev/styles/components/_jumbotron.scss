@@ -4,12 +4,8 @@
 
 @layer jumbotron {
     .jumbotron {
-        &__textwrapper {
-
-            p:last-of-type {
-                margin: 0;
-            }
-        }
+        // &__textwrapper { 
+        // }
 
         // Extra Large screens ...
         @media (min-width: 1400px) {

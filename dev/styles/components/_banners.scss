@@ -46,10 +46,6 @@
 @layer banners {
     .banner-shine, .banner-feature {
         p, ul {
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-
             &+ .btn {
                 margin: var(--website-banner-shine-cta-mrg);
                 // border: 20px solid palevioletred;

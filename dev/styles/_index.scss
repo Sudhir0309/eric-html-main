@@ -20,18 +20,13 @@
     @import './base/utilities';
 }
 
-
 @layer layouts {
     @import './layouts/index';
 }
 
-
-
 @layer vendors {
     @import './vendors/modal.scss';
 }
-
-
 
 @layer components {
 //     // The "icons-and-more" file has to remain on top because of the 
@@ -45,9 +40,9 @@
     @import './components/navbar';
     @import './components/site-carousel.scss';
     @import './components/mixed-components';
-//     @import './components/alert';
-    @import './components/section-video-banner';   
     @import './components/footer';
+//     @import './components/alert';
+    // @import './components/section-video-banner';   
 //     @import './components/info1-blurb';
 //     @import './components/accordion';
 //     @import './components/case-study-thumb';

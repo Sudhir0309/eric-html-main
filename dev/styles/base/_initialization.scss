@@ -44,6 +44,10 @@ body {
   // font-size handled by bootstrap
 } 
 
+* {
+  transition: all 0.3s ease; /* Adjust the duration and timing function as needed */
+}
+
 
 /**
  * TYPOGRAPHY

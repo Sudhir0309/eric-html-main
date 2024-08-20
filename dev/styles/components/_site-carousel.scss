@@ -83,10 +83,6 @@
                 text-decoration: none;
                 padding: var(--website-carousel-card-padd);
 
-                p:last-of-type {
-                    margin-bottom: 0;
-                }
-
                 // Overlay screen designed to blur the content on hover ...
                 &::before {
                     content: '';

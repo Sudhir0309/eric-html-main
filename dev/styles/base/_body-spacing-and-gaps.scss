@@ -1,45 +1,46 @@
 :root {
   --website-spacing-top-gap: 20px;
-  --website-spacing-1: 30px;
-}
-
-* {
-  transition: all 0.3s ease; /* Adjust the duration and timing function as needed */
+  --website-header-bot-spacing: 10px;
 }
 
 body {
-  // // Creating a top gap for a the fixed navbar
-  // padding-top: calc(var(--website-navbar-height) + var(--website-spacing-top-gap));
-
-    // Extra Large screens ...
-    @media (min-width: 1400px) {
-      --website-spacing-section-h-small: 120px;
-      --website-spacing-1: 60px;
+  // Extra Large screens ...
+  @media (min-width: 1400px) {
+    // border: 10px solid purple;
+    --website-spacing-section-h-small: 120px;
+    --website-header-bot-spacing: 30px;
   }
   
   // Large screens ...
   @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-      --website-spacing-section-h-small: 90px;
-      --website-spacing-1: 60px;
+    // border: 10px solid violet;
+    --website-spacing-section-h-small: 90px;
+    --website-header-bot-spacing: 30px;
   }
   
   // Large Medium screens ...
   @media (min-width: 992px) and (max-width: (1200px - 1)) {
-      --website-spacing-section-h-small: 70px;
-      --website-spacing-1: 40px;
+    // border: 10px solid lime;
+    --website-spacing-section-h-small: 70px;
+    --website-header-bot-spacing: 30px;
   }
 
   // Medium Medium screens ...
   @media (min-width: 768px) and (max-width: (992px - 1)) {
+    // border: 10px solid blue;
     --website-spacing-section-h-small: 60px;
+    --website-header-bot-spacing: 20px;
   }
 
   // Small Medium screens ...
   @media (min-width: 576px) and (max-width: (768px - 1)) {
+    // border: 10px solid turquoise;
+    --website-header-bot-spacing: 20px;
   }
 
   // Smaller screens ...
   @media (max-width: (576px - 1px)) {
+    // border: 10px solid chocolate;
   }
 }
 
@@ -57,8 +58,8 @@ body {
   .sc-block-mg-bot {
     margin-bottom: var(--website-spacing-section-h-small);
   }
-  .sc-block-mg-bot-1 {
-    margin-bottom: var(--website-spacing-1);
+  .sc-header-bot-spacing {
+    margin-bottom: var(--website-header-bot-spacing);
   }
   .sc-block-pd-top {
     padding-top: var(--website-spacing-section-h-small);

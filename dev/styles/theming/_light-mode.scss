@@ -34,10 +34,6 @@
     body {
         background-color: var(--website-theme-light-xxxx-1);
         color: var(--website-theme-light-col-3c);
-
-        // h1, h2, h3, h4, h5, h6 {
-        //     color: var(--website-theme-light-col-3b);
-        // }
     }
 
     @layer site-carousel {
@@ -98,11 +94,6 @@
                 // box-shadow: 0 0 0 #fff;
                 box-shadow: 0px 0px 10px white;
             }
-            // background-color: var(--website-theme-light-col-1a);
-
-            // .navbar-collapse {
-            //     background-color: var(--website-theme-light-navbar-collapse-bgcol);
-            // }
 
             .navbar-brand, .nav-link {
                 color: var(--website-theme-light-col-3c);
@@ -197,35 +188,8 @@
             .card {
                 background-color: var(--website-theme-light-yyyy-2);
             }
-
-
-    // --website-theme-light-yyyy-1: #5946D9;
-    // --website-theme-light-yyyy-2: #644FF3;
-
-
         }
     }
-
-    // @layer headings {
-    //     h1, h2, h3, h4, h5, b {
-    //         color: var(--website-theme-light-headings-col);
-    //     }
-    // }
-
-    // @layer texts {
-    //     p, li {
-    //         color: var(--website-theme-light-text-col);
-    //     }
-    // }
-
-    // @layer utilities {
-    //     .shinespot-col3-1 {
-    //         color: var(--website-theme-light-txt-highshine-col-1);
-    //     }
-    //     .shinespot-col3-2 {
-    //         color: var(--website-theme-light-txt-highshine-col-2);
-    //     }
-    // }
 
     @layer buttons {
         .btn-primary, .btn-secondary {
@@ -251,277 +215,15 @@
             background-color: var(--website-theme-light-col-3a);
             border-color: var(--website-theme-light-col-2c); 
         }
-
-        // .slick-arrow:not(.slick-disabled), //Settting carousel button as a seondary button
-        
-        // .slick-disabled {
-        //     color: var(--website-theme-light-text-col);
-        //     background-color: transparent;
-        // }
     }
-
-    // @layer banners {
-    //     @layer banner-shine {
-    //         .banner-shine {
-    //             background-color: var(--website-theme-light-banner-shine-bgcol);
-    //             color: var(--website-theme-light-bodybg-col);
-
-    //             h2, p, li, .btn {
-    //                 color: var(--website-theme-light-bodybg-col);
-    //             }
-    //             .btn {
-    //                 border-color: var(--website-theme-light-bodybg-col);
-    //             }
-    //         }
-    //     }
-
-    //     @layer banner-feature {
-    //         .banner-feature {
-    //             &.accent-1 {
-    //                 background-color: var(--website-theme-light-banner-feature1-bgcol);
-
-    //                 .banner-feature--img-deco {
-    //                     background-image: url(./_img/banner-light-frustration-free.png);
-    //                 }
-    //             }
-    //             &.accent-2 {
-    //                 background-color: var(--website-theme-light-banner-feature2-bgcol);
-
-    //                 .banner-feature--img-deco {
-    //                     background-image: url(./_img/banner-light-what-we-do.png);
-    //                 }
-    //             }
-    //             &.accent-3 {
-    //                 background-color: var(--website-theme-light-banner-feature3-bgcol);
-
-    //                 .banner-feature--img-deco {
-    //                     background-image: url(./_img/banner-light-our-vision.png);
-    //                 }
-    //             }
-    //         }
-
-    //     }
-    // }
-
-    // @layer block-presentation-1 {
-    //     .block-presentation-1 {
-    //         // left border
-    //         &::after {
-    //             background: linear-gradient(to bottom, var(--website-theme-light-presentation1-sep-col), transparent 100%);
-    //         }
-
-    //         // All 6 icons ...
-    //         &-icon1 {
-    //             &::before {
-    //                 background-image: url(./_img/icon-light-design-think-1.png);
-    //             }
-    //         }
-    //         &-icon2 {
-    //             &::before {
-    //                 background-image: url(./_img/icon-light-design-think-2.png);
-    //             }
-    //         }
-    //         &-icon3 {
-    //             &::before {
-    //                 background-image: url(./_img/icon-light-design-think-3.png);
-    //             }
-    //         }
-    //         &-icon4 {
-    //             &::before {
-    //                 background-image: url(./_img/icon-light-design-think-4.png);
-    //             }
-    //         }
-    //         &-icon5 {
-    //             &::before {
-    //                 background-image: url(./_img/icon-light-design-think-5.png);
-    //             }
-    //         }
-    //         &-icon6 {
-    //             &::before {
-    //                 background-image: url(./_img/icon-light-design-think-6.png);
-    //             }
-    //         }
-    //     }
-    // }
-
-    // @layer icon-elements {
-    //     .list-of-custom-icons {
-    //         li { 
-    //             &::after { 
-    //                 color: var(--website-theme-light-text-col);
-    //             }
-    //         }
-    //         &.has-checked-icons { 
-    //             li {
-    //                 &::after {
-    //                     background-image: url(./_img/icon-light-check.png);
-    //                 }
-    //             }
-    //         }
-    //         &.has-numbered-items {
-    //             li {
-    //                 &::after {
-    //                     background: var(--website-theme-light-accordion-active-bg);
-    //                 }
-    //             }
-    //         }
-    //         &.has-dashed-lines { 
-    //             &::before { 
-    //                 background-image: var(--website-theme-light-list-dashed-line-bgimg);
-    //             }
-    //             li { 
-    //                 // Hidding dotted line for the last item of the list
-    //                 &:last-of-type { 
-    //                     &::before {
-    //                         background-color: var(--website-theme-light-bodybg-col);
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-
-    // @layer section-info1 {
-    //     .section-info1 {
-    //         .section-info1__wrapper {
-    //             .item {
-    //                 &::after {
-    //                     background: linear-gradient(to right, var(--website-theme-light-presentation1-sep-col), transparent 100%);
-    //                 }
-
-    //                 &:hover {
-    //                     background-color: var(--website-theme-light-section-info1-hover-bgcol);
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
 
     @layer footer {
         .global-footer {
             background-color: var(--website-theme-light-col-1a);
 
-            // .logo, p, a {
-            //     color: var(--website-theme-light-col-gray-1);
-            // }
-            // .logo, a {
-            //     color: var(--website-theme-light-col-2c);
-
-            //     &:hover {
-            //         color: var(--website-theme-light-col-2a);
-            //     }
-            // }
-            // a {
-            //     &::before {
-            //         color: var(--website-theme-light-col-2a);
-            //     }
-            // }
             .copyright {
                 color: var(--website-theme-light-col-gray-2);
             }
-            
         }
     }
-
-    // @layer form-elts {
-    //     @layer inputs {
-    //         .form-label {
-    //             color: var(--website-theme-light-form-label-col);
-    //         }
-    //         .form-control {
-    //             border-color: var(--website-theme-light-form-control-bdrcol);
-    //             color: var(--website-theme-light-form-label-col);
-    //             background-color: var(--website-theme-light-form-control-bgcol);
-    //         }
-    //     }
-    // }
-
-    // @layer section-packages {
-    //     .section-packages { 
-    //         .section-packages-table {
-    //             td, th {
-    //                 color: var(--website-theme-light-text-col);
-    //             }
-    //             >:not(caption)>*>* {
-    //                 border-bottom-color: var(--website-theme-light-navbar-sep);
-    //                 background-color: var(--website-theme-light-section-info1-hover-bgcol);
-    //             }
-    //         }
-    //     }
-    // }
-
-    // @layer alert {
-    //     .alert {
-    //         color: var(--website-theme-light-headings-col);
-    //         border-left: 3px solid var(--website-theme-light-headings-col);
-    //         background-color: var(--website-theme-light-alert-info-bgcol);
-
-    //         &-info {
-    //             &::before {
-    //                 background-image: url(./_img/icon-alert-info.png);
-    //             }
-    //         }
-    //     }
-    // }
-
-    // @layer accordion {
-    //     .accordion {
-    //     }
-    //     .accordion-item {
-    //         border-top: 1px solid var(--website-theme-light-accordion-bdr-col);
-
-    //         &:last-of-type {
-    //             border-bottom: 1px solid var(--website-theme-light-accordion-bdr-col);
-    //         }
-    //     }
-    //     .accordion-button {
-    //         color: var(--website-theme-light-headings-col);
-
-    //         &::after {
-    //             background-image: var(--website-theme-light-accordion-arrow-down);
-    //         }
-
-    //         &:not(.collapsed) {
-    //             background-color: var(--website-theme-light-accordion-active-bg);
-    //             color: var(--website-theme-light-headings-col);
-    //             box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--website-theme-light-accordion-bdr-col);
-
-    //             &::after {
-    //                 background-image: var(--website-theme-light-accordion-arrow-up);
-    //             }
-    //         }
-
-    //         &:hover {
-    //             background-color: var(--website-theme-light-accordion-active-bg-hover);
-    //         }
-    //     }
-    //     .accordion-collapse.collapse.show {
-    //         background-color: var(--website-theme-light-accordion-active-bg);
-    //     }
-    // }
-
-    // @layer section-top-clients {
-    //     .section-top-clients {
-    //         .badge.tv-text-bg-info {
-    //             background-color: var(--website-theme-light-section-top-clients-badge-bgcol);
-    //             color: var(--website-theme-light-section-top-clients-badge-col);
-    //         }
-    //     }
-    // }
-
-    // @layer case-study-thumb {
-    //     .case-study-thumb {
-    //         a {
-    //             &:hover {
-    //                 background-color: var(--website-theme-light-case-study-thumb-hover-bgcol);
-    //                 h3 {
-    //                     color: var(--website-theme-light-case-study-thumb-hover-col);
-    //                 }
-    //                 .img-fluid {
-    //                     opacity: 0.4;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
 // }
