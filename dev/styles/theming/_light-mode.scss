@@ -1,50 +1,58 @@
 :root {
-    --website-theme-light-col-1a: #fff;
+    --website-theme-light-xxxx-0: #fff;
     --website-theme-light-xxxx-1: #EDEBF7;
-    --website-theme-light-yyyy-1: #5946D9;
-    --website-theme-light-yyyy-2: #644FF3;
-    --website-theme-light-yyyy-3: #d9caf2;
-    --website-theme-light-yyyy-4: #F0EFFB;
-    --website-theme-light-col-2a: #FFE500;
-    --website-theme-light-col-2b: #8b7d00;
-    --website-theme-light-col-2b1: #756900;
-    --website-theme-light-col-2d: #959572;
-    --website-theme-light-col-2c: #fff7b0;
-    --website-theme-light-col-2d: #EAEACE;
-    --website-theme-light-col-3a: #010023;
-    --website-theme-light-col-3b: #262200;
-    --website-theme-light-col-3c: #4A4834;
-    --website-theme-light-col-4a: #004ee5;
-    --website-theme-light-col-5a: #b31e7f;
-    --website-theme-light-col-5b: #e151af;
-    --website-theme-light-col-gray-1: #E3E1CC;
-    --website-theme-light-col-gray-2: #B0AE9E;
-    --website-theme-light-col-gray-3: #aaa;
+    --website-theme-light-xxxx-2: #DDDCF2;
+    --website-theme-light-xxxx-3: #CCCCF5;
 
-    --website-theme-light-headings-col: var(--website-theme-light-col-3b);
+    --website-theme-light-yyyy-0: #010023;
+    --website-theme-light-yyyy-1: #323069;
+    --website-theme-light-yyyy-2: #3B27BE;
+    --website-theme-light-yyyy-3: #4934D5;
+    --website-theme-light-yyyy-4: #d9caf2;
+    --website-theme-light-yyyy-5: #F0EFFB;
+    
+    --website-theme-light-wwww-5: #535273;
 
-    --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-2d);
-
-
-    --website-clr-gray-1: #e6e6e6;
-    --website-clr-gray-5: #302E1D;
+    --website-theme-light-zzzz-0: #00ff94;
+    --website-theme-light-zzzz-1: #00b268;  
 }
 
 // html[data-theme="light"] {
     body {
         background-color: var(--website-theme-light-xxxx-1);
-        color: var(--website-theme-light-col-3c);
+        color: var(--website-theme-light-wwww-5);
+    }
+
+    @layer color-mix {
+        .light-block-txt-col {
+            h1, h2, h3, h4, h5, h6 {
+                color: var(--website-theme-light-yyyy-1);
+            }
+            ul, p, a {
+                color: var(--website-theme-light-wwww-5);
+            }
+            a {
+                &:hover {
+                    text-decoration: none;
+                    opacity: 0.5;
+                }
+            }
+        }
+    
+        .dark-block-txt-col {
+            h1, h2, h3, h4, h5, h6 {
+                color: var(--website-theme-light-xxxx-2);
+            }
+            ul, p, a {
+                color: var(--website-theme-light-xxxx-3);
+            }
+        }
     }
 
     @layer site-carousel {
         .site-carousel {  
-            .badge {
-                color: var(--website-clr-gray-5);
-                background-color: var(--website-clr-gray-1);
-            }
-
             .slick-arrow {
-                background-color: var(--website-theme-light-col-2a);
+                background-color: var(--website-theme-light-zzzz-0);
                 // font-weight: bold;
                 // font-size: 0.8rem;
                 // line-height: 0.8rem;
@@ -57,30 +65,7 @@
 
     @layer hero {
         .hero {
-            color: var(--website-theme-light-col-1a);
-            background-color: var(--website-theme-light-col-3a);
-
-
-            .speech-bubble {
-                background-color: var(--website-theme-light-col-2a);
-
-                a {
-                    color: var(--website-theme-light-headings-col);
-                }
-
-                // Speech bubble pointer
-                &::before {
-                    border-bottom-color: var(--website-theme-light-col-2a);
-                } 
-            }
-        }
-    }
-
-    @layer color-mix {
-        .section-theme1, .hero {
-            h1, h2, h3 {
-                color: var(--website-theme-light-col-1a);
-            }
+            background-color: var(--website-theme-light-yyyy-0);
         }
     }
 
@@ -88,7 +73,7 @@
         .navbar {
 
             &.navbar-masked {
-                background-color: var(--website-theme-light-col-3a);
+                background-color: var(--website-theme-light-yyyy-0);
             }
 
             .navbar-toggler-icon {
@@ -100,26 +85,27 @@
             }
 
             .navbar-brand, .nav-link {
-                color: var(--website-theme-light-col-3c);
+                // color: var(--website-theme-light-wwww-5);
                 
                 &:hover, &.active {
-                    color: var(--website-theme-light-col-2b1);
+                    color: red;
                 } 
+            }
+            .navbar-collapse.collapse.show {
+                background-color: var(--website-theme-light-yyyy-2);
             }
 
             .nav-item { 
                 // separator between links
                 &::after { 
-                    background-color: var(--website-theme-light-col-gray-3);
+                    background-color: var(--website-theme-light-yyyy-4);
                 }
             }
 
             .nav-link {
                 &.item-icon-material {
-                    color: var(--website-theme-light-col-5a);
- 
                     &:hover {
-                        color: var(--website-theme-light-col-3b);
+                        color: var(--website-theme-light-zzzz-0);
                     }
                 }
             }
@@ -128,19 +114,16 @@
             // Extra Large screens ...
             @media (min-width: 1400px) {
                 // border: 10px solid purple;
-                --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-1a);
             }
             
             // Large screens ...
             @media (min-width: 1200px) and (max-width: (1400px - 1)) {
                 // border: 10px solid violet;
-                --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-1a);
             }
             
             // Large Medium screens ...
             @media (min-width: 992px) and (max-width: (1200px - 1)) {
                 // border: 10px solid lime;
-                --website-theme-light-navbar-collapse-bgcol: var(--website-theme-light-col-1a);
             }
 
             // Medium Medium screens ...
@@ -163,71 +146,38 @@
     @layer section-introduction {
         .section-introduction {
             .card {
-                border: 1px solid var(--website-theme-light-yyyy-3);
-            }
-        }
-    }
-
-    @layer section-video-banner {
-        .section-video-banner {
-            a:not(.btn) {
-                color: var(--website-theme-light-col-3b);
-                background-color: var(--website-theme-light-col-2c);
-
-                &:hover {
-                    color: var(--website-theme-light-col-1a);
-                    background-color: var(--website-theme-light-col-2b1);
-                }
+                border: 1px solid var(--website-theme-light-yyyy-4);
             }
         }
     }
 
     @layer section-theme {
         .section-theme1 {
-            background-color: var(--website-theme-light-yyyy-1);
-            p, ul {
-                color: var(--website-theme-light-yyyy-4);
-            }
+            background-color: var(--website-theme-light-yyyy-2);
 
             .card {
-                background-color: var(--website-theme-light-yyyy-2);
+                background-color: var(--website-theme-light-yyyy-3);
             }
         }
     }
 
     @layer buttons {
-        .btn-primary, .btn-secondary {
-            border-top-width: 3px;
-            border-right-width: 0px;
-            border-bottom-width: 3px;
-            border-left-width: 0px;
-
-            &:hover {
-                color: var(--website-theme-light-col-1a);
-                background-color: var(--website-theme-light-col-2b);
-                border-color: var(--website-theme-light-col-2b);
-            }
-        }
         .btn-primary {
-            color: var(--website-theme-light-col-3a);
-            background-color: var(--website-theme-light-col-2a);
-            border-color: var(--website-theme-light-col-3a);
+            color: var(--website-theme-light-yyyy-0);
+            background-color: var(--website-theme-light-zzzz-0);
+            border-color: var(--website-theme-light-zzzz-0);
         }
 
         .btn-secondary {
-            color: var(--website-theme-light-col-1a);
-            background-color: var(--website-theme-light-col-3a);
-            border-color: var(--website-theme-light-col-2c); 
+            color: var(--website-theme-light-yyyy-0);
+            background-color: var(--website-theme-light-xxxx-2);
+            border-color: var(--website-theme-light-xxxx-2); 
         }
     }
 
     @layer footer {
         .global-footer {
-            background-color: var(--website-theme-light-col-1a);
-
-            .copyright {
-                color: var(--website-theme-light-col-gray-2);
-            }
+            background-color: var(--website-theme-light-xxxx-0);
         }
     }
 // }

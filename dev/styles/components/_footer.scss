@@ -1,23 +1,17 @@
 :root {
-    --website-footer-padding: 60px 0;
-    --website-footer-text-wrapper-gap: 20px;
-    --website-footer-text-wrapper-width: 480px;
+    --website-footer-container-gap: 20px;
+    --website-footer-container-grid-template: 1fr / 1fr;
     --website-footer-logo-width: 184.24px;
-    // --website-footer-logo-padding: 0 30px 0 0;
-    // --website-footer-logo-icon-fontsize: 1.3rem;
-    // --website-footer-logo-icon-top: 7px;
+    --website-footer-copyright-grid-col: unset;
+    --website-footer-copyright-text-align: left;
 }
 
 @layer footer {
     .global-footer {
-        padding: var(--website-footer-padding);
-
-        .text-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: var(--website-footer-text-wrapper-gap);
-            margin: 0 auto;
-            max-width: var(--website-footer-text-wrapper-width);
+        .container {
+            display: grid;
+            grid-template: var(--website-footer-container-grid-template);
+            gap: var(--website-footer-container-gap);
         }
 
         .logo {
@@ -65,61 +59,57 @@
         }
 
         .copyright {
-            font-size: .8rem;
+            font-size: .9rem;
+            grid-column: var(--website-footer-copyright-grid-col);
+            text-align: var(--website-footer-copyright-text-align);
         }
-
-
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            border: 3px solid purple;
-            --website-footer-text-wrapper-gap: 30px;
+            // border: 3px solid purple;
+            --website-footer-container-gap: 30px;
             --website-footer-logo-width: 263.48px;
-            // --website-footer-logo-icon-fontsize: 1.5rem;
-            // --website-footer-logo-icon-top: 9px;
-            // --website-footer-logo-padding: 0 37px 0 0;
-            // padding ...
-            --website-footer-padding: 100px 0;
+            --website-footer-container-grid-template: auto auto / auto auto auto;
+            --website-footer-copyright-grid-col: span 3;
+            --website-footer-copyright-text-align: center;
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            border: 3px solid violet;
-            --website-footer-text-wrapper-gap: 30px;
-            --website-footer-logo-width: 263.48px;
-            // --website-footer-logo-icon-fontsize: 1.5rem;
-            // --website-footer-logo-icon-top: 9px;
-            // --website-footer-logo-padding: 0 37px 0 0;
-            // padding ...
-            --website-footer-padding: 100px 0;
+            // border: 3px solid violet;
+            --website-footer-container-gap: 30px;
+            --website-footer-logo-width: 363.48px;
+            --website-footer-container-grid-template: auto auto / auto auto auto;
+            --website-footer-copyright-grid-col: span 3;
+            --website-footer-copyright-text-align: center;
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            border: 3px solid lime;
-            --website-footer-text-wrapper-gap: 30px;
-            // --website-footer-logo-width: 2rem;
-            // --website-footer-logo-icon-fontsize: 1.5rem;
-            // --website-footer-logo-icon-top: 9px;
-            // --website-footer-logo-padding: 0 37px 0 0;
-            // padding ...
-            --website-footer-padding: 100px 0;
+            // border: 3px solid lime;
+            --website-footer-container-gap: 30px;
+            --website-footer-logo-width: 263.48px;
+            --website-footer-container-grid-template: auto auto / auto auto auto;
+            --website-footer-copyright-grid-col: span 3;
+            --website-footer-copyright-text-align: center;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            border: 3px solid blue;
-            --website-footer-padding: 100px 0;
+            // border: 3px solid blue;
+            --website-footer-container-grid-template: auto auto / auto auto auto;
+            --website-footer-copyright-grid-col: span 3;
+            --website-footer-copyright-text-align: center;
         }
 
-        // Small Medium screens ...
-        @media (min-width: 576px) and (max-width: (768px - 1)) {
-            border: 3px solid turquoise;
-        }
+        // // Small Medium screens ...
+        // @media (min-width: 576px) and (max-width: (768px - 1)) {
+        //     border: 3px solid turquoise;
+        // }
 
-        // Smaller screens ...
-        @media (max-width: (576px - 1px)) {
-            border: 3px solid chocolate;
-        }
+        // // Smaller screens ...
+        // @media (max-width: (576px - 1px)) {
+        //     border: 3px solid chocolate;
+        // }
     }
 }

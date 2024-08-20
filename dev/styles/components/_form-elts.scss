@@ -1,7 +1,7 @@
 
 :root {
     --website-btn-padding: 10px 20px;
-    --website-btn-fontsize: 1.2rem;
+    --website-btn-fontsize: 1.15rem;
     // btn icon ...
     --website-btnicon-padding: 10px 45px 10px 20px;
     --website-btnicon-icon-top: 6px;
@@ -11,7 +11,7 @@
 @layer form-elts {
     @layer buttons {
         .btn {
-            border-radius: 0;
+            border-radius: 4px;
             padding: var(--website-btn-padding);
             font-weight: 500;
             font-size: var(--website-btn-fontsize);
@@ -21,8 +21,6 @@
             @media (min-width: 1400px) {
                 // border: 10px solid purple;
                 --website-btn-padding: 15px 30px;
-                --website-btn-fontsize: 1.35rem;
-                // btn icon ...
                 --website-btnicon-icon-top: 8px;
             }
             
@@ -30,8 +28,6 @@
             @media (min-width: 1200px) and (max-width: (1400px - 1)) {
                 // border: 10px solid violet;
                 --website-btn-padding: 15px 30px;
-                --website-btn-fontsize: 1.35rem;
-                // btn icon ...
                 --website-btnicon-icon-top: 8px;
             }
             
@@ -39,8 +35,6 @@
             @media (min-width: 992px) and (max-width: (1200px - 1)) {
                 // border: 10px solid lime;
                 --website-btn-padding: 15px 30px;
-                --website-btn-fontsize: 1.35rem;
-                // btn icon ...
                 --website-btnicon-icon-top: 8px;
             }
 

@@ -2,7 +2,7 @@
 
 :root { 
     --website-hero-height: auto; // 270px; 
-    --website-hero-margin: 90px auto 0 auto;
+    --website-hero-container-paddtop: 90px;
     --website-hero-jumbotron-margin: 0 0 20px 0;
     --website-hero-persona-position: relative;
     --website-hero-persona-pos-bottom: 0;
@@ -20,10 +20,7 @@
         height: var(--website-hero-height); 
 
         &-content-wrapper {
-            margin: var(--website-hero-margin);
-            // display: flex;
-            // align-items: end;
-            // overflow: hidden;
+            padding-top: var(--website-hero-container-paddtop);
         }
 
         &-persona {
@@ -44,9 +41,9 @@
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            border: 3px solid purple; 
+            // border: 3px solid purple; 
             --website-hero-height: 560px; 
-            --website-hero-margin: 190px auto 0 auto;
+            --website-hero-container-paddtop: 190px; ;
             --website-hero-persona-width: 400px;
             --website-jumbotron-textwrapper-width: 760px;
             --website-hero-persona-margin: 0;
@@ -56,9 +53,9 @@
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            border: 3px solid violet; 
+            // border: 3px solid violet; 
             --website-hero-height: 560px; 
-            --website-hero-margin: 190px auto 0 auto;
+            --website-hero-container-paddtop: 190px;
             --website-hero-persona-width: 400px;
             --website-jumbotron-textwrapper-width: 760px;
             --website-hero-persona-margin: 0;
@@ -68,9 +65,9 @@
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            border: 3px solid lime; 
+            // border: 3px solid lime; 
             --website-hero-height: 430px; 
-            --website-hero-margin: 160px auto 0 auto;
+            --website-hero-container-paddtop: 160px;
             --website-hero-persona-width: 300px;
             --website-jumbotron-textwrapper-width: 500px;
             --website-hero-persona-margin: 0;
@@ -80,9 +77,9 @@
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            border: 3px solid blue; 
+            // border: 3px solid blue; 
             --website-hero-height: 430px; 
-            --website-hero-margin: 150px auto 0 auto;
+            --website-hero-container-paddtop: 150px;
             --website-hero-persona-width: 300px;
             --website-jumbotron-textwrapper-width: 400px;
             --website-hero-persona-margin: 0;
@@ -92,13 +89,13 @@
 
         // Small Medium screens ...
         @media (min-width: 576px) and (max-width: (768px - 1)) {
-            border: 3px solid turquoise;
+            // border: 3px solid turquoise;
             --website-hero-persona-width: 45%;
         }
 
         // Smaller screens ...
         @media (max-width: (576px - 1px)) {
-            border: 3px solid chocolate;
+            // border: 3px solid chocolate;
         }
     }
 }
