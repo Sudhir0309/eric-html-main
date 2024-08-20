@@ -11159,7 +11159,9 @@
     --website-section-intro-card-marg: 0 0 4px 0;
     --website-section-intro-card-display: block;
     --website-section-intro-card-padd: 30px 20px 20px 20px;
+    --website-skills-wrapper-grid-template: 1fr / 1fr;
     --website-skills-card-padd: 30px 20px 20px 20px;
+    --website-skills-card-1st-child-gridrow: unset;
   }
   @layer best-work {
     .best-work-header {
@@ -11180,12 +11182,14 @@
       .section-introduction .card-group {
         border: 4px solid purple;
         --website-section-intro-card-display: flex;
+        --website-section-intro-card-padd: 45px 40px 40px 40px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .section-introduction .card-group {
         border: 4px solid violet;
         --website-section-intro-card-display: flex;
+        --website-section-intro-card-padd: 45px 35px 35px 35px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
@@ -11214,27 +11218,42 @@
     }
   }
   @layer section-skills {
+    .section-skills header {
+      max-width: 670px;
+    }
     .section-skills .section-skills__wrapper {
       display: grid;
-      grid-template: 1fr/1fr;
+      grid-template: var(--website-skills-wrapper-grid-template);
       gap: 4px;
     }
     .section-skills .section-skills__wrapper .special-card .card-body {
       padding: var(--website-skills-card-padd);
     }
+    .section-skills .section-skills__wrapper .special-card:first-of-type {
+      grid-row: var(--website-skills-card-1st-child-gridrow);
+    }
     @media (min-width: 1400px) {
       .section-skills .section-skills__wrapper {
         border: 4px solid purple;
+        --website-skills-wrapper-grid-template: 1fr 1fr / 1fr 1fr;
+        --website-skills-card-1st-child-gridrow: span 2;
+        --website-skills-card-padd: 40px 40px 40px 85px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .section-skills .section-skills__wrapper {
         border: 4px solid violet;
+        --website-skills-wrapper-grid-template: 1fr 1fr / 1fr 1fr;
+        --website-skills-card-1st-child-gridrow: span 2;
+        --website-skills-card-padd: 40px 40px 40px 65px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .section-skills .section-skills__wrapper {
         border: 4px solid lime;
+        --website-skills-wrapper-grid-template: 1fr 1fr / 1fr 1fr;
+        --website-skills-card-1st-child-gridrow: span 2;
+        --website-skills-card-padd: 30px 30px 30px 55px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
@@ -12032,6 +12051,7 @@
         border: 3px solid purple;
         --website-site-carousel-btnnext-y: -70px;
         --website-site-carousel-item-gap: 60px;
+        --website-carousel-card-padd: 30px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
@@ -12039,6 +12059,7 @@
         border: 3px solid violet;
         --website-site-carousel-btnnext-y: -80px;
         --website-site-carousel-item-gap: 60px;
+        --website-carousel-card-padd: 30px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
@@ -12046,12 +12067,14 @@
         border: 3px solid lime;
         --website-site-carousel-btnnext-y: -70px;
         --website-site-carousel-item-gap: 40px;
+        --website-carousel-card-padd: 30px;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .site-carousel {
         border: 3px solid blue;
         --website-site-carousel-item-gap: 20px;
+        --website-carousel-card-padd: 30px;
       }
     }
     @media (min-width: 576px) and (max-width: 767px) {
@@ -12159,11 +12182,6 @@
     }
   }
   @layer section-footer-cta {
-    .icon-list,
-    .section-footer-cta,
-    .site-carousel {
-      margin: var(--website-hero-elts-spacer);
-    }
     @media (min-width: 1400px) {
       .icon-list,
       .section-footer-cta,

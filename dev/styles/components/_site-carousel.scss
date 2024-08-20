@@ -137,6 +137,7 @@
             border: 3px solid purple;
             --website-site-carousel-btnnext-y: -70px;
             --website-site-carousel-item-gap: 60px;
+            --website-carousel-card-padd: 30px;
         }
         
         // Large screens ...
@@ -144,6 +145,7 @@
             border: 3px solid violet;
             --website-site-carousel-btnnext-y: -80px;
             --website-site-carousel-item-gap: 60px;
+            --website-carousel-card-padd: 30px;
         }
         
         // Large Medium screens ...
@@ -151,6 +153,7 @@
             border: 3px solid lime;
             --website-site-carousel-btnnext-y: -70px;
             --website-site-carousel-item-gap: 40px;
+            --website-carousel-card-padd: 30px;
         }
 
         // Medium Medium screens ...
@@ -158,13 +161,13 @@
             border: 3px solid blue;
             // --website-site-carousel-btnnext-y: 0px;
             --website-site-carousel-item-gap: 20px;
+            --website-carousel-card-padd: 30px;
         }
 
         // Small Medium screens ...
         @media (min-width: 576px) and (max-width: (768px - 1)) {
             border: 3px solid turquoise;
-            // --website-site-carousel-btnnext-y: 0px;
-
+            // --website-site-carousel-btnnext-y: 0px; 
             --website-carousel-card-padd: 30px;
         }
 

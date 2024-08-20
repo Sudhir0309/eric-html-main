@@ -6,7 +6,9 @@
     --website-section-intro-card-padd: 30px 20px 20px 20px;
 
     // Skills card
+    --website-skills-wrapper-grid-template: 1fr / 1fr;
     --website-skills-card-padd: 30px 20px 20px 20px;
+    --website-skills-card-1st-child-gridrow: unset;
 }
 
 @layer best-work {
@@ -32,12 +34,14 @@
             @media (min-width: 1400px) {
                 border: 4px solid purple;
                 --website-section-intro-card-display: flex;
+                --website-section-intro-card-padd: 45px 40px 40px 40px;
             }
             
             // Large screens ...
             @media (min-width: 1200px) and (max-width: (1400px - 1)) {
                 border: 4px solid violet;
                 --website-section-intro-card-display: flex;
+                --website-section-intro-card-padd: 45px 35px 35px 35px;
             }
             
             // Large Medium screens ...
@@ -69,31 +73,46 @@
 
 @layer section-skills {
     .section-skills {
+        header {
+            max-width: 670px;
+        }
         .section-skills__wrapper {
             display: grid;
-            grid-template: 1fr / 1fr;
+            grid-template: var(--website-skills-wrapper-grid-template);
             gap: 4px;
 
-            .special-card {
-
+            .special-card { 
                 .card-body {
                     padding: var(--website-skills-card-padd);
+                }
+
+                &:first-of-type { // Occupy 2 rows
+                    grid-row: var(--website-skills-card-1st-child-gridrow);
                 }
             }
 
             // Extra Large screens ...
             @media (min-width: 1400px) {
                 border: 4px solid purple;
+                --website-skills-wrapper-grid-template: 1fr 1fr / 1fr 1fr;
+                --website-skills-card-1st-child-gridrow: span 2;
+                --website-skills-card-padd: 40px 40px 40px 85px;
             }
             
             // Large screens ...
             @media (min-width: 1200px) and (max-width: (1400px - 1)) {
                 border: 4px solid violet;
+                --website-skills-wrapper-grid-template: 1fr 1fr / 1fr 1fr;
+                --website-skills-card-1st-child-gridrow: span 2;
+                --website-skills-card-padd: 40px 40px 40px 65px;
             }
             
             // Large Medium screens ...
             @media (min-width: 992px) and (max-width: (1200px - 1)) {
                 border: 4px solid lime;
+                --website-skills-wrapper-grid-template: 1fr 1fr / 1fr 1fr;
+                --website-skills-card-1st-child-gridrow: span 2;
+                --website-skills-card-padd: 30px 30px 30px 55px;
             }
     
             // Medium Medium screens ...
