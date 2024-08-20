@@ -34,3 +34,30 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+/**
+ * TODO:
+ * -- PUT THIS IN ITS OWN FILE WHENEVER POSSIBLE
+ */
+document.addEventListener('DOMContentLoaded', function () {
+
+  // This function adds/removes a class to the nav when the page scrolls past a threshold
+  const navigation = document.querySelector('#main-nav'); // Change 'nav' to your navigation element selector
+  const threshold = 100; // Set your desired scroll threshold in pixels
+  const activeClass = 'navbar-masked'; // Set the class to add/remove
+
+  function handleScroll() {
+      if (window.scrollY > threshold) {
+          navigation.classList.add(activeClass);
+      } else {
+          navigation.classList.remove(activeClass);
+      }
+  }
+
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll);
+
+  // Check scroll position on page load
+  handleScroll();
+});
+
+
