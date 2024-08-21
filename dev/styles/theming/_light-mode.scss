@@ -1,35 +1,41 @@
 :root {
     --website-theme-light-xxxx-0: #fff;
-    --website-theme-light-xxxx-1: #EDEBF7;
-    --website-theme-light-xxxx-2: #DDDCF2;
-    --website-theme-light-xxxx-3: #CCCCF5;
 
-    --website-theme-light-yyyy-0: #010023;
-    --website-theme-light-yyyy-1: #323069;
-    --website-theme-light-yyyy-2: #3B27BE;
-    --website-theme-light-yyyy-3: #4934D5;
-    --website-theme-light-yyyy-4: #d9caf2;
-    --website-theme-light-yyyy-5: #F0EFFB;
-    
-    --website-theme-light-wwww-5: #535273;
+    --website-theme-light-aaaa-0: #ADFF00;
+    --website-theme-light-aaaa-1: #00ff94;
+    --website-theme-light-aaaa-2: #80D1A5; 
+    --website-theme-light-aaaa-7: #80AA27; 
 
-    --website-theme-light-zzzz-0: #00ff94;
-    --website-theme-light-zzzz-1: #00b268;  
+    --website-theme-light-bbbb-0: #010023;
+    --website-theme-light-bbbb-1: #323069;
+    --website-theme-light-bbbb-2: #3B27BE;
+    --website-theme-light-bbbb-3: #4934D5;
+    --website-theme-light-bbbb-4: #535273;
+    --website-theme-light-bbbb-5: #DDDCF2;
+    --website-theme-light-bbbb-6: #F0EFFB;
+    --website-theme-light-bbbb-7: #EDEBF7;
+    --website-theme-light-bbbb-8: #CCCCF5;
+    --website-theme-light-bbbb-9: #C4C2FF;
+
+    --website-theme-light-cccc-3: #d9caf2; 
+    --website-theme-light-cccc-4: #AFAEDE;
+    --website-theme-light-cccc-5: #9C8EFF;
+    --website-theme-light-cccc-6: #8073D5;
 }
 
 // html[data-theme="light"] {
     body {
-        background-color: var(--website-theme-light-xxxx-1);
-        color: var(--website-theme-light-wwww-5);
+        background-color: var(--website-theme-light-bbbb-7);
+        color: var(--website-theme-light-bbbb-4);
     }
 
     @layer color-mix {
         .light-block-txt-col {
             h1, h2, h3, h4, h5, h6 {
-                color: var(--website-theme-light-yyyy-1);
+                color: var(--website-theme-light-bbbb-1);
             }
             ul, p, a {
-                color: var(--website-theme-light-wwww-5);
+                color: var(--website-theme-light-bbbb-4);
             }
             a {
                 &:hover {
@@ -41,31 +47,17 @@
     
         .dark-block-txt-col {
             h1, h2, h3, h4, h5, h6 {
-                color: var(--website-theme-light-xxxx-2);
+                color: var(--website-theme-light-bbbb-5);
             }
             ul, p, a {
-                color: var(--website-theme-light-xxxx-3);
-            }
-        }
-    }
-
-    @layer site-carousel {
-        .site-carousel {  
-            .slick-arrow {
-                background-color: var(--website-theme-light-zzzz-0);
-                // font-weight: bold;
-                // font-size: 0.8rem;
-                // line-height: 0.8rem;
-                // background: yellow;
-                border: 0;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.20);
+                color: var(--website-theme-light-bbbb-8);
             }
         }
     }
 
     @layer hero {
         .hero {
-            background-color: var(--website-theme-light-yyyy-0);
+            background-color: var(--website-theme-light-bbbb-0);
         }
     }
 
@@ -73,7 +65,7 @@
         .navbar {
 
             &.navbar-masked {
-                background-color: var(--website-theme-light-yyyy-0);
+                background-color: var(--website-theme-light-bbbb-0);
             }
 
             .navbar-toggler-icon {
@@ -85,27 +77,25 @@
             }
 
             .navbar-brand, .nav-link {
-                // color: var(--website-theme-light-wwww-5);
-                
                 &:hover, &.active {
-                    color: red;
+                    color: var(--website-theme-light-aaaa-1);
                 } 
             }
             .navbar-collapse.collapse.show {
-                background-color: var(--website-theme-light-yyyy-2);
+                background-color: var(--website-theme-light-bbbb-2);
             }
 
             .nav-item { 
                 // separator between links
                 &::after { 
-                    background-color: var(--website-theme-light-yyyy-4);
+                    background-color: var(--website-theme-light-cccc-3);
                 }
             }
 
             .nav-link {
                 &.item-icon-material {
                     &:hover {
-                        color: var(--website-theme-light-zzzz-0);
+                        color: var(--website-theme-light-aaaa-1);
                     }
                 }
             }
@@ -146,32 +136,54 @@
     @layer section-introduction {
         .section-introduction {
             .card {
-                border: 1px solid var(--website-theme-light-yyyy-4);
+                border: 1px solid var(--website-theme-light-cccc-3);
             }
         }
     }
 
     @layer section-theme {
         .section-theme1 {
-            background-color: var(--website-theme-light-yyyy-2);
+            background-color: var(--website-theme-light-bbbb-2);
 
             .card {
-                background-color: var(--website-theme-light-yyyy-3);
+                background-color: var(--website-theme-light-bbbb-3);
             }
         }
     }
 
     @layer buttons {
+        .btn {
+            &:disabled {
+                opacity: 0.5;
+            }
+        }
         .btn-primary {
-            color: var(--website-theme-light-yyyy-0);
-            background-color: var(--website-theme-light-zzzz-0);
-            border-color: var(--website-theme-light-zzzz-0);
+            color: var(--website-theme-light-bbbb-0);
+            background-color: var(--website-theme-light-aaaa-1);
+            border-color: var(--website-theme-light-aaaa-1);
+
+            &:hover {
+                background-color: var(--website-theme-light-aaaa-0);
+                border-color: var(--website-theme-light-aaaa-7);
+            }
+            &:active {
+                background-color: var(--website-theme-light-aaaa-7);
+            }
         }
 
+
+        .slick-arrow, // Set carousel buttons as 2nd btns
         .btn-secondary {
-            color: var(--website-theme-light-yyyy-0);
-            background-color: var(--website-theme-light-xxxx-2);
-            border-color: var(--website-theme-light-xxxx-2); 
+            color: var(--website-theme-light-bbbb-0);
+            background-color: var(--website-theme-light-bbbb-5);
+            border-color: var(--website-theme-light-cccc-6); 
+
+            &:hover {
+                background-color: var(--website-theme-light-cccc-4);
+            }
+            &:active {
+                background-color: var(--website-theme-light-cccc-6);
+            }
         }
     }
 

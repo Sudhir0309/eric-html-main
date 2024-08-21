@@ -188,6 +188,11 @@
                     content: "\e5e1";
                 }
             }
+            &.arrow-open-modal {
+                &::before {
+                    content: "\f1e1";
+                }
+            }
         }
 
         &-after {
@@ -224,6 +229,11 @@
             &.arrow-forward {
                 &::after {
                     content: "\e5e1";
+                }
+            }
+            &.arrow-open-modal {
+                &::after {
+                    content: "\f1e1";
                 }
             }
             &.mail {

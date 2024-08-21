@@ -1,11 +1,11 @@
 :root {
     --website-a-color: inherit;
     --website-site-carousel-hover-state: 35%; 
-    --website-site-carousel-btnprev-y: -66px; 
-    --website-site-carousel-btnnext-y: -110px; 
+    --website-site-carousel-btnprev-y: -60px; 
+    --website-site-carousel-btnnext-y: -103px; 
     --website-site-carousel-item-gap: 0;
 
-    --website-site-carousel-btnprev-x: 0px; // 60px;
+    --website-site-carousel-btnprev-x: 0px;
     --website-site-carousel-btn-x: 0; //-10px;
     --website-site-carousel-btn-padd: 6px 8px 6px 13px;
     --website-site-carousel-btn-fontsize: 0.8rem;
@@ -132,6 +132,8 @@
         @media (min-width: 1400px) {
             border: 3px solid purple;
             --website-site-carousel-btnnext-y: -70px;
+            --website-site-carousel-btnprev-y: -70px; 
+            --website-site-carousel-btnprev-x: 70px;
             --website-site-carousel-item-gap: 60px;
             --website-carousel-card-padd: 30px;
         }
@@ -139,7 +141,9 @@
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
             border: 3px solid violet;
-            --website-site-carousel-btnnext-y: -80px;
+            --website-site-carousel-btnnext-y: -70px;
+            --website-site-carousel-btnprev-y: -70px; 
+            --website-site-carousel-btnprev-x: 70px;
             --website-site-carousel-item-gap: 60px;
             --website-carousel-card-padd: 30px;
         }
@@ -148,6 +152,8 @@
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
             border: 3px solid lime;
             --website-site-carousel-btnnext-y: -70px;
+            --website-site-carousel-btnprev-y: -70px; 
+            --website-site-carousel-btnprev-x: 70px;
             --website-site-carousel-item-gap: 40px;
             --website-carousel-card-padd: 30px;
         }

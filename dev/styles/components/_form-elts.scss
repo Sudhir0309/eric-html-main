@@ -10,33 +10,65 @@
 
 @layer form-elts {
     @layer buttons {
+
+
+
+
+
+
+    // @layer site-carousel {
+    //     .site-carousel {  
+    //         .slick-arrow {
+    //             background-color: var(--website-theme-light-aaaa-1);
+    //             // font-weight: bold;
+    //             // font-size: 0.8rem;
+    //             // line-height: 0.8rem;
+    //             // background: yellow;
+    //             border: 0;
+    //             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.20);
+    //         }
+    //     }
+    // }
+        .slick-arrow {
+            border-width: 1px;
+        }
+
+        .slick-arrow,
         .btn {
             border-radius: 4px;
             padding: var(--website-btn-padding);
             font-weight: 500;
             font-size: var(--website-btn-fontsize);
 
+            &.btn-sm {
+                padding: 0.25rem 0.75rem;
+                font-size: 0.875rem;
+                // font-weight: 500;
+                // font-size: var(--website-btn-fontsize);
+                // font-size: 0.875rem;
+            }
 
-            // Extra Large screens ...
-            @media (min-width: 1400px) {
-                // border: 10px solid purple;
-                --website-btn-padding: 15px 30px;
-                --website-btnicon-icon-top: 8px;
-            }
+
+            // // Extra Large screens ...
+            // @media (min-width: 1400px) {
+            //     // border: 10px solid purple;
+            //     --website-btn-padding: 15px 30px;
+            //     --website-btnicon-icon-top: 8px;
+            // }
             
-            // Large screens ...
-            @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-                // border: 10px solid violet;
-                --website-btn-padding: 15px 30px;
-                --website-btnicon-icon-top: 8px;
-            }
+            // // Large screens ...
+            // @media (min-width: 1200px) and (max-width: (1400px - 1)) {
+            //     // border: 10px solid violet;
+            //     --website-btn-padding: 15px 30px;
+            //     --website-btnicon-icon-top: 8px;
+            // }
             
-            // Large Medium screens ...
-            @media (min-width: 992px) and (max-width: (1200px - 1)) {
-                // border: 10px solid lime;
-                --website-btn-padding: 15px 30px;
-                --website-btnicon-icon-top: 8px;
-            }
+            // // Large Medium screens ...
+            // @media (min-width: 992px) and (max-width: (1200px - 1)) {
+            //     // border: 10px solid lime;
+            //     --website-btn-padding: 15px 30px;
+            //     --website-btnicon-icon-top: 8px;
+            // }
 
             // // Medium Medium screens ...
             // @media (min-width: 768px) and (max-width: (992px - 1)) {

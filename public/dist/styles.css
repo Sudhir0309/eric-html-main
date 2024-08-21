@@ -11496,6 +11496,9 @@
     .item-icon-material-before.arrow-forward::before {
       content: "\e5e1";
     }
+    .item-icon-material-before.arrow-open-modal::before {
+      content: "\f1e1";
+    }
     .item-icon-material-after.chat-bubble::after {
       content: "\e0b7";
     }
@@ -11516,6 +11519,9 @@
     }
     .item-icon-material-after.arrow-forward::after {
       content: "\e5e1";
+    }
+    .item-icon-material-after.arrow-open-modal::after {
+      content: "\f1e1";
     }
     .item-icon-material-after.mail::after {
       content: "\e158";
@@ -11546,29 +11552,20 @@
   }
   @layer form-elts {
     @layer buttons {
+      .slick-arrow {
+        border-width: 1px;
+      }
+      .slick-arrow,
       .btn {
         border-radius: 4px;
         padding: var(--website-btn-padding);
         font-weight: 500;
         font-size: var(--website-btn-fontsize);
       }
-      @media (min-width: 1400px) {
-        .btn {
-          --website-btn-padding: 15px 30px;
-          --website-btnicon-icon-top: 8px;
-        }
-      }
-      @media (min-width: 1200px) and (max-width: 1399px) {
-        .btn {
-          --website-btn-padding: 15px 30px;
-          --website-btnicon-icon-top: 8px;
-        }
-      }
-      @media (min-width: 992px) and (max-width: 1199px) {
-        .btn {
-          --website-btn-padding: 15px 30px;
-          --website-btnicon-icon-top: 8px;
-        }
+      .slick-arrow.btn-sm,
+      .btn.btn-sm {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.875rem;
       }
       .btn.item-icon-bootstrap,
       .btn.item-icon-material {
@@ -11959,8 +11956,8 @@
   :root {
     --website-a-color: inherit;
     --website-site-carousel-hover-state: 35%;
-    --website-site-carousel-btnprev-y: -66px;
-    --website-site-carousel-btnnext-y: -110px;
+    --website-site-carousel-btnprev-y: -60px;
+    --website-site-carousel-btnnext-y: -103px;
     --website-site-carousel-item-gap: 0;
     --website-site-carousel-btnprev-x: 0px;
     --website-site-carousel-btn-x: 0;
@@ -12057,6 +12054,8 @@
       .site-carousel {
         border: 3px solid purple;
         --website-site-carousel-btnnext-y: -70px;
+        --website-site-carousel-btnprev-y: -70px;
+        --website-site-carousel-btnprev-x: 70px;
         --website-site-carousel-item-gap: 60px;
         --website-carousel-card-padd: 30px;
       }
@@ -12064,7 +12063,9 @@
     @media (min-width: 1200px) and (max-width: 1399px) {
       .site-carousel {
         border: 3px solid violet;
-        --website-site-carousel-btnnext-y: -80px;
+        --website-site-carousel-btnnext-y: -70px;
+        --website-site-carousel-btnprev-y: -70px;
+        --website-site-carousel-btnprev-x: 70px;
         --website-site-carousel-item-gap: 60px;
         --website-carousel-card-padd: 30px;
       }
@@ -12073,6 +12074,8 @@
       .site-carousel {
         border: 3px solid lime;
         --website-site-carousel-btnnext-y: -70px;
+        --website-site-carousel-btnprev-y: -70px;
+        --website-site-carousel-btnprev-x: 70px;
         --website-site-carousel-item-gap: 40px;
         --website-carousel-card-padd: 30px;
       }
@@ -12315,56 +12318,55 @@
 @layer theming {
   :root {
     --website-theme-light-xxxx-0: #fff;
-    --website-theme-light-xxxx-1: #EDEBF7;
-    --website-theme-light-xxxx-2: #DDDCF2;
-    --website-theme-light-xxxx-3: #CCCCF5;
-    --website-theme-light-yyyy-0: #010023;
-    --website-theme-light-yyyy-1: #323069;
-    --website-theme-light-yyyy-2: #3B27BE;
-    --website-theme-light-yyyy-3: #4934D5;
-    --website-theme-light-yyyy-4: #d9caf2;
-    --website-theme-light-yyyy-5: #F0EFFB;
-    --website-theme-light-wwww-5: #535273;
-    --website-theme-light-zzzz-0: #00ff94;
-    --website-theme-light-zzzz-1: #00b268;
+    --website-theme-light-aaaa-0: #ADFF00;
+    --website-theme-light-aaaa-1: #00ff94;
+    --website-theme-light-aaaa-2: #80D1A5;
+    --website-theme-light-aaaa-7: #80AA27;
+    --website-theme-light-bbbb-0: #010023;
+    --website-theme-light-bbbb-1: #323069;
+    --website-theme-light-bbbb-2: #3B27BE;
+    --website-theme-light-bbbb-3: #4934D5;
+    --website-theme-light-bbbb-4: #535273;
+    --website-theme-light-bbbb-5: #DDDCF2;
+    --website-theme-light-bbbb-6: #F0EFFB;
+    --website-theme-light-bbbb-7: #EDEBF7;
+    --website-theme-light-bbbb-8: #CCCCF5;
+    --website-theme-light-bbbb-9: #C4C2FF;
+    --website-theme-light-cccc-3: #d9caf2;
+    --website-theme-light-cccc-4: #AFAEDE;
+    --website-theme-light-cccc-5: #9C8EFF;
+    --website-theme-light-cccc-6: #8073D5;
   }
   body {
-    background-color: var(--website-theme-light-xxxx-1);
-    color: var(--website-theme-light-wwww-5);
+    background-color: var(--website-theme-light-bbbb-7);
+    color: var(--website-theme-light-bbbb-4);
   }
   @layer color-mix {
     .light-block-txt-col h1, .light-block-txt-col h2, .light-block-txt-col h3, .light-block-txt-col h4, .light-block-txt-col h5, .light-block-txt-col h6 {
-      color: var(--website-theme-light-yyyy-1);
+      color: var(--website-theme-light-bbbb-1);
     }
     .light-block-txt-col ul, .light-block-txt-col p, .light-block-txt-col a {
-      color: var(--website-theme-light-wwww-5);
+      color: var(--website-theme-light-bbbb-4);
     }
     .light-block-txt-col a:hover {
       text-decoration: none;
       opacity: 0.5;
     }
     .dark-block-txt-col h1, .dark-block-txt-col h2, .dark-block-txt-col h3, .dark-block-txt-col h4, .dark-block-txt-col h5, .dark-block-txt-col h6 {
-      color: var(--website-theme-light-xxxx-2);
+      color: var(--website-theme-light-bbbb-5);
     }
     .dark-block-txt-col ul, .dark-block-txt-col p, .dark-block-txt-col a {
-      color: var(--website-theme-light-xxxx-3);
-    }
-  }
-  @layer site-carousel {
-    .site-carousel .slick-arrow {
-      background-color: var(--website-theme-light-zzzz-0);
-      border: 0;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      color: var(--website-theme-light-bbbb-8);
     }
   }
   @layer hero {
     .hero {
-      background-color: var(--website-theme-light-yyyy-0);
+      background-color: var(--website-theme-light-bbbb-0);
     }
   }
   @layer navbar {
     .navbar.navbar-masked {
-      background-color: var(--website-theme-light-yyyy-0);
+      background-color: var(--website-theme-light-bbbb-0);
     }
     .navbar .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27><path stroke=%27rgba%28200, 200, 200, 0.75%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/></svg>");
@@ -12373,41 +12375,60 @@
       box-shadow: 0px 0px 10px white;
     }
     .navbar .navbar-brand:hover, .navbar .navbar-brand.active, .navbar .nav-link:hover, .navbar .nav-link.active {
-      color: red;
+      color: var(--website-theme-light-aaaa-1);
     }
     .navbar .navbar-collapse.collapse.show {
-      background-color: var(--website-theme-light-yyyy-2);
+      background-color: var(--website-theme-light-bbbb-2);
     }
     .navbar .nav-item::after {
-      background-color: var(--website-theme-light-yyyy-4);
+      background-color: var(--website-theme-light-cccc-3);
     }
     .navbar .nav-link.item-icon-material:hover {
-      color: var(--website-theme-light-zzzz-0);
+      color: var(--website-theme-light-aaaa-1);
     }
   }
   @layer section-introduction {
     .section-introduction .card {
-      border: 1px solid var(--website-theme-light-yyyy-4);
+      border: 1px solid var(--website-theme-light-cccc-3);
     }
   }
   @layer section-theme {
     .section-theme1 {
-      background-color: var(--website-theme-light-yyyy-2);
+      background-color: var(--website-theme-light-bbbb-2);
     }
     .section-theme1 .card {
-      background-color: var(--website-theme-light-yyyy-3);
+      background-color: var(--website-theme-light-bbbb-3);
     }
   }
   @layer buttons {
-    .btn-primary {
-      color: var(--website-theme-light-yyyy-0);
-      background-color: var(--website-theme-light-zzzz-0);
-      border-color: var(--website-theme-light-zzzz-0);
+    .btn:disabled {
+      opacity: 0.5;
     }
+    .btn-primary {
+      color: var(--website-theme-light-bbbb-0);
+      background-color: var(--website-theme-light-aaaa-1);
+      border-color: var(--website-theme-light-aaaa-1);
+    }
+    .btn-primary:hover {
+      background-color: var(--website-theme-light-aaaa-0);
+      border-color: var(--website-theme-light-aaaa-7);
+    }
+    .btn-primary:active {
+      background-color: var(--website-theme-light-aaaa-7);
+    }
+    .slick-arrow,
     .btn-secondary {
-      color: var(--website-theme-light-yyyy-0);
-      background-color: var(--website-theme-light-xxxx-2);
-      border-color: var(--website-theme-light-xxxx-2);
+      color: var(--website-theme-light-bbbb-0);
+      background-color: var(--website-theme-light-bbbb-5);
+      border-color: var(--website-theme-light-cccc-6);
+    }
+    .slick-arrow:hover,
+    .btn-secondary:hover {
+      background-color: var(--website-theme-light-cccc-4);
+    }
+    .slick-arrow:active,
+    .btn-secondary:active {
+      background-color: var(--website-theme-light-cccc-6);
     }
   }
   @layer footer {
