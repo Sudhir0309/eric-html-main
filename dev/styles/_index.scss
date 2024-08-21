@@ -10,10 +10,6 @@
     @import './vendors/_bootstrap@5.3.3.min';
 }
 
-// @layer framework {
-//     @import './framework/_bootstrap-override.scss';
-// }
-
 @layer base {
     @import './base/initialization';
     @import './base/variables';
@@ -29,8 +25,6 @@
 }
 
 @layer components {
-//     // The "icons-and-more" file has to remain on top because of the 
-//     // "icon-foundation" layer that needs to be overriten by the other layers
     @import './components/icons-and-more';
     @import './components/form-elts';
     @import './components/jumbotron';
@@ -41,16 +35,8 @@
     @import './components/site-carousel.scss';
     @import './components/mixed-components';
     @import './components/footer';
-//     @import './components/alert';
-    // @import './components/section-video-banner';   
-//     @import './components/info1-blurb';
-//     @import './components/accordion';
-//     @import './components/case-study-thumb';
-//     @import './components/navigation-articles';
 }
 
 @layer theming {
-//     @import './theming/theme-toggle';
     @import './theming/light-mode';
-//     @import './theming/dark-mode';
 }
