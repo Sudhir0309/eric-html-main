@@ -10973,7 +10973,7 @@
     --website-fs-h2: 28px;
     --website-ln-h2: 28px;
     --website-fs-h3: 23px;
-    --website-ln-h3: 26px;
+    --website-ln-h3: 24px;
     --website-fs-h4: 18px;
     --website-ln-h4: 24px;
     --website-mb-h1: 10px;
@@ -11032,7 +11032,7 @@
       --website-fs-h2: 42px;
       --website-ln-h2: 46px;
       --website-fs-h3: 26.5px;
-      --website-ln-h3: 34.5px;
+      --website-ln-h3: 29px;
       --website-fs-h4: 22px;
       --website-ln-h4: 26px;
       --website-mb-h2: 25px;
@@ -11051,7 +11051,7 @@
       --website-fs-h2: 34.5px;
       --website-ln-h2: 38.5px;
       --website-fs-h3: 25px;
-      --website-ln-h3: 33.5px;
+      --website-ln-h3: 29px;
       --website-fs-h4: 21px;
       --website-ln-h4: 26px;
       --website-mb-h2: 22px;
@@ -11070,7 +11070,7 @@
       --website-fs-h2: 30.5px;
       --website-ln-h2: 33.5px;
       --website-fs-h3: 24.5px;
-      --website-ln-h3: 30.5px;
+      --website-ln-h3: 29px;
       --website-fs-h4: 20.5px;
       --website-ln-h4: 26px;
       --website-mb-h2: 20px;
@@ -11089,7 +11089,7 @@
       --website-fs-h2: 30.5px;
       --website-ln-h2: 33.5px;
       --website-fs-h3: 24.5px;
-      --website-ln-h3: 28.5px;
+      --website-ln-h3: 25.5px;
       --website-fs-h4: 20.5px;
       --website-ln-h4: 24px;
       --website-mb-h2: 20px;
@@ -11546,42 +11546,71 @@
   :root {
     --website-btn-padding: 10px 20px;
     --website-btn-fontsize: 1.15rem;
+    --website-btn-icon-before-padding: 10px 20px 10px 40px;
+    --website-btn-icon-after-padding: 10px 40px 10px 20px;
+    --website-btn-icon-icon-size: 1.5rem;
+    --website-btn-icon-icon-top: 5px;
+    --website-btn-icon-icon-left: 9px;
+    --website-btn-icon-icon-right: 17px;
+    --website-btn-sm-padding: 0.25rem 0.75rem;
+    --website-btn-sm-fontsize: 0.875rem;
+    --website-btn-icon-before-sm-padding: 0.25rem 0.75rem 0.25rem 2rem;
+    --website-btn-icon-after-sm-padding: 0.25rem 2rem 0.25rem 0.75rem;
+    --website-btn-icon-sm-icon-size: 1.1rem;
+    --website-btn-icon-sm-icon-top: 2px;
+    --website-btn-icon-sm-icon-right: 10px;
     --website-btnicon-padding: 10px 45px 10px 20px;
     --website-btnicon-icon-top: 6px;
     --website-btnicon-icon-right: 20px;
   }
   @layer form-elts {
     @layer buttons {
-      .slick-arrow {
-        border-width: 1px;
-      }
-      .slick-arrow,
       .btn {
         border-radius: 4px;
         padding: var(--website-btn-padding);
         font-weight: 500;
         font-size: var(--website-btn-fontsize);
       }
-      .slick-arrow.btn-sm,
-      .btn.btn-sm {
-        padding: 0.25rem 0.75rem;
-        font-size: 0.875rem;
-      }
-      .btn.item-icon-bootstrap,
-      .btn.item-icon-material {
+      .btn.item-icon-bootstrap, .btn.item-icon-material {
         position: relative;
-        padding: var(--website-btnicon-padding);
       }
-      .btn.item-icon-bootstrap::before, .btn.item-icon-bootstrap::after,
-      .btn.item-icon-material::before,
-      .btn.item-icon-material::after {
-        position: absolute;
+      .btn.item-icon-bootstrap.item-icon-material-before, .btn.item-icon-material.item-icon-material-before {
+        padding: var(--website-btn-icon-before-padding);
+      }
+      .btn.item-icon-bootstrap.item-icon-material-before::before, .btn.item-icon-material.item-icon-material-before::before {
+        left: var(--website-btn-icon-icon-left);
+      }
+      .btn.item-icon-bootstrap.item-icon-material-after, .btn.item-icon-material.item-icon-material-after {
+        padding: var(--website-btn-icon-after-padding);
+      }
+      .btn.item-icon-bootstrap.item-icon-material-after::after, .btn.item-icon-material.item-icon-material-after::after {
         left: unset;
+        right: var(--website-btn-icon-icon-right);
       }
-      .btn.item-icon-bootstrap.item-icon-bootstrap-after::after,
-      .btn.item-icon-material.item-icon-material-after::after {
-        top: var(--website-btnicon-icon-top);
-        right: var(--website-btnicon-icon-right);
+      .btn.item-icon-bootstrap::before, .btn.item-icon-bootstrap::after, .btn.item-icon-material::before, .btn.item-icon-material::after {
+        position: absolute;
+        font-size: var(--website-btn-icon-icon-size);
+        top: var(--website-btn-icon-icon-top);
+      }
+      .btn.btn-sm {
+        padding: var(--website-btn-sm-padding);
+        font-size: var(--website-btn-sm-fontsize);
+      }
+      .btn.btn-sm.item-icon-bootstrap.item-icon-material-before, .btn.btn-sm.item-icon-material.item-icon-material-before {
+        padding: var(--website-btn-icon-before-sm-padding);
+      }
+      .btn.btn-sm.item-icon-bootstrap.item-icon-material-before::before, .btn.btn-sm.item-icon-material.item-icon-material-before::before {
+        left: var(--website-btn-icon-sm-icon-right);
+      }
+      .btn.btn-sm.item-icon-bootstrap.item-icon-material-after, .btn.btn-sm.item-icon-material.item-icon-material-after {
+        padding: var(--website-btn-icon-after-sm-padding);
+      }
+      .btn.btn-sm.item-icon-bootstrap.item-icon-material-after::after, .btn.btn-sm.item-icon-material.item-icon-material-after::after {
+        right: var(--website-btn-icon-sm-icon-right);
+      }
+      .btn.btn-sm.item-icon-bootstrap::before, .btn.btn-sm.item-icon-bootstrap::after, .btn.btn-sm.item-icon-material::before, .btn.btn-sm.item-icon-material::after {
+        font-size: var(--website-btn-icon-sm-icon-size);
+        top: var(--website-btn-icon-sm-icon-top);
       }
     }
   }
@@ -11613,19 +11642,23 @@
   :root {
     --website-hero-height: auto;
     --website-hero-container-paddtop: 90px;
-    --website-hero-jumbotron-margin: 0 0 20px 0;
     --website-hero-persona-position: relative;
     --website-hero-persona-pos-bottom: 0;
     --website-hero-persona-pos-right: 0;
     --website-hero-persona-position: relative;
     --website-hero-persona-width: 50%;
     --website-hero-persona-margin: 0 auto;
+    --website-hero-decoration-display: none;
+    --website-hero-decoration-height: 400px;
+    --website-hero-decoration-right: 0;
     --website-jumbotron-textwrapper-width: unset;
+    --website-hero-jumbotron-margin: 0 0 20px 0;
   }
   @layer hero {
     .hero {
       position: relative;
       height: var(--website-hero-height);
+      overflow: hidden;
     }
     .hero-content-wrapper {
       padding-top: var(--website-hero-container-paddtop);
@@ -11638,11 +11671,21 @@
       width: var(--website-hero-persona-width);
       margin: var(--website-hero-persona-margin);
       transform: scaleX(-1);
+      z-index: 2;
+    }
+    .hero-decoration {
+      position: absolute;
       z-index: 1;
+      display: var(--website-hero-decoration-display);
+      height: var(--website-hero-decoration-height);
+      right: var(--website-hero-decoration-right);
+      bottom: 0;
     }
     .hero-jumbotron {
+      position: relative;
       width: var(--website-jumbotron-textwrapper-width);
       margin: var(--website-hero-jumbotron-margin);
+      z-index: 3;
     }
     @media (min-width: 1400px) {
       .hero {
@@ -11653,6 +11696,9 @@
         --website-hero-persona-margin: 0;
         --website-hero-persona-position: absolute;
         --website-hero-persona-pos-right: 40px;
+        --website-hero-decoration-height: 100%;
+        --website-hero-decoration-right: -10%;
+        --website-hero-decoration-display: block;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
@@ -11664,6 +11710,9 @@
         --website-hero-persona-margin: 0;
         --website-hero-persona-position: absolute;
         --website-hero-persona-pos-right: 40px;
+        --website-hero-decoration-height: 100%;
+        --website-hero-decoration-right: -10%;
+        --website-hero-decoration-display: block;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
@@ -11675,6 +11724,9 @@
         --website-hero-persona-margin: 0;
         --website-hero-persona-position: absolute;
         --website-hero-persona-pos-right: 40px;
+        --website-hero-decoration-height: 100%;
+        --website-hero-decoration-right: -10%;
+        --website-hero-decoration-display: block;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
@@ -11686,11 +11738,17 @@
         --website-hero-persona-margin: 0;
         --website-hero-persona-position: absolute;
         --website-hero-persona-pos-right: 60px;
+        --website-hero-decoration-height: 100%;
+        --website-hero-decoration-right: -20%;
+        --website-hero-decoration-display: block;
       }
     }
     @media (min-width: 576px) and (max-width: 767px) {
       .hero {
         --website-hero-persona-width: 45%;
+        --website-hero-decoration-height: 100%;
+        --website-hero-decoration-right: -20%;
+        --website-hero-decoration-display: block;
       }
     }
   }
@@ -11712,7 +11770,7 @@
 
       .speech-bubble {
           position: absolute;
-          z-index: 2;
+          z-index: 5;
 
           left: var(--website-hero-spbubble-left);
           bottom: var(--website-hero-spbubble-bottom);
@@ -11797,6 +11855,9 @@
       padding: 0;
       overflow: hidden;
     }
+    .icon-list li {
+      display: none; /* Hide all list items */
+    }
     .icon-list li img {
       height: var(--website-logo-icon-height);
     }
@@ -11822,6 +11883,16 @@
       .icon-list {
         --website-logo-icon-height: 53px;
         --website-logo-icon-gap: 70px;
+      }
+    }
+    @media (min-width: 576px) {
+      .icon-list li:nth-child(-n+6) { /* Show only the first 4 list items */
+        display: list-item;
+      }
+    }
+    @media (max-width: 575px) {
+      .icon-list li:nth-child(-n+4) { /* Show only the first 4 list items */
+        display: list-item;
       }
     }
   }
@@ -11954,16 +12025,13 @@
     }
   }
   :root {
-    --website-a-color: inherit;
     --website-site-carousel-hover-state: 35%;
     --website-site-carousel-btnprev-y: -60px;
-    --website-site-carousel-btnnext-y: -103px;
-    --website-site-carousel-item-gap: 0;
-    --website-site-carousel-btnprev-x: 0px;
-    --website-site-carousel-btn-x: 0;
-    --website-site-carousel-btn-padd: 6px 8px 6px 13px;
-    --website-site-carousel-btn-fontsize: 0.8rem;
-    --website-site-carousel-btn-line-height: 25px;
+    --website-site-carousel-item-gap: 20px;
+    --website-carousel-controls-top: -90px;
+    --website-carousel-controls-flexdir: column;
+    --website-carousel-controls-width: min-content;
+    --website-carousel-controls-gap: 5px;
     --website-carousel-card-padd: 20px 20px 20px 20px;
   }
   /**
@@ -11972,51 +12040,37 @@
    * https://kenwheeler.github.io/slick/
   */
   @layer site-carousel {
-    .site-carousel {
+    .site-carousel-wrapper {
+      position: relative;
+    }
+    .site-carousel-wrapper .site-carousel-controls {
+      position: absolute;
+      display: flex;
+      top: var(--website-carousel-controls-top);
+      gap: var(--website-carousel-controls-gap);
+      right: 0;
+      justify-content: end;
+      flex-direction: var(--website-carousel-controls-flexdir);
+      width: var(--website-carousel-controls-width);
+    }
+    .site-carousel-wrapper .site-carousel-controls button {
+      width: fit-content;
+    }
+    .site-carousel-wrapper .site-carousel__items-list {
       list-style: none;
       margin: 0;
       padding: 0;
     }
-    .site-carousel .slick-arrow {
-      position: absolute;
-      top: var(--website-site-carousel-btnnext-y);
-      right: var(--website-site-carousel-btn-x);
-      z-index: 2;
-      font-weight: bold;
-      font-size: var(--website-site-carousel-btn-fontsize);
-      line-height: var(--website-site-carousel-btn-line-height);
-      padding: var(--website-site-carousel-btn-padd);
+    .site-carousel-wrapper .site-carousel__items-list .slick-arrow {
+      display: none !important;
     }
-    .site-carousel .slick-arrow.slick-next:after {
-      content: "\f285";
-      font-family: bootstrap-icons !important;
-      color: #B31E7F;
-      position: relative;
-      top: 3px;
-    }
-    .site-carousel .slick-arrow.slick-prev {
-      top: var(--website-site-carousel-btnprev-y);
-      right: var(--website-site-carousel-btnprev-x);
-    }
-    .site-carousel .slick-arrow.slick-prev:before {
-      content: "\f284";
-      font-family: bootstrap-icons !important;
-      color: #B31E7F;
-      position: relative;
-      top: 3px;
-    }
-    .site-carousel .slick-arrow.slick-disabled {
-      opacity: 0.4;
-      cursor: default;
-    }
-    .site-carousel .site-carousel-item .card {
+    .site-carousel-wrapper .site-carousel__items-list .site-carousel-item .card {
       position: relative;
       display: block;
-      color: var(--website-a-color);
       text-decoration: none;
       padding: var(--website-carousel-card-padd);
     }
-    .site-carousel .site-carousel-item .card::before {
+    .site-carousel-wrapper .site-carousel__items-list .site-carousel-item .card::before {
       content: "";
       position: absolute;
       z-index: 1;
@@ -12025,10 +12079,9 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #fff;
       transition: all 0.3s ease;
     }
-    .site-carousel .site-carousel-item .card .hover-btn {
+    .site-carousel-wrapper .site-carousel__items-list .site-carousel-item .card .hover-btn {
       position: absolute;
       z-index: 2;
       opacity: 0;
@@ -12037,65 +12090,86 @@
       top: 20%;
       left: 30%;
     }
-    .site-carousel .site-carousel-item .card:hover .hover-btn {
+    .site-carousel-wrapper .site-carousel__items-list .site-carousel-item .card:hover .hover-btn {
       visibility: visible;
       opacity: 1;
     }
-    .site-carousel .site-carousel-item .card:hover::before {
+    .site-carousel-wrapper .site-carousel__items-list .site-carousel-item .card:hover::before {
       opacity: 0.7;
     }
-    .site-carousel .site-carousel-item:nth-child(odd) {
-      padding-right: var(--website-site-carousel-item-gap);
+    .site-carousel-wrapper .site-carousel__items-list .slick-track {
+      /**
+       * Styling the 3 active items .......
+       * ----------------------------------
+      */
+      /**
+       * Styling the 2 active items .......
+       * ----------------------------------
+      */
     }
-    .site-carousel .site-carousel-item:nth-child(even) {
-      padding-left: var(--website-site-carousel-item-gap);
+    @media (min-width: 1200px) {
+      .site-carousel-wrapper .site-carousel__items-list .slick-track {
+        --website-site-carousel-item-gap: 25px;
+      }
+      .site-carousel-wrapper .site-carousel__items-list .slick-track .slick-active:has(+ .slick-active + .slick-active) .card {
+        margin-left: 0;
+        margin-right: var(--website-site-carousel-item-gap);
+      }
+      .site-carousel-wrapper .site-carousel__items-list .slick-track .slick-active:has(+ .slick-active) .card, .site-carousel-wrapper .site-carousel__items-list .slick-track .slick-active.slick-current + .slick-active .card {
+        margin-left: var(--website-site-carousel-item-gap);
+        margin-right: var(--website-site-carousel-item-gap);
+      }
+      .site-carousel-wrapper .site-carousel__items-list .slick-track .slick-active.slick-current + .slick-active + .slick-active .card, .site-carousel-wrapper .site-carousel__items-list .slick-track .slick-active:last-of-type.slick-current .card {
+        margin-left: var(--website-site-carousel-item-gap);
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .site-carousel-wrapper .site-carousel__items-list .slick-track {
+        --website-site-carousel-item-gap: 20px;
+      }
+      .site-carousel-wrapper .site-carousel__items-list .slick-track .slick-active:has(+ .slick-active) .card {
+        margin-right: var(--website-site-carousel-item-gap);
+      }
+      .site-carousel-wrapper .site-carousel__items-list .slick-track .slick-active.slick-current + .slick-active .card, .site-carousel-wrapper .site-carousel__items-list .slick-track .slick-active:last-of-type.slick-current .card {
+        margin-left: var(--website-site-carousel-item-gap);
+      }
     }
     @media (min-width: 1400px) {
-      .site-carousel {
-        border: 3px solid purple;
+      .site-carousel-wrapper {
         --website-site-carousel-btnnext-y: -70px;
         --website-site-carousel-btnprev-y: -70px;
-        --website-site-carousel-btnprev-x: 70px;
-        --website-site-carousel-item-gap: 60px;
         --website-carousel-card-padd: 30px;
+        --website-carousel-controls-top: -70px;
+        --website-carousel-controls-flexdir: row;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
-      .site-carousel {
-        border: 3px solid violet;
+      .site-carousel-wrapper {
         --website-site-carousel-btnnext-y: -70px;
         --website-site-carousel-btnprev-y: -70px;
-        --website-site-carousel-btnprev-x: 70px;
-        --website-site-carousel-item-gap: 60px;
         --website-carousel-card-padd: 30px;
+        --website-carousel-controls-top: -70px;
+        --website-carousel-controls-flexdir: row;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
-      .site-carousel {
-        border: 3px solid lime;
-        --website-site-carousel-btnnext-y: -70px;
+      .site-carousel-wrapper {
         --website-site-carousel-btnprev-y: -70px;
-        --website-site-carousel-btnprev-x: 70px;
-        --website-site-carousel-item-gap: 40px;
         --website-carousel-card-padd: 30px;
+        --website-carousel-controls-top: -70px;
+        --website-carousel-controls-flexdir: row;
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
-      .site-carousel {
-        border: 3px solid blue;
-        --website-site-carousel-item-gap: 20px;
+      .site-carousel-wrapper {
         --website-carousel-card-padd: 30px;
+        --website-carousel-controls-top: -60px;
+        --website-carousel-controls-flexdir: row;
       }
     }
     @media (min-width: 576px) and (max-width: 767px) {
-      .site-carousel {
-        border: 3px solid turquoise;
+      .site-carousel-wrapper {
         --website-carousel-card-padd: 30px;
-      }
-    }
-    @media (max-width: 575px) {
-      .site-carousel {
-        border: 3px solid chocolate;
       }
     }
   }
@@ -12108,10 +12182,8 @@
   **/
   :root {
     --website-anchors-scrollto-top: -80px;
-    --website-btnscrolltop-padding: 5px 10px;
     --website-btnscrolltop-font-size: 0.8rem;
     --website-btnscrolltop-x-pos: 10px;
-    --website-btnscrolltop-arrowdisplay: none;
     --website-hero-elts-spacer: 20px 0 0 0;
     --website-special-card-padd: 30px 20px 20px 20px;
   }
@@ -12152,42 +12224,21 @@
       position: fixed;
       z-index: 999;
       bottom: 30px;
-      padding: var(--website-btnscrolltop-padding);
-      font-size: var(--website-btnscrolltop-font-size);
       left: var(--website-btnscrolltop-x-pos);
-    }
-    .btn-scroll-top::after {
-      display: var(--website-btnscrolltop-arrowdisplay);
     }
     @media (min-width: 1400px) {
       .btn-scroll-top {
-        --website-btnscrolltop-padding: 10px 45px 10px 20px;
-        --website-btnscrolltop-font-size: 1.2rem;
-        --website-btnscrolltop-arrowdisplay: block;
         --website-btnscrolltop-x-pos: 50px;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .btn-scroll-top {
-        --website-btnscrolltop-padding: 10px 45px 10px 20px;
-        --website-btnscrolltop-font-size: 1.2rem;
-        --website-btnscrolltop-arrowdisplay: block;
         --website-btnscrolltop-x-pos: 90px;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .btn-scroll-top {
-        --website-btnscrolltop-padding: 10px 45px 10px 20px;
-        --website-btnscrolltop-font-size: 1.2rem;
-        --website-btnscrolltop-arrowdisplay: block;
         --website-btnscrolltop-x-pos: 90px;
-      }
-    }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .btn-scroll-top {
-        --website-btnscrolltop-padding: 10px 45px 10px 20px;
-        --website-btnscrolltop-font-size: 1.2rem;
-        --website-btnscrolltop-arrowdisplay: block;
       }
     }
   }
@@ -12325,13 +12376,14 @@
     --website-theme-light-bbbb-0: #010023;
     --website-theme-light-bbbb-1: #323069;
     --website-theme-light-bbbb-2: #3B27BE;
-    --website-theme-light-bbbb-3: #4934D5;
+    --website-theme-light-bbbb-3: #4934d5;
     --website-theme-light-bbbb-4: #535273;
     --website-theme-light-bbbb-5: #DDDCF2;
     --website-theme-light-bbbb-6: #F0EFFB;
     --website-theme-light-bbbb-7: #EDEBF7;
     --website-theme-light-bbbb-8: #CCCCF5;
     --website-theme-light-bbbb-9: #C4C2FF;
+    --website-theme-light-cccc-0: #0066FF;
     --website-theme-light-cccc-3: #d9caf2;
     --website-theme-light-cccc-4: #AFAEDE;
     --website-theme-light-cccc-5: #9C8EFF;
@@ -12340,6 +12392,17 @@
   body {
     background-color: var(--website-theme-light-bbbb-7);
     color: var(--website-theme-light-bbbb-4);
+  }
+  @layer component-mix {
+    .section-introduction .card,
+    .site-carousel__items-list .card {
+      border: 1px solid var(--website-theme-light-cccc-3);
+    }
+  }
+  @layer site-carousel {
+    .site-carousel-item .card::before {
+      background-color: var(--website-theme-light-xxxx-0);
+    }
   }
   @layer color-mix {
     .light-block-txt-col h1, .light-block-txt-col h2, .light-block-txt-col h3, .light-block-txt-col h4, .light-block-txt-col h5, .light-block-txt-col h6 {
@@ -12350,7 +12413,7 @@
     }
     .light-block-txt-col a:hover {
       text-decoration: none;
-      opacity: 0.5;
+      color: var(--website-theme-light-cccc-0);
     }
     .dark-block-txt-col h1, .dark-block-txt-col h2, .dark-block-txt-col h3, .dark-block-txt-col h4, .dark-block-txt-col h5, .dark-block-txt-col h6 {
       color: var(--website-theme-light-bbbb-5);
@@ -12372,7 +12435,7 @@
       background-image: url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27><path stroke=%27rgba%28200, 200, 200, 0.75%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/></svg>");
     }
     .navbar .navbar-toggler:focus {
-      box-shadow: 0px 0px 10px white;
+      box-shadow: 0px 0px 10px var(--website-theme-light-xxxx-0);
     }
     .navbar .navbar-brand:hover, .navbar .navbar-brand.active, .navbar .nav-link:hover, .navbar .nav-link.active {
       color: var(--website-theme-light-aaaa-1);
@@ -12385,11 +12448,6 @@
     }
     .navbar .nav-link.item-icon-material:hover {
       color: var(--website-theme-light-aaaa-1);
-    }
-  }
-  @layer section-introduction {
-    .section-introduction .card {
-      border: 1px solid var(--website-theme-light-cccc-3);
     }
   }
   @layer section-theme {

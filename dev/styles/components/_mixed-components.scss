@@ -7,11 +7,9 @@
 **/
 
 :root {
-    --website-anchors-scrollto-top: -80px;
-    --website-btnscrolltop-padding: 5px 10px;
+    --website-anchors-scrollto-top: -80px; 
     --website-btnscrolltop-font-size: 0.8rem;
-    --website-btnscrolltop-x-pos: 10px;
-    --website-btnscrolltop-arrowdisplay: none;
+    --website-btnscrolltop-x-pos: 10px; 
 
     --website-hero-elts-spacer: 20px 0 0 0;
 
@@ -27,13 +25,10 @@
 
     .anchors-scrollto {
         position: absolute;
-        top: var(--website-anchors-scrollto-top); 
-
-
+        top: var(--website-anchors-scrollto-top);  
         display: block;
         width: 100px;
-        height: 20px;
-
+        height: 20px; 
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
@@ -78,47 +73,30 @@
     .btn-scroll-top {
         position: fixed;
         z-index: 999;
-        bottom: 30px;
-        padding: var(--website-btnscrolltop-padding);
-        font-size: var(--website-btnscrolltop-font-size);
-        left: var(--website-btnscrolltop-x-pos);
-        &::after {
-            display: var(--website-btnscrolltop-arrowdisplay);
-        }
+        bottom: 30px;  
+        left: var(--website-btnscrolltop-x-pos); 
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            // border: 10px solid purple;
-            --website-btnscrolltop-padding: 10px 45px 10px 20px;
-            --website-btnscrolltop-font-size: 1.2rem;
-            --website-btnscrolltop-arrowdisplay: block;
+            // border: 10px solid purple;  
             --website-btnscrolltop-x-pos: 50px;
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            // border: 10px solid violet;
-            --website-btnscrolltop-padding: 10px 45px 10px 20px;
-            --website-btnscrolltop-font-size: 1.2rem;
-            --website-btnscrolltop-arrowdisplay: block;
+            // border: 10px solid violet;  
             --website-btnscrolltop-x-pos: 90px;
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            // border: 10px solid lime;
-            --website-btnscrolltop-padding: 10px 45px 10px 20px;
-            --website-btnscrolltop-font-size: 1.2rem;
-            --website-btnscrolltop-arrowdisplay: block;
+            // border: 10px solid lime;  
             --website-btnscrolltop-x-pos: 90px;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            // border: 10px solid blue;
-            --website-btnscrolltop-padding: 10px 45px 10px 20px;
-            --website-btnscrolltop-font-size: 1.2rem;
-            --website-btnscrolltop-arrowdisplay: block;
+            // border: 10px solid blue;  
         }
 
         // // Small Medium screens ...

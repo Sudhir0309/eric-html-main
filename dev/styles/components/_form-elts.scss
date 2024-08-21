@@ -1,7 +1,26 @@
 
 :root {
+    // Normal buttons ...
     --website-btn-padding: 10px 20px;
     --website-btn-fontsize: 1.15rem;
+    // Normal buttons + icon
+    --website-btn-icon-before-padding: 10px 20px 10px 40px;
+    --website-btn-icon-after-padding: 10px 40px 10px 20px;
+    --website-btn-icon-icon-size: 1.5rem; 
+    --website-btn-icon-icon-top: 5px;
+    --website-btn-icon-icon-left: 9px;
+    --website-btn-icon-icon-right: 17px;
+
+    // Small buttons ...
+    --website-btn-sm-padding: 0.25rem 0.75rem; 
+    --website-btn-sm-fontsize: 0.875rem;
+    // Small buttons + icon
+    --website-btn-icon-before-sm-padding: 0.25rem 0.75rem 0.25rem 2rem; // icon before
+    --website-btn-icon-after-sm-padding: 0.25rem 2rem 0.25rem 0.75rem; // icon after
+    --website-btn-icon-sm-icon-size: 1.1rem; 
+    --website-btn-icon-sm-icon-top: 2px;
+    --website-btn-icon-sm-icon-right: 10px;
+
     // btn icon ...
     --website-btnicon-padding: 10px 45px 10px 20px;
     --website-btnicon-icon-top: 6px;
@@ -9,128 +28,72 @@
 }
 
 @layer form-elts {
-    @layer buttons {
-
-
-
-
-
-
-    // @layer site-carousel {
-    //     .site-carousel {  
-    //         .slick-arrow {
-    //             background-color: var(--website-theme-light-aaaa-1);
-    //             // font-weight: bold;
-    //             // font-size: 0.8rem;
-    //             // line-height: 0.8rem;
-    //             // background: yellow;
-    //             border: 0;
-    //             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.20);
-    //         }
-    //     }
-    // }
-        .slick-arrow {
-            border-width: 1px;
-        }
-
-        .slick-arrow,
+    @layer buttons {   
         .btn {
             border-radius: 4px;
             padding: var(--website-btn-padding);
             font-weight: 500;
             font-size: var(--website-btn-fontsize);
 
+            // ...
+            &.item-icon-bootstrap,
+            &.item-icon-material {
+                position: relative;
+
+                &.item-icon-material-before {
+                    padding: var(--website-btn-icon-before-padding);
+                    
+                    &::before {
+                        left: var(--website-btn-icon-icon-left);
+                    }
+                }
+                &.item-icon-material-after {
+                    padding: var(--website-btn-icon-after-padding);
+                    
+                    &::after {
+                        left: unset;
+                        right: var(--website-btn-icon-icon-right);
+                    }
+                }
+
+                &::before, &::after {
+                    position: absolute;
+
+                    font-size: var(--website-btn-icon-icon-size);
+                    top: var(--website-btn-icon-icon-top);
+                }
+            }
+
             &.btn-sm {
-                padding: 0.25rem 0.75rem;
-                font-size: 0.875rem;
-                // font-weight: 500;
-                // font-size: var(--website-btn-fontsize);
-                // font-size: 0.875rem;
+                padding: var(--website-btn-sm-padding);
+                font-size: var(--website-btn-sm-fontsize);
+
+                &.item-icon-bootstrap,
+                &.item-icon-material {
+
+                    &.item-icon-material-before {
+                        padding: var(--website-btn-icon-before-sm-padding);
+
+                        &::before {
+                            left: var(--website-btn-icon-sm-icon-right);
+                        }
+                    }
+                    &.item-icon-material-after {
+                        padding: var(--website-btn-icon-after-sm-padding);
+
+                        &::after {
+                            right: var(--website-btn-icon-sm-icon-right);
+                        }
+                    } 
+
+                    &::before, &::after {
+                        font-size: var(--website-btn-icon-sm-icon-size);
+                        top: var(--website-btn-icon-sm-icon-top);
+                    }
+                }
             }
 
 
-            // // Extra Large screens ...
-            // @media (min-width: 1400px) {
-            //     // border: 10px solid purple;
-            //     --website-btn-padding: 15px 30px;
-            //     --website-btnicon-icon-top: 8px;
-            // }
-            
-            // // Large screens ...
-            // @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            //     // border: 10px solid violet;
-            //     --website-btn-padding: 15px 30px;
-            //     --website-btnicon-icon-top: 8px;
-            // }
-            
-            // // Large Medium screens ...
-            // @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            //     // border: 10px solid lime;
-            //     --website-btn-padding: 15px 30px;
-            //     --website-btnicon-icon-top: 8px;
-            // }
-
-            // // Medium Medium screens ...
-            // @media (min-width: 768px) and (max-width: (992px - 1)) {
-            //     border: 10px solid blue;
-            // }
-
-            // // Small Medium screens ...
-            // @media (min-width: 576px) and (max-width: (768px - 1)) {
-            //     border: 10px solid turquoise;
-            // }
-
-            // // Smaller screens ...
-            // @media (max-width: (576px - 1px)) {
-            //     border: 10px solid chocolate;
-            // }
-        }
-        .btn.item-icon-bootstrap,
-        .btn.item-icon-material {
-            position: relative;
-            padding: var(--website-btnicon-padding);
-
-            &::before, &::after {
-                position: absolute;
-                left: unset;
-            }
-        }
-        .btn.item-icon-bootstrap.item-icon-bootstrap-after,
-        .btn.item-icon-material.item-icon-material-after {
-            &::after {
-                top: var(--website-btnicon-icon-top);
-                right: var(--website-btnicon-icon-right);
-            }
-        }
- 
-        // .btn-large {
-        //     font-size: 1.3rem;
-        // }
-        // .btn-min-block {
-        //     min-width: 230px;  
-        // }
-        // .slick-arrow, //Settting carousel button as a seondary button
-        // .btn-secondary {
-        //     border-width: 2px;
-        //     border-style: solid;
-        // }
-        // .slick-arrow {
-        //     display: block;
-        //     padding: 3px 13px;
-        //     font-size: 1rem;
-        // }
-        // .btn-transparent {
-        //     background-color: transparent;
-        // }
-    }
-
-    // @layer inputs {
-    //     .form-control {
-    //         border-radius: 0;
-    //         padding: 13px 12px;
-    //     }
-    //     .form-label {
-    //         margin-bottom: 4px;
-    //     }
-    // }
+        } 
+    } 
 }

@@ -9,13 +9,15 @@
     --website-theme-light-bbbb-0: #010023;
     --website-theme-light-bbbb-1: #323069;
     --website-theme-light-bbbb-2: #3B27BE;
-    --website-theme-light-bbbb-3: #4934D5;
+    --website-theme-light-bbbb-3: #4934d5;
     --website-theme-light-bbbb-4: #535273;
     --website-theme-light-bbbb-5: #DDDCF2;
     --website-theme-light-bbbb-6: #F0EFFB;
     --website-theme-light-bbbb-7: #EDEBF7;
     --website-theme-light-bbbb-8: #CCCCF5;
     --website-theme-light-bbbb-9: #C4C2FF;
+
+    --website-theme-light-cccc-0: #0066FF;
 
     --website-theme-light-cccc-3: #d9caf2; 
     --website-theme-light-cccc-4: #AFAEDE;
@@ -29,6 +31,24 @@
         color: var(--website-theme-light-bbbb-4);
     }
 
+    @layer component-mix {
+        .section-introduction .card,
+        .site-carousel__items-list .card {
+            border: 1px solid var(--website-theme-light-cccc-3); 
+        }
+    }
+
+    @layer site-carousel {
+        .site-carousel-item {  
+            .card { 
+                // Overlay screen designed to blur the content on hover ...
+                &::before { 
+                    background-color: var(--website-theme-light-xxxx-0);
+                }
+            }
+        } 
+    }
+
     @layer color-mix {
         .light-block-txt-col {
             h1, h2, h3, h4, h5, h6 {
@@ -40,7 +60,7 @@
             a {
                 &:hover {
                     text-decoration: none;
-                    opacity: 0.5;
+                    color: var(--website-theme-light-cccc-0);
                 }
             }
         }
@@ -71,9 +91,8 @@
             .navbar-toggler-icon {
                 background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28200, 200, 200, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
             }
-            .navbar-toggler:focus {
-                // box-shadow: 0 0 0 #fff;
-                box-shadow: 0px 0px 10px white;
+            .navbar-toggler:focus { 
+                box-shadow: 0px 0px 10px var(--website-theme-light-xxxx-0);
             }
 
             .navbar-brand, .nav-link {
@@ -129,14 +148,6 @@
             // Smaller screens ...
             @media (max-width: (576px - 1px)) {
                 // border: 10px solid chocolate;
-            }
-        }
-    }
-
-    @layer section-introduction {
-        .section-introduction {
-            .card {
-                border: 1px solid var(--website-theme-light-cccc-3);
             }
         }
     }

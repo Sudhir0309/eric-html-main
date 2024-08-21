@@ -11,7 +11,7 @@
   --website-ln-h2: 28px; 
 
   --website-fs-h3: 23px;
-  --website-ln-h3: 26px; 
+  --website-ln-h3: 24px; 
 
   --website-fs-h4: 18px;
   --website-ln-h4: 24px;
@@ -127,7 +127,7 @@ h5 {
     --website-fs-h2: 42px;
     --website-ln-h2: 46px; 
     --website-fs-h3: 26.5px;
-    --website-ln-h3: 34.5px; 
+    --website-ln-h3: 29px; 
     --website-fs-h4: 22px;
     --website-ln-h4: 26px;
 
@@ -147,7 +147,7 @@ h5 {
     --website-fs-h2: 34.5px;
     --website-ln-h2: 38.5px; 
     --website-fs-h3: 25px;
-    --website-ln-h3: 33.5px; 
+    --website-ln-h3: 29px; 
     --website-fs-h4: 21px;
     --website-ln-h4: 26px;
 
@@ -158,7 +158,7 @@ h5 {
   
   // Large Medium screens ...
   @media (min-width: 992px) and (max-width: (1200px - 1)) {
-    // border: 1px solid lime;
+    // border: 4px solid lime;
     // Font sizes and line heights ... 
     --website-fs-h1: 40px;
     --website-ln-h1: 44px; 
@@ -167,7 +167,7 @@ h5 {
     --website-fs-h2: 30.5px;
     --website-ln-h2: 33.5px; 
     --website-fs-h3: 24.5px;
-    --website-ln-h3: 30.5px; 
+    --website-ln-h3: 29px; 
     --website-fs-h4: 20.5px;
     --website-ln-h4: 26px;
 
@@ -187,7 +187,7 @@ h5 {
     --website-fs-h2: 30.5px;
     --website-ln-h2: 33.5px; 
     --website-fs-h3: 24.5px;
-    --website-ln-h3: 28.5px; 
+    --website-ln-h3: 25.5px; 
     --website-fs-h4: 20.5px;
     --website-ln-h4: 24px;
 

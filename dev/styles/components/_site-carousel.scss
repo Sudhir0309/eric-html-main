@@ -1,15 +1,12 @@
 :root {
-    --website-a-color: inherit;
     --website-site-carousel-hover-state: 35%; 
     --website-site-carousel-btnprev-y: -60px; 
-    --website-site-carousel-btnnext-y: -103px; 
-    --website-site-carousel-item-gap: 0;
+    --website-site-carousel-item-gap: 20px;
 
-    --website-site-carousel-btnprev-x: 0px;
-    --website-site-carousel-btn-x: 0; //-10px;
-    --website-site-carousel-btn-padd: 6px 8px 6px 13px;
-    --website-site-carousel-btn-fontsize: 0.8rem;
-    --website-site-carousel-btn-line-height: 25px;
+    --website-carousel-controls-top: -90px;
+    --website-carousel-controls-flexdir: column;
+    --website-carousel-controls-width: min-content;
+    --website-carousel-controls-gap: 5px; 
 
     // Special card
     --website-carousel-card-padd: 20px 20px 20px 20px;
@@ -22,162 +19,195 @@
 */
 
 @layer site-carousel {
-    .site-carousel { 
-        list-style: none;    
-        margin: 0;
-        padding: 0;
-        // margin-top: 120px;
+    .site-carousel-wrapper {
+        position: relative;
 
         // [Carousel controls]
-        // Move all button controls to the carousel top right, and align them horizontally
-        // "Prev button" on the left, and "next button" on the right
-        .slick-arrow  {
+        .site-carousel-controls {
             position: absolute;
-            top: var(--website-site-carousel-btnnext-y);
-            right: var(--website-site-carousel-btn-x);
-            z-index: 2;
-            font-weight: bold;
-            font-size: var(--website-site-carousel-btn-fontsize);
-            line-height: var(--website-site-carousel-btn-line-height);
-            padding: var(--website-site-carousel-btn-padd);
-
-            // Next arrow icon
-
-            &.slick-next {
-                
-                &:after {
-                    content: '\F285';
-                    font-family: bootstrap-icons!important;
-                    color: #B31E7F;  
-                    position: relative;
-                    top: 3px;
-                }
-            }
-
-
-            &.slick-prev {
-                top: var(--website-site-carousel-btnprev-y);
-                right: var(--website-site-carousel-btnprev-x);
-               
-                &:before
-               {
-                    content: '\F284';  
-                    font-family: bootstrap-icons!important;
-                    color: #B31E7F;
-                    position: relative;
-                    top: 3px;
-                }
-            }
-            &.slick-disabled {
-                opacity: 0.4;
-                cursor: default;
+            display: flex;
+            top: var(--website-carousel-controls-top);
+            gap: var(--website-carousel-controls-gap); 
+            right: 0;
+            justify-content: end;
+            flex-direction: var(--website-carousel-controls-flexdir);
+            width: var(--website-carousel-controls-width);
+    
+            button {
+                width: fit-content;
             }
         }
 
-
-        .site-carousel-item {
-            .card {
-                position: relative;
-                display: block;
-                color: var(--website-a-color);
-                text-decoration: none;
-                padding: var(--website-carousel-card-padd);
-
-                // Overlay screen designed to blur the content on hover ...
-                &::before {
-                    content: '';
-                    position: absolute;
-                    z-index: 1;
-                    opacity: 0; // hidden by default
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: #fff;
-                    transition: all 0.3s ease; // ensures a smooth transition
-                }
-
-                .hover-btn {
-                    position: absolute;
-                    z-index: 2;
-                    opacity: 0;
-                    visibility: hidden;
-                    box-shadow: 0 4px 90px rgba(0, 0, 0, 0.65);
-                    top: 20%;
-                    left: 30%;
-                }
-                
-                &:hover { 
-                    .hover-btn { // Reveal the CTA
-                        visibility: visible;
-                        opacity: 1;
-                    }
-
-                    &::before { // Partially hide the content
-                        opacity: .7;
-                    }
-                }
-            }
-
-            &:nth-child(odd) {
-                padding-right: var(--website-site-carousel-item-gap);
-            }
+        .site-carousel__items-list { 
+            list-style: none;    
+            margin: 0;
+            padding: 0;
             
-            &:nth-child(even) {
-                padding-left: var(--website-site-carousel-item-gap);
+            // Hide default carousel controls
+            .slick-arrow {
+                display: none!important;
+            }
+    
+            .site-carousel-item { 
+                .card {
+                    position: relative;
+                    display: block; 
+                    text-decoration: none;
+                    padding: var(--website-carousel-card-padd);
+    
+                    // Overlay screen designed to blur the content on hover ...
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        z-index: 1;
+                        opacity: 0; // hidden by default
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%; 
+                        transition: all 0.3s ease; // ensures a smooth transition
+                    }
+    
+                    .hover-btn {
+                        position: absolute;
+                        z-index: 2;
+                        opacity: 0;
+                        visibility: hidden;
+                        box-shadow: 0 4px 90px rgba(0, 0, 0, 0.65);
+                        top: 20%;
+                        left: 30%;
+                    }
+                    
+                    &:hover { 
+                        .hover-btn { // Reveal the CTA
+                            visibility: visible;
+                            opacity: 1;
+                        }
+    
+                        &::before { // Partially hide the content
+                            opacity: .7;
+                        }
+                    }
+                } 
+            }
+    
+            .slick-track {
+                /**
+                 * Styling the 3 active items .......
+                 * ----------------------------------
+                */ 
+                @media (min-width: 1200px) { 
+                    --website-site-carousel-item-gap: 25px;
+    
+                    .slick-active { 
+                        // 1st element ...
+                        &:has(+ .slick-active + .slick-active) {
+                            .card {
+                                margin-left: 0;
+                                margin-right: var(--website-site-carousel-item-gap);
+                                // background-color: rgb(0, 91, 165);
+                            }
+                        }
+                        // 2nd element ...
+                        &:has(+ .slick-active),
+                        &.slick-current + .slick-active {
+                            .card {
+                                margin-left: var(--website-site-carousel-item-gap);
+                                margin-right: var(--website-site-carousel-item-gap);
+                                // background-color: rgb(0, 140, 255);
+                            }
+                        }
+                        // 3rd element ...
+                        &.slick-current + .slick-active + .slick-active,
+                        &:last-of-type.slick-current {
+                            .card {
+                                margin-left: var(--website-site-carousel-item-gap);
+                                // background-color: rgb(163, 19, 0);
+                            } 
+                        }
+                    }
+                }
+    
+                /**
+                 * Styling the 2 active items .......
+                 * ----------------------------------
+                */ 
+                @media (min-width: 768px) and (max-width: (1200px - 1)) { 
+                    --website-site-carousel-item-gap: 20px;
+                    
+                    .slick-active {
+                        // 1st element ...
+                        &:has(+ .slick-active) { 
+                            .card {
+                                // background-color: rgb(0, 91, 165);
+                                margin-right: var(--website-site-carousel-item-gap);
+                            }
+                        }
+                        // 2nd element ...
+                        &.slick-current + .slick-active,
+                        &:last-of-type.slick-current {
+                            .card {
+                                // background-color: rgb(163, 19, 0);
+                                margin-left: var(--website-site-carousel-item-gap);
+                            } 
+                        }
+                    }
+        
+        
+                }
             }
         }
 
+
+    
+    
+    
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            border: 3px solid purple;
+            // border: 3px solid purple;
             --website-site-carousel-btnnext-y: -70px;
-            --website-site-carousel-btnprev-y: -70px; 
-            --website-site-carousel-btnprev-x: 70px;
-            --website-site-carousel-item-gap: 60px;
+            --website-site-carousel-btnprev-y: -70px;  
             --website-carousel-card-padd: 30px;
+            --website-carousel-controls-top: -70px;
+            --website-carousel-controls-flexdir: row;
         }
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            border: 3px solid violet;
+            // border: 3px solid violet;
             --website-site-carousel-btnnext-y: -70px;
-            --website-site-carousel-btnprev-y: -70px; 
-            --website-site-carousel-btnprev-x: 70px;
-            --website-site-carousel-item-gap: 60px;
+            --website-site-carousel-btnprev-y: -70px;  
             --website-carousel-card-padd: 30px;
+            --website-carousel-controls-top: -70px;
+            --website-carousel-controls-flexdir: row;
         }
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            border: 3px solid lime;
-            --website-site-carousel-btnnext-y: -70px;
-            --website-site-carousel-btnprev-y: -70px; 
-            --website-site-carousel-btnprev-x: 70px;
-            --website-site-carousel-item-gap: 40px;
+            // border: 3px solid lime;
+            --website-site-carousel-btnprev-y: -70px;  
             --website-carousel-card-padd: 30px;
+            --website-carousel-controls-top: -70px;
+            --website-carousel-controls-flexdir: row;
         }
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            border: 3px solid blue;
-            // --website-site-carousel-btnnext-y: 0px;
-            --website-site-carousel-item-gap: 20px;
+            // border: 3px solid blue;
             --website-carousel-card-padd: 30px;
+            --website-carousel-controls-top: -60px;
+            --website-carousel-controls-flexdir: row;
         }
 
         // Small Medium screens ...
         @media (min-width: 576px) and (max-width: (768px - 1)) {
-            border: 3px solid turquoise;
-            // --website-site-carousel-btnnext-y: 0px; 
+            // border: 3px solid turquoise;
             --website-carousel-card-padd: 30px;
         }
 
         // Smaller screens ...
         @media (max-width: (576px - 1px)) {
-            border: 3px solid chocolate;
+            // border: 3px solid chocolate;
         }
     }
-
-    
 }
