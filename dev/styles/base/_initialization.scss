@@ -2,19 +2,25 @@
 @import './body-spacing-and-gaps';
 
 :root {
+  // Font sizes and line heights ...
+  --website-fs-h1: 48px;
+  --website-ln-h1: 46px; 
 
-    // Font sizes and line heights ... 
-  --website-fs-h1: 32px;
-  --website-ln-h1: 34px; 
+  --website-fs-h2: 34px;
+  --website-ln-h2: 34px; 
 
-  --website-fs-h2: 28px;
-  --website-ln-h2: 28px; 
+  --website-fs-h3: 26px;
+  --website-ln-h3: 28px; 
 
-  --website-fs-h3: 23px;
-  --website-ln-h3: 24px; 
-
-  --website-fs-h4: 18px;
+  --website-fs-h4: 23px;
   --website-ln-h4: 24px;
+
+
+  // --website-fs-h3: 26px;
+  // --website-ln-h3: 30px; 
+
+  // --website-fs-h4: 23px;
+  // --website-ln-h4: 23px;
 
   // Bottom margins
   --website-mb-h1: 10px;
@@ -118,17 +124,19 @@ h5 {
 
   // Extra Large screens ...
   @media (min-width: 1400px) {
-    // border: 1px solid purple;
+    // border: 3px solid purple;
     // Font sizes and line heights ...
-    --website-fs-h1: 60px;
-    --website-ln-h1: 60px; 
+    --website-fs-h1: 80px;
+    --website-ln-h1: 79px; 
     --website-mb-h1: 30px;
 
-    --website-fs-h2: 42px;
+    --website-fs-h2: 48px;
     --website-ln-h2: 46px; 
-    --website-fs-h3: 26.5px;
-    --website-ln-h3: 29px; 
-    --website-fs-h4: 22px;
+
+    --website-fs-h3: 30px;
+    --website-ln-h3: 33px; 
+
+    --website-fs-h4: 26px;
     --website-ln-h4: 26px;
 
     // Margins ...
@@ -138,17 +146,19 @@ h5 {
   
   // Large screens ...
   @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-    // border: 1px solid violet;
+    // border: 3px solid violet;
     // Font sizes and line heights ...
-    --website-fs-h1: 48px;
-    --website-ln-h1: 50px; 
+    --website-fs-h1: 72px;
+    --website-ln-h1: 70px; 
     --website-mb-h1: 30px;
 
-    --website-fs-h2: 34.5px;
-    --website-ln-h2: 38.5px; 
-    --website-fs-h3: 25px;
-    --website-ln-h3: 29px; 
-    --website-fs-h4: 21px;
+    --website-fs-h2: 46px;
+    --website-ln-h2: 44px; 
+
+    --website-fs-h3: 28px;
+    --website-ln-h3: 33px; 
+
+    --website-fs-h4: 26px;
     --website-ln-h4: 26px;
 
     // Margins ...
@@ -158,18 +168,20 @@ h5 {
   
   // Large Medium screens ...
   @media (min-width: 992px) and (max-width: (1200px - 1)) {
-    // border: 4px solid lime;
+    // border: 3px solid lime;
     // Font sizes and line heights ... 
-    --website-fs-h1: 40px;
-    --website-ln-h1: 44px; 
+    --website-fs-h1: 68px;
+    --website-ln-h1: 64px; 
     --website-mb-h1: 20px;
 
-    --website-fs-h2: 30.5px;
-    --website-ln-h2: 33.5px; 
-    --website-fs-h3: 24.5px;
-    --website-ln-h3: 29px; 
-    --website-fs-h4: 20.5px;
-    --website-ln-h4: 26px;
+    --website-fs-h2: 42px;
+    --website-ln-h2: 38px; 
+
+    --website-fs-h3: 26px;
+    --website-ln-h3: 32px; 
+
+    --website-fs-h4: 23px;
+    --website-ln-h4: 23px;
 
     // Margins ...
     --website-mb-h2: 20px;
@@ -178,18 +190,20 @@ h5 {
 
   // Medium Medium screens ...
   @media (min-width: 768px) and (max-width: (992px - 1)) {
-    // border: 1px solid blue;
+    // border: 3px solid blue;
     // Font sizes and line heights ...  
-    --website-fs-h1: 40px;
-    --website-ln-h1: 44px;  
+    --website-fs-h1: 58px;
+    --website-ln-h1: 56px; 
     --website-mb-h1: 20px;
 
-    --website-fs-h2: 30.5px;
-    --website-ln-h2: 33.5px; 
-    --website-fs-h3: 24.5px;
-    --website-ln-h3: 25.5px; 
-    --website-fs-h4: 20.5px;
-    --website-ln-h4: 24px;
+    --website-fs-h2: 38px;
+    --website-ln-h2: 30px; 
+
+    --website-fs-h3: 26px;
+    --website-ln-h3: 30px; 
+
+    --website-fs-h4: 23px;
+    --website-ln-h4: 23px;
 
     // Margins ...
       --website-mb-h2: 20px;
@@ -198,12 +212,12 @@ h5 {
 
   // // Small Medium screens ...
   // @media (min-width: 576px) and (max-width: (768px - 1)) {
-  //     border: 1px solid turquoise;
+  //     border: 3px solid turquoise;
   // }
 
   // // Smaller screens ...
   // @media (max-width: (576px - 1px)) {
-  //     border: 1px solid chocolate;
+  //     border: 3px solid chocolate;
   // }
 }
 
@@ -220,6 +234,7 @@ h2 {
   font-size: var(--website-fs-h2); 
   line-height: var(--website-ln-h2);
   letter-spacing: -0.28px;
+  font-weight: 350;
 }
 
 h3 {
@@ -236,7 +251,7 @@ h4 {
 }
 
 h3, h4 {
-  font-weight: 600;
+  font-weight: 450;
 }
 
 

@@ -10,12 +10,13 @@
     --website-theme-light-bbbb-1: #323069;
     --website-theme-light-bbbb-2: #3B27BE;
     --website-theme-light-bbbb-3: #4934d5;
-    --website-theme-light-bbbb-4: #535273;
-    --website-theme-light-bbbb-5: #DDDCF2;
-    --website-theme-light-bbbb-6: #F0EFFB;
-    --website-theme-light-bbbb-7: #EDEBF7;
-    --website-theme-light-bbbb-8: #CCCCF5;
-    --website-theme-light-bbbb-9: #C4C2FF;
+    --website-theme-light-bbbb-4: #5742d3;
+    --website-theme-light-bbbb-5: #535273;
+    --website-theme-light-bbbb-6: #DDDCF2;
+    --website-theme-light-bbbb-7: #F0EFFB;
+    --website-theme-light-bbbb-8: #EDEBF7;
+    --website-theme-light-bbbb-9: #CCCCF5;
+    --website-theme-light-bbbb-10: #C4C2FF;
 
     --website-theme-light-cccc-0: #0066FF;
 
@@ -27,8 +28,8 @@
 
 // html[data-theme="light"] {
     body {
-        background-color: var(--website-theme-light-bbbb-7);
-        color: var(--website-theme-light-bbbb-4);
+        background-color: var(--website-theme-light-bbbb-8);
+        color: var(--website-theme-light-bbbb-5);
     }
 
     @layer component-mix {
@@ -55,7 +56,7 @@
                 color: var(--website-theme-light-bbbb-1);
             }
             ul, p, a {
-                color: var(--website-theme-light-bbbb-4);
+                color: var(--website-theme-light-bbbb-5);
             }
             a {
                 &:hover {
@@ -67,10 +68,10 @@
     
         .dark-block-txt-col {
             h1, h2, h3, h4, h5, h6 {
-                color: var(--website-theme-light-bbbb-5);
+                color: var(--website-theme-light-bbbb-6);
             }
             ul, p, a {
-                color: var(--website-theme-light-bbbb-8);
+                color: var(--website-theme-light-bbbb-9);
             }
         }
     }
@@ -107,7 +108,7 @@
             .nav-item { 
                 // separator between links
                 &::after { 
-                    background-color: var(--website-theme-light-cccc-3);
+                    background-color: var(--website-theme-light-bbbb-4);
                 }
             }
 
@@ -186,7 +187,7 @@
         .slick-arrow, // Set carousel buttons as 2nd btns
         .btn-secondary {
             color: var(--website-theme-light-bbbb-0);
-            background-color: var(--website-theme-light-bbbb-5);
+            background-color: var(--website-theme-light-bbbb-6);
             border-color: var(--website-theme-light-cccc-6); 
 
             &:hover {
