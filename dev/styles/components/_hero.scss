@@ -68,7 +68,7 @@
 
         // Extra Large screens ...
         @media (min-width: 1400px) {
-            border: 3px solid purple; 
+            // border: 3px solid purple; 
             --website-hero-height: 560px; 
             --website-hero-container-paddtop: 150px; 
             --website-hero-persona-width: 400px;
@@ -87,7 +87,7 @@
         
         // Large screens ...
         @media (min-width: 1200px) and (max-width: (1400px - 1)) {
-            border: 3px solid violet; 
+            // border: 3px solid violet; 
             --website-hero-height: 560px; 
             --website-hero-container-paddtop: 150px;
             --website-hero-persona-width: 400px;
@@ -106,7 +106,7 @@
         
         // Large Medium screens ...
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
-            border: 3px solid lime; 
+            // border: 3px solid lime; 
             --website-hero-height: 430px; 
             --website-hero-container-paddtop: 120px;
             --website-hero-persona-width: 300px;
@@ -125,7 +125,7 @@
 
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
-            border: 3px solid blue; 
+            // border: 3px solid blue; 
             --website-hero-height: 430px; 
             --website-hero-container-paddtop: 130px;
             --website-hero-persona-width: 300px;
@@ -144,7 +144,7 @@
 
         // Small Medium screens ...
         @media (min-width: 576px) and (max-width: (768px - 1)) {
-            border: 3px solid turquoise;
+            // border: 3px solid turquoise;
             --website-hero-persona-width: 45%;
             
             --website-hero-decoration-height: 100%;
@@ -154,7 +154,7 @@
 
         // Smaller screens ...
         @media (max-width: (576px - 1px)) {
-            border: 3px solid chocolate;
+            // border: 3px solid chocolate;
         }
     }
 }

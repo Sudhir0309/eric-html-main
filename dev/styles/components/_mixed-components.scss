@@ -163,6 +163,9 @@
         // &__title {}
         &__list {
             padding-left: 13px;
+            // list items spacing
+            display: grid;
+            gap: 8px;
         }
         &__list:last-of-type {
             margin-bottom: 0;

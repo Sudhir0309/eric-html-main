@@ -3,7 +3,7 @@
     --website-site-carousel-btnprev-y: -60px; 
     --website-site-carousel-item-gap: 20px;
 
-    --website-carousel-controls-top: -90px;
+    --website-carousel-controls-top: -110px;
     --website-carousel-controls-flexdir: column;
     --website-carousel-controls-width: min-content;
     --website-carousel-controls-gap: 5px; 
@@ -73,9 +73,9 @@
                         z-index: 2;
                         opacity: 0;
                         visibility: hidden;
-                        box-shadow: 0 4px 90px rgba(0, 0, 0, 0.65);
-                        top: 20%;
-                        left: 30%;
+                        box-shadow: 0 1px 3px rgb(19, 63, 0);
+                        top: 40%;
+                        left: calc(50% - 59px);
                     }
                     
                     &:hover { 
@@ -85,7 +85,7 @@
                         }
     
                         &::before { // Partially hide the content
-                            opacity: .7;
+                            opacity: .8;
                         }
                     }
                 } 
@@ -195,13 +195,14 @@
         @media (min-width: 768px) and (max-width: (992px - 1)) {
             // border: 3px solid blue;
             --website-carousel-card-padd: 30px;
-            --website-carousel-controls-top: -60px;
+            --website-carousel-controls-top: -70px;
             --website-carousel-controls-flexdir: row;
         }
 
         // Small Medium screens ...
         @media (min-width: 576px) and (max-width: (768px - 1)) {
             // border: 3px solid turquoise;
+            --website-carousel-controls-top: -100px;
             --website-carousel-card-padd: 30px;
         }
 

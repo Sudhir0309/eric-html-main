@@ -1,9 +1,12 @@
 :root {
     --website-theme-light-xxxx-0: #fff;
-
-    --website-theme-light-aaaa-0: #ADFF00;
-    --website-theme-light-aaaa-1: #00ff94;
-    --website-theme-light-aaaa-2: #80D1A5; 
+    
+    --website-theme-light-aaaa-0: #E0FFF2; 
+    --website-theme-light-aaaa-1: #C9FFE8; 
+    --website-theme-light-aaaa-2: #A5FFD9; 
+    --website-theme-light-aaaa-x: #ADFF00;
+    --website-theme-light-aaaa-y: #00ff94;
+    --website-theme-light-aaaa-3: #80D1A5; 
     --website-theme-light-aaaa-7: #80AA27; 
 
     --website-theme-light-bbbb-0: #010023;
@@ -44,7 +47,7 @@
             .card { 
                 // Overlay screen designed to blur the content on hover ...
                 &::before { 
-                    background-color: var(--website-theme-light-xxxx-0);
+                    background-color: var(--website-theme-light-aaaa-0);
                 }
             }
         } 
@@ -98,7 +101,7 @@
 
             .navbar-brand, .nav-link {
                 &:hover, &.active {
-                    color: var(--website-theme-light-aaaa-1);
+                    color: var(--website-theme-light-aaaa-y);
                 } 
             }
             .navbar-collapse.collapse.show {
@@ -115,7 +118,7 @@
             .nav-link {
                 &.item-icon-material {
                     &:hover {
-                        color: var(--website-theme-light-aaaa-1);
+                        color: var(--website-theme-light-aaaa-y);
                     }
                 }
             }
@@ -171,11 +174,11 @@
         }
         .btn-primary {
             color: var(--website-theme-light-bbbb-0);
-            background-color: var(--website-theme-light-aaaa-1);
-            border-color: var(--website-theme-light-aaaa-1);
+            background-color: var(--website-theme-light-aaaa-y);
+            border-color: var(--website-theme-light-aaaa-y);
 
             &:hover {
-                background-color: var(--website-theme-light-aaaa-0);
+                background-color: var(--website-theme-light-aaaa-x);
                 border-color: var(--website-theme-light-aaaa-7);
             }
             &:active {
@@ -191,7 +194,7 @@
             border-color: var(--website-theme-light-cccc-6); 
 
             &:hover {
-                background-color: var(--website-theme-light-cccc-4);
+                background-color: var(--website-theme-light-aaaa-x);
             }
             &:active {
                 background-color: var(--website-theme-light-cccc-6);

@@ -10914,35 +10914,29 @@
 @layer base {
   :root {
     --website-spacing-top-gap: 20px;
-    --website-header-bot-spacing: 10px;
+    --website-header-bot-spacing: 1.438rem;
   }
   @media (min-width: 1400px) {
     body {
       --website-spacing-section-h-small: 120px;
-      --website-header-bot-spacing: 30px;
+      --website-header-bot-spacing: 1.875rem;
     }
   }
   @media (min-width: 1200px) and (max-width: 1399px) {
     body {
       --website-spacing-section-h-small: 90px;
-      --website-header-bot-spacing: 30px;
+      --website-header-bot-spacing: 1.875rem;
     }
   }
   @media (min-width: 992px) and (max-width: 1199px) {
     body {
       --website-spacing-section-h-small: 70px;
-      --website-header-bot-spacing: 30px;
+      --website-header-bot-spacing: 1.875rem;
     }
   }
   @media (min-width: 768px) and (max-width: 991px) {
     body {
       --website-spacing-section-h-small: 60px;
-      --website-header-bot-spacing: 20px;
-    }
-  }
-  @media (min-width: 576px) and (max-width: 767px) {
-    body {
-      --website-header-bot-spacing: 20px;
     }
   }
   @layer blocks {
@@ -10968,17 +10962,20 @@
   }
   @layer blocks {}
   :root {
-    --website-fs-h1: 48px;
-    --website-ln-h1: 46px;
-    --website-fs-h2: 34px;
-    --website-ln-h2: 34px;
-    --website-fs-h3: 26px;
-    --website-ln-h3: 28px;
-    --website-fs-h4: 23px;
-    --website-ln-h4: 24px;
-    --website-mb-h1: 15px;
-    --website-mb-h2: 10px;
-    --website-mb-h3: 10px;
+    --website-fs-h1: 3rem;
+    --website-ln-h1: 3.375rem;
+    --website-fs-h2: 2.125rem;
+    --website-ln-h2: 2.438rem;
+    --website-fs-h2-subtitle: 1.125rem;
+    --website-ln-h2-subtitle: 1.688rem;
+    --website-fs-h3: 1.625rem;
+    --website-ln-h3: 1.875rem;
+    --website-fs-h4: 1.438rem;
+    --website-ln-h4: 1.296rem;
+    --website-mb-h1: 0.938rem;
+    --website-mb-h2: 0.938rem;
+    --website-mb-h3: 0.625rem;
+    --website-mb-h4: 0.625rem;
   }
   /**
    * INITIALIZATION
@@ -11026,17 +11023,18 @@
     h3,
     h4,
     h5 {
-      --website-fs-h1: 80px;
+      --website-fs-h1: 5rem;
       --website-ln-h1: 79px;
       --website-mb-h1: 30px;
-      --website-fs-h2: 48px;
-      --website-ln-h2: 46px;
+      --website-fs-h2: 3rem;
+      --website-ln-h2: 3.25rem;
       --website-fs-h3: 30px;
-      --website-ln-h3: 33px;
-      --website-fs-h4: 26px;
-      --website-ln-h4: 26px;
-      --website-mb-h2: 25px;
-      --website-mb-h3: 20.5px;
+      --website-ln-h3: 2.188rem;
+      --website-fs-h4: 1.625rem;
+      --website-ln-h4: 1.875rem;
+      --website-mb-h2: 1.25rem;
+      --website-mb-h3: 0.813rem;
+      --website-mb-h4: 0.813rem;
     }
   }
   @media (min-width: 1200px) and (max-width: 1399px) {
@@ -11048,14 +11046,15 @@
       --website-fs-h1: 72px;
       --website-ln-h1: 70px;
       --website-mb-h1: 30px;
-      --website-fs-h2: 46px;
-      --website-ln-h2: 44px;
-      --website-fs-h3: 28px;
-      --website-ln-h3: 33px;
-      --website-fs-h4: 26px;
-      --website-ln-h4: 26px;
-      --website-mb-h2: 22px;
-      --website-mb-h3: 17.5px;
+      --website-fs-h2: 2.875rem;
+      --website-ln-h2: 3.25rem;
+      --website-fs-h3: 1.75rem;
+      --website-ln-h3: 2rem;
+      --website-fs-h4: 1.625rem;
+      --website-ln-h4: 1.875rem;
+      --website-mb-h2: 1.25rem;
+      --website-mb-h3: 0.625rem;
+      --website-mb-h4: 0.813rem;
     }
   }
   @media (min-width: 992px) and (max-width: 1199px) {
@@ -11067,14 +11066,15 @@
       --website-fs-h1: 68px;
       --website-ln-h1: 64px;
       --website-mb-h1: 22px;
-      --website-fs-h2: 42px;
-      --website-ln-h2: 38px;
-      --website-fs-h3: 26px;
-      --website-ln-h3: 32px;
-      --website-fs-h4: 23px;
-      --website-ln-h4: 23px;
-      --website-mb-h2: 20px;
-      --website-mb-h3: 15px;
+      --website-fs-h2: 2.625rem;
+      --website-ln-h2: 2.938rem;
+      --website-fs-h3: 1.625rem;
+      --website-ln-h3: 2rem;
+      --website-fs-h4: 1.438rem;
+      --website-ln-h4: 1.296rem;
+      --website-mb-h2: 1.25rem;
+      --website-mb-h3: 0.625rem;
+      --website-mb-h4: 0.813rem;
     }
   }
   @media (min-width: 768px) and (max-width: 991px) {
@@ -11086,14 +11086,15 @@
       --website-fs-h1: 58px;
       --website-ln-h1: 56px;
       --website-mb-h1: 22px;
-      --website-fs-h2: 38px;
-      --website-ln-h2: 30px;
-      --website-fs-h3: 26px;
-      --website-ln-h3: 30px;
-      --website-fs-h4: 23px;
-      --website-ln-h4: 23px;
-      --website-mb-h2: 20px;
-      --website-mb-h3: 15px;
+      --website-fs-h2: 2.375rem;
+      --website-ln-h2: 2.625rem;
+      --website-fs-h3: 1.625rem;
+      --website-ln-h3: 1.875rem;
+      --website-fs-h4: 1.438rem;
+      --website-ln-h4: 1.296rem;
+      --website-mb-h2: 1.25rem;
+      --website-mb-h3: 0.625rem;
+      --website-mb-h4: 0.813rem;
     }
   }
   h1 {
@@ -11109,6 +11110,10 @@
     letter-spacing: -0.28px;
     font-weight: 350;
   }
+  .h2-subtitle {
+    font-size: var(--website-fs-h2-subtitle);
+    line-height: var(--website-ln-h2-subtitle);
+  }
   h3 {
     margin-bottom: var(--website-mb-h3);
     font-size: var(--website-fs-h3);
@@ -11116,6 +11121,7 @@
     letter-spacing: -0.46px;
   }
   h4 {
+    margin-bottom: var(--website-mb-h4);
     font-size: var(--website-fs-h4);
     line-height: var(--website-ln-h4);
     letter-spacing: -0.46px;
@@ -11248,6 +11254,9 @@
   .jumbotron__textwrapper ul:last-of-type,
   .jumbotron__textwrapper ol:last-of-type,
   .jumbotron__textwrapper p:last-of-type,
+  .sc-header-bot-spacing ul:last-of-type,
+  .sc-header-bot-spacing ol:last-of-type,
+  .sc-header-bot-spacing p:last-of-type,
   .banner-shine ul:last-of-type,
   .banner-shine ol:last-of-type,
   .banner-shine p:last-of-type, .banner-feature ul:last-of-type, .banner-feature ol:last-of-type, .banner-feature p:last-of-type,
@@ -11296,11 +11305,6 @@
       }
     }
     @media (min-width: 768px) and (max-width: 991px) {
-      .section-skills .section-skills__wrapper {
-        --website-skills-card-padd: 45px 30px 30px 30px;
-      }
-    }
-    @media (min-width: 576px) and (max-width: 767px) {
       .section-skills .section-skills__wrapper {
         --website-skills-card-padd: 45px 30px 30px 30px;
       }
@@ -11696,7 +11700,6 @@
     }
     @media (min-width: 1400px) {
       .hero {
-        border: 3px solid purple;
         --website-hero-height: 560px;
         --website-hero-container-paddtop: 150px;
         --website-hero-persona-width: 400px;
@@ -11713,7 +11716,6 @@
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .hero {
-        border: 3px solid violet;
         --website-hero-height: 560px;
         --website-hero-container-paddtop: 150px;
         --website-hero-persona-width: 400px;
@@ -11730,7 +11732,6 @@
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .hero {
-        border: 3px solid lime;
         --website-hero-height: 430px;
         --website-hero-container-paddtop: 120px;
         --website-hero-persona-width: 300px;
@@ -11747,7 +11748,6 @@
     }
     @media (min-width: 768px) and (max-width: 991px) {
       .hero {
-        border: 3px solid blue;
         --website-hero-height: 430px;
         --website-hero-container-paddtop: 130px;
         --website-hero-persona-width: 300px;
@@ -11764,16 +11764,10 @@
     }
     @media (min-width: 576px) and (max-width: 767px) {
       .hero {
-        border: 3px solid turquoise;
         --website-hero-persona-width: 45%;
         --website-hero-decoration-height: 100%;
         --website-hero-decoration-right: -20%;
         --website-hero-decoration-display: block;
-      }
-    }
-    @media (max-width: 575px) {
-      .hero {
-        border: 3px solid chocolate;
       }
     }
   }
@@ -12053,7 +12047,7 @@
     --website-site-carousel-hover-state: 35%;
     --website-site-carousel-btnprev-y: -60px;
     --website-site-carousel-item-gap: 20px;
-    --website-carousel-controls-top: -90px;
+    --website-carousel-controls-top: -110px;
     --website-carousel-controls-flexdir: column;
     --website-carousel-controls-width: min-content;
     --website-carousel-controls-gap: 5px;
@@ -12111,16 +12105,16 @@
       z-index: 2;
       opacity: 0;
       visibility: hidden;
-      box-shadow: 0 4px 90px rgba(0, 0, 0, 0.65);
-      top: 20%;
-      left: 30%;
+      box-shadow: 0 1px 3px rgb(19, 63, 0);
+      top: 40%;
+      left: calc(50% - 59px);
     }
     .site-carousel-wrapper .site-carousel__items-list .site-carousel-item .card:hover .hover-btn {
       visibility: visible;
       opacity: 1;
     }
     .site-carousel-wrapper .site-carousel__items-list .site-carousel-item .card:hover::before {
-      opacity: 0.7;
+      opacity: 0.8;
     }
     .site-carousel-wrapper .site-carousel__items-list .slick-track {
       /**
@@ -12188,12 +12182,13 @@
     @media (min-width: 768px) and (max-width: 991px) {
       .site-carousel-wrapper {
         --website-carousel-card-padd: 30px;
-        --website-carousel-controls-top: -60px;
+        --website-carousel-controls-top: -70px;
         --website-carousel-controls-flexdir: row;
       }
     }
     @media (min-width: 576px) and (max-width: 767px) {
       .site-carousel-wrapper {
+        --website-carousel-controls-top: -100px;
         --website-carousel-card-padd: 30px;
       }
     }
@@ -12300,6 +12295,8 @@
   @layer special-card {
     .special-card__list {
       padding-left: 13px;
+      display: grid;
+      gap: 8px;
     }
     .special-card__list:last-of-type {
       margin-bottom: 0;
@@ -12394,9 +12391,12 @@
 @layer theming {
   :root {
     --website-theme-light-xxxx-0: #fff;
-    --website-theme-light-aaaa-0: #ADFF00;
-    --website-theme-light-aaaa-1: #00ff94;
-    --website-theme-light-aaaa-2: #80D1A5;
+    --website-theme-light-aaaa-0: #E0FFF2;
+    --website-theme-light-aaaa-1: #C9FFE8;
+    --website-theme-light-aaaa-2: #A5FFD9;
+    --website-theme-light-aaaa-x: #ADFF00;
+    --website-theme-light-aaaa-y: #00ff94;
+    --website-theme-light-aaaa-3: #80D1A5;
     --website-theme-light-aaaa-7: #80AA27;
     --website-theme-light-bbbb-0: #010023;
     --website-theme-light-bbbb-1: #323069;
@@ -12427,7 +12427,7 @@
   }
   @layer site-carousel {
     .site-carousel-item .card::before {
-      background-color: var(--website-theme-light-xxxx-0);
+      background-color: var(--website-theme-light-aaaa-0);
     }
   }
   @layer color-mix {
@@ -12464,7 +12464,7 @@
       box-shadow: 0px 0px 10px var(--website-theme-light-xxxx-0);
     }
     .navbar .navbar-brand:hover, .navbar .navbar-brand.active, .navbar .nav-link:hover, .navbar .nav-link.active {
-      color: var(--website-theme-light-aaaa-1);
+      color: var(--website-theme-light-aaaa-y);
     }
     .navbar .navbar-collapse.collapse.show {
       background-color: var(--website-theme-light-bbbb-0);
@@ -12473,7 +12473,7 @@
       background-color: var(--website-theme-light-bbbb-4);
     }
     .navbar .nav-link.item-icon-material:hover {
-      color: var(--website-theme-light-aaaa-1);
+      color: var(--website-theme-light-aaaa-y);
     }
   }
   @layer section-theme {
@@ -12490,11 +12490,11 @@
     }
     .btn-primary {
       color: var(--website-theme-light-bbbb-0);
-      background-color: var(--website-theme-light-aaaa-1);
-      border-color: var(--website-theme-light-aaaa-1);
+      background-color: var(--website-theme-light-aaaa-y);
+      border-color: var(--website-theme-light-aaaa-y);
     }
     .btn-primary:hover {
-      background-color: var(--website-theme-light-aaaa-0);
+      background-color: var(--website-theme-light-aaaa-x);
       border-color: var(--website-theme-light-aaaa-7);
     }
     .btn-primary:active {
@@ -12508,7 +12508,7 @@
     }
     .slick-arrow:hover,
     .btn-secondary:hover {
-      background-color: var(--website-theme-light-cccc-4);
+      background-color: var(--website-theme-light-aaaa-x);
     }
     .slick-arrow:active,
     .btn-secondary:active {

@@ -114,6 +114,7 @@
 .site-carousel-item .card,
 .section-skills header,
 .jumbotron__textwrapper,
+.sc-header-bot-spacing,
 .banner-shine, .banner-feature,
 .alert,
 .special-card {
@@ -174,16 +175,16 @@
                 --website-skills-card-padd: 45px 30px 30px 30px;
             }
     
-            // Small Medium screens ...
-            @media (min-width: 576px) and (max-width: (768px - 1)) {
-                // border: 4px solid turquoise;
-                --website-skills-card-padd: 45px 30px 30px 30px;
-            }
+            // // Small Medium screens ...
+            // @media (min-width: 576px) and (max-width: (768px - 1)) {
+            //     border: 4px solid turquoise;
+            //     --website-skills-card-padd: 45px 30px 30px 30px;
+            // }
     
-            // Smaller screens ...
-            @media (max-width: (576px - 1px)) {
-                // border: 4px solid chocolate;
-            }
+            // // Smaller screens ...
+            // @media (max-width: (576px - 1px)) {
+            //     border: 4px solid chocolate;
+            // }
         }
     }
 }
