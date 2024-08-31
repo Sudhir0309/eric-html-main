@@ -223,14 +223,14 @@ h5 {
 }
 
 
-h1 {
+h1, .h1 {
   margin-bottom: var(--website-mb-h1);
   font-size: var(--website-fs-h1);
   line-height: var(--website-ln-h1);
   letter-spacing: -0.66px;
 }
 
-h2 {
+h2, .h2 {
   margin-bottom: var(--website-mb-h2);
   font-size: var(--website-fs-h2); 
   line-height: var(--website-ln-h2);
@@ -242,14 +242,14 @@ h2 {
   line-height: var(--website-ln-h2-subtitle); 
 }
 
-h3 {
+h3, .h3 {
   margin-bottom: var(--website-mb-h3);
   font-size: var(--website-fs-h3); 
   line-height: var(--website-ln-h3);
   letter-spacing: -0.46px;
 }
 
-h4 {
+h4, .h4 {
   margin-bottom: var(--website-mb-h4);
   font-size: var(--website-fs-h4); 
   line-height: var(--website-ln-h4);

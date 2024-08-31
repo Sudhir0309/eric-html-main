@@ -85,14 +85,13 @@
                     }
                     
                     &:hover { 
+                        .card-body {
+                            text-decoration: underline;
+                        }
                         .hover-btn { // Reveal the CTA
                             visibility: visible;
                             opacity: 1;
                         }
-    
-                        // &::before { // Partially hide the content
-                        //     opacity: .8;
-                        // }
                     }
 
                     .card-body {

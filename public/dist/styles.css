@@ -11097,13 +11097,13 @@
       --website-mb-h4: 0.813rem;
     }
   }
-  h1 {
+  h1, .h1 {
     margin-bottom: var(--website-mb-h1);
     font-size: var(--website-fs-h1);
     line-height: var(--website-ln-h1);
     letter-spacing: -0.66px;
   }
-  h2 {
+  h2, .h2 {
     margin-bottom: var(--website-mb-h2);
     font-size: var(--website-fs-h2);
     line-height: var(--website-ln-h2);
@@ -11114,13 +11114,13 @@
     font-size: var(--website-fs-h2-subtitle);
     line-height: var(--website-ln-h2-subtitle);
   }
-  h3 {
+  h3, .h3 {
     margin-bottom: var(--website-mb-h3);
     font-size: var(--website-fs-h3);
     line-height: var(--website-ln-h3);
     letter-spacing: -0.46px;
   }
-  h4 {
+  h4, .h4 {
     margin-bottom: var(--website-mb-h4);
     font-size: var(--website-fs-h4);
     line-height: var(--website-ln-h4);
@@ -11165,6 +11165,12 @@
       left: 0;
       width: 100%;
       z-index: 1000; /* Ensure it's on top */
+    }
+    .txt-highlight1 {
+      font-weight: 600;
+    }
+    .list-bullets-vert-align {
+      padding-left: 0.875rem;
     }
   }
 }
@@ -11317,72 +11323,58 @@
    * Modal is from the Bootstrap vendor, so we are mostly overriding styles
   */
   :root {
-    --website-modal-LeftRight-space: 20px;
+    --website-modal-space-gap: 1.25rem;
+    --website-modal-heading-margtop: 1.875rem;
+    --website-modal-gallery-images-margtop: 1.25rem;
+    --website-modal-gallery-grid-template: 1fr / 1fr;
   }
   @layer modal {
-    .modal h4 {
-      margin-top: 47px;
+    .modal .modal-header, .modal .modal-body, .modal .modal-footer {
+      padding: var(--website-modal-space-gap);
     }
-    .modal .modal-header, .modal .modal-body {
-      padding-left: 20px;
-      padding-right: 20px;
+    .modal .modal-body .list-text, .modal .modal-body .gallery-images {
+      display: grid;
     }
-    .modal .modal-list {
+    .modal .modal-body .list-text {
+      gap: 0.625rem;
+    }
+    .modal .modal-body h4 {
+      margin-top: var(--website-modal-heading-margtop);
+    }
+    .modal .modal-body .gallery-images {
+      grid-template-columns: var(--website-modal-gallery-grid-template);
+      grid-gap: 0.75rem;
+      margin-top: var(--website-modal-gallery-images-margtop);
+    }
+    .modal .modal-body .list-highlights {
       list-style: none;
     }
-    .modal .modal-list li:before {
+    .modal .modal-body .list-highlights li:before {
       padding-right: 11px;
       font-size: 17px;
     }
-    .modal .modal-list .light-color-icon:before {
-      color: #BCBCBC;
-    }
-    .modal .grid-col {
-      grid-template-columns: auto auto auto;
-      grid-gap: 12px;
-    }
-    .modal .modal-header, .modal .modal-body {
-      padding-left: var(--website-modal-LeftRight-space);
-      padding-right: var(--website-modal-LeftRight-space);
-    }
-    .modal .btn {
-      margin-top: 36px;
-    }
-    .modal .btn.bi-box-arrow-up-right::before {
-      position: absolute;
-      right: 17px;
-      top: 11px !important;
+    .modal .modal-footer .btn {
+      margin: 0;
     }
     @media (min-width: 1400px) {
       .modal {
-        border: 10px solid purple;
-        --website-modal-LeftRight-space: 40px;
+        --website-modal-space-gap: 1.875rem 3.125rem;
+        --website-modal-heading-margtop: 2.5rem;
+        --website-modal-gallery-images-margtop: 1.875rem;
       }
     }
     @media (min-width: 1200px) and (max-width: 1399px) {
       .modal {
-        border: 10px solid violet;
-        --website-modal-LeftRight-space: 40px;
+        --website-modal-space-gap: 1.875rem 2.5rem;
+        --website-modal-heading-margtop: 2.5rem;
+        --website-modal-gallery-images-margtop: 1.875rem;
       }
     }
     @media (min-width: 992px) and (max-width: 1199px) {
       .modal {
-        border: 10px solid lime;
-      }
-    }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .modal {
-        border: 10px solid blue;
-      }
-    }
-    @media (min-width: 576px) and (max-width: 767px) {
-      .modal {
-        border: 10px solid turquoise;
-      }
-    }
-    @media (max-width: 575px) {
-      .modal {
-        border: 10px solid chocolate;
+        --website-modal-space-gap: 1.875rem 2.5rem;
+        --website-modal-heading-margtop: 2.5rem;
+        --website-modal-gallery-images-margtop: 1.875rem;
       }
     }
   }
@@ -12115,6 +12107,9 @@
       font-size: 1.5rem;
       left: 0.7rem;
     }
+    .site-carousel-wrapper .site-carousel__items-list .site-carousel-item .card:hover .card-body {
+      text-decoration: underline;
+    }
     .site-carousel-wrapper .site-carousel__items-list .site-carousel-item .card:hover .hover-btn {
       visibility: visible;
       opacity: 1;
@@ -12448,6 +12443,10 @@
     }
     .site-carousel-item .card:hover {
       background-color: var(--website-theme-light-cccc-8);
+      color: var(--website-theme-light-bbbb-4) !important;
+    }
+    .site-carousel-item .card:hover .card-body h3, .site-carousel-item .card:hover .card-body p {
+      color: var(--website-theme-light-bbbb-4) !important;
     }
   }
   @layer color-mix {
@@ -12538,6 +12537,22 @@
   @layer footer {
     .global-footer {
       background-color: var(--website-theme-light-xxxx-0);
+    }
+  }
+  @layer modal {
+    .modal .modal-body a {
+      color: var(--website-theme-light-bbbb-3);
+    }
+    .modal .bi-check-circle-fill:before {
+      color: var(--website-theme-light-bbbb-2);
+    }
+    .modal .light-color-icon:before {
+      color: var(--website-theme-light-bbbb-10);
+    }
+  }
+  @layer utilities {
+    .txt-highlight1 {
+      color: var(--website-theme-light-bbbb-1);
     }
   }
 }
