@@ -23,10 +23,13 @@
 
     --website-theme-light-cccc-0: #0066FF;
 
+    --website-theme-light-cccc-2: #E0DCF6;
     --website-theme-light-cccc-3: #d9caf2; 
     --website-theme-light-cccc-4: #AFAEDE;
-    --website-theme-light-cccc-5: #9C8EFF;
-    --website-theme-light-cccc-6: #8073D5;
+    --website-theme-light-cccc-7: #B5AEE8;
+    --website-theme-light-cccc-8: #ABA1EE;
+    --website-theme-light-cccc-10: #8073D5;
+    --website-theme-light-cccc-14: #9C8EFF; 
 }
 
 // html[data-theme="light"] {
@@ -45,9 +48,18 @@
     @layer site-carousel {
         .site-carousel-item {  
             .card { 
+                background-color: var(--website-theme-light-cccc-2);
+
                 // Overlay screen designed to blur the content on hover ...
                 &::before { 
                     background-color: var(--website-theme-light-aaaa-0);
+                }
+
+                &-body {
+                    background-color: var(--website-theme-light-xxxx-0);
+                }
+                &:hover { 
+                    background-color: var(--website-theme-light-cccc-8);
                 }
             }
         } 
@@ -191,13 +203,13 @@
         .btn-secondary {
             color: var(--website-theme-light-bbbb-0);
             background-color: var(--website-theme-light-bbbb-6);
-            border-color: var(--website-theme-light-cccc-6); 
+            border-color: var(--website-theme-light-cccc-10); 
 
             &:hover {
                 background-color: var(--website-theme-light-aaaa-x);
             }
             &:active {
-                background-color: var(--website-theme-light-cccc-6);
+                background-color: var(--website-theme-light-cccc-10);
             }
         }
     }

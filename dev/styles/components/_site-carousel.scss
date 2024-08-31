@@ -9,7 +9,7 @@
     --website-carousel-controls-gap: 5px; 
 
     // Special card
-    --website-carousel-card-padd: 20px 20px 20px 20px;
+    --website-carousel-card-padd: 0.938rem 1.25rem 1.25rem 1.25rem;
 }
 
 /**
@@ -53,7 +53,6 @@
                     position: relative;
                     display: block; 
                     text-decoration: none;
-                    padding: var(--website-carousel-card-padd);
     
                     // Overlay screen designed to blur the content on hover ...
                     &::before {
@@ -74,8 +73,15 @@
                         opacity: 0;
                         visibility: hidden;
                         box-shadow: 0 1px 3px rgb(19, 63, 0);
-                        top: 40%;
-                        left: calc(50% - 59px);
+                        top: 20px;
+                        right: 20px;
+                        width: 41.34px;
+                        height: 41.34px;
+
+                        &::after {
+                            font-size: 1.5rem;
+                            left: 0.7rem;
+                        }
                     }
                     
                     &:hover { 
@@ -84,9 +90,15 @@
                             opacity: 1;
                         }
     
-                        &::before { // Partially hide the content
-                            opacity: .8;
-                        }
+                        // &::before { // Partially hide the content
+                        //     opacity: .8;
+                        // }
+                    }
+
+                    .card-body {
+                        padding: var(--website-carousel-card-padd);
+                        border-bottom-left-radius: var(--website-bdr-radius-0);
+                        border-bottom-right-radius: var(--website-bdr-radius-0);
                     }
                 } 
             }
@@ -112,8 +124,8 @@
                         &:has(+ .slick-active),
                         &.slick-current + .slick-active {
                             .card {
-                                margin-left: var(--website-site-carousel-item-gap);
-                                margin-right: var(--website-site-carousel-item-gap);
+                                margin-left: calc(var(--website-site-carousel-item-gap) / 2);
+                                margin-right: calc(var(--website-site-carousel-item-gap) / 2);
                                 // background-color: rgb(0, 140, 255);
                             }
                         }
@@ -167,7 +179,7 @@
             // border: 3px solid purple;
             --website-site-carousel-btnnext-y: -70px;
             --website-site-carousel-btnprev-y: -70px;  
-            --website-carousel-card-padd: 30px;
+            --website-carousel-card-padd: 1.25rem 1.875rem 1.875rem 1.875rem;
             --website-carousel-controls-top: -70px;
             --website-carousel-controls-flexdir: row;
         }
@@ -177,7 +189,7 @@
             // border: 3px solid violet;
             --website-site-carousel-btnnext-y: -70px;
             --website-site-carousel-btnprev-y: -70px;  
-            --website-carousel-card-padd: 30px;
+            --website-carousel-card-padd: 1.25rem 1.875rem 1.875rem 1.875rem;
             --website-carousel-controls-top: -70px;
             --website-carousel-controls-flexdir: row;
         }
@@ -186,7 +198,7 @@
         @media (min-width: 992px) and (max-width: (1200px - 1)) {
             // border: 3px solid lime;
             --website-site-carousel-btnprev-y: -70px;  
-            --website-carousel-card-padd: 30px;
+            --website-carousel-card-padd: 1.25rem 1.875rem 1.875rem 1.875rem;
             --website-carousel-controls-top: -70px;
             --website-carousel-controls-flexdir: row;
         }
@@ -194,7 +206,7 @@
         // Medium Medium screens ...
         @media (min-width: 768px) and (max-width: (992px - 1)) {
             // border: 3px solid blue;
-            --website-carousel-card-padd: 30px;
+            --website-carousel-card-padd: 0.938rem 1.25rem 1.25rem 1.25rem;
             --website-carousel-controls-top: -70px;
             --website-carousel-controls-flexdir: row;
         }
@@ -203,7 +215,7 @@
         @media (min-width: 576px) and (max-width: (768px - 1)) {
             // border: 3px solid turquoise;
             --website-carousel-controls-top: -100px;
-            --website-carousel-card-padd: 30px;
+            --website-carousel-card-padd: 1.25rem 1.875rem 1.875rem 1.875rem;
         }
 
         // Smaller screens ...

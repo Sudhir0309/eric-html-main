@@ -30,7 +30,7 @@
 @layer form-elts {
     @layer buttons {   
         .btn {
-            border-radius: 4px;
+            border-radius: var(--website-bdr-radius-0);
             padding: var(--website-btn-padding);
             font-weight: 500;
             font-size: var(--website-btn-fontsize);
